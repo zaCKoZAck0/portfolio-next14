@@ -6,13 +6,13 @@ import { ArrowRight } from 'lucide-react'
 export function Hero() {
   return (
     <div className="relative flex flex-col gap-12 items-center justify-center">
-      <Logo className="text-7xl" />
-      <H1 className="text-primary">{"I'm a"} 
+      <Logo className="md:text-7xl text-5xl" />
+      <H1 className="text-primary text-2xl text-nowrap">{"I'm a"} 
         <span className="bg-primary text-primary-foreground px-2 mx-1">
         fullstack Developer.
         </span>
         </H1>
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex md:flex-row flex-col items-center justify-center gap-4">
             <Button className="rounded-full font-semibold text-xl" size='lg'>
                 <H4>
                     Read More
