@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "~/components/navigation";
+import { cn } from "~/lib/utils";
+import { Providers } from "./providers";
 
-const inter = Inter({ subsets: ["latin"] });
+const mono = JetBrains_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+        <Providers>
+      <body className={cn(mono.className, "mt-12")}>
+        <Navbar />
+        {children}</body>
+        </Providers>
     </html>
   );
 }
