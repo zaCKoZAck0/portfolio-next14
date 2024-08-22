@@ -11,7 +11,7 @@ type CommitGraphProps = {
 
 const getColor = (count: number): string => {
   const colors: { [key: number]: string } = {
-    0: "bg-gray-200",
+    0: "bg-gray-700",
     1: "bg-orange-100",
     2: "bg-orange-200",
   };
@@ -23,6 +23,12 @@ export function CommitGraph({contributions}: CommitGraphProps) {
       week.contributionDays.map(day => day.contributionCount)
   );}
     , [contributions]);
+
+    const commitsDateData = useMemo(() => {
+      return contributions.map(week => 
+        week.contributionDays.map(day => day.date)
+    );
+    }, [contributions]);
   return (
     <section>
       <div className="flex flex-col items-center justify-center border-2 border-primary/50 py-3">
@@ -48,7 +54,7 @@ export function CommitGraph({contributions}: CommitGraphProps) {
             <TooltipContent>
               <div className="text-sm">
                 {commitCount} Contribution{commitCount === 1 ? "" : "s"} on{" "}
-                {new Date().toLocaleDateString()}
+                {new Date(commitsDateData[i][j]).toLocaleDateString()}
               </div>
             </TooltipContent>
                 </Tooltip>
