@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "pnpm script:github && next start",
     "lint": "next lint",
-    "script:github": "node ./src/scripts/github-data.js"
+    "script:github": "node ./src/scripts/github-data-script.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
