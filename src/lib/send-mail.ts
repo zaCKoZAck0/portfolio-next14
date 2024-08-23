@@ -22,6 +22,7 @@ export async function SendEmail({ email, subject, template }: SendEmailProps): P
     from: 'ZACKOZACK <bot@zackozack.xyz>',
     to: [email, 'id.ayushkryadav@gmail.com'],
     subject,
+    replyTo: 'id.ayushkryadav@gmail.com',
     react: template,
   });
 
