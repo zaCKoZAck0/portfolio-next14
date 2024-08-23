@@ -10,6 +10,8 @@ import { Experience } from "./experience";
 import { Skills } from "./skills";
 import { Education } from "./education";
 import { OpenSource } from "./open-source";
+import { Suspense } from "react";
+import { AccordionContentSkeleton } from "./skeleton/accordion-content";
   
 export function ResumeAccordion(){
     return <div className="max-w-3xl w-full">
@@ -21,7 +23,9 @@ export function ResumeAccordion(){
         </H3>
     </AccordionTrigger>
     <AccordionContent>
-     <AboutMe />
+      <Suspense fallback={<AccordionContentSkeleton />}>
+      <AboutMe />
+      </Suspense>
     </AccordionContent>
   </AccordionItem>
   <AccordionItem value="experience">
@@ -31,7 +35,9 @@ export function ResumeAccordion(){
         </H3>
     </AccordionTrigger>
     <AccordionContent>
+      <Suspense fallback={<AccordionContentSkeleton />}>
       <Experience />
+      </Suspense>
     </AccordionContent>
   </AccordionItem>
   <AccordionItem value="skills">
@@ -41,7 +47,9 @@ export function ResumeAccordion(){
         </H3>
     </AccordionTrigger>
     <AccordionContent>
+      <Suspense fallback={<AccordionContentSkeleton />}>
       <Skills />
+      </Suspense>
     </AccordionContent>
   </AccordionItem>
   <AccordionItem value="education">
@@ -51,7 +59,9 @@ export function ResumeAccordion(){
         </H3>
     </AccordionTrigger>
     <AccordionContent>
+      <Suspense fallback={<AccordionContentSkeleton />}>
       <Education />
+      </Suspense>
     </AccordionContent>
   </AccordionItem>
   <AccordionItem value="open-source">
@@ -61,7 +71,9 @@ export function ResumeAccordion(){
         </H3>
     </AccordionTrigger>
     <AccordionContent>
+      <Suspense fallback={<AccordionContentSkeleton />}>
       <OpenSource />
+      </Suspense>
     </AccordionContent>
   </AccordionItem>
 </Accordion>
