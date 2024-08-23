@@ -22,33 +22,31 @@ export const ContactEmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
     <h1 style={header}>Hi, {name}! 
         {company && <span> from {company}</span>}
     </h1>
-    <p>Thank you for reaching out regarding <strong>{reason}</strong>.</p>
-        <br />
+    <p style={block}>Thank you for reaching out regarding <strong>{reason}</strong>.</p>
         <div style={chatbubble}>
         <p style={chatbubbleHeader}>Message from {name}:</p>
         <p style={chatbubbleContent}>{message}</p>
         </div>
-        <br />
     <hr />
-    <p>This is the start of our conversation, please feel free to reply to this thread as necessary.</p>
-    <p>I will try to look into this mail ASAP.</p>
-    <p>Regards</p>
-    <p>Ayush.</p>
+    <p style={block}>This is the start of our conversation, please feel free to reply to this thread as necessary.</p>
+    <p style={block}>I will try to look into this mail ASAP.</p>
+    <p style={block}>Regards</p>
+    <p style={block}>Ayush.</p>
     <br />
     <div style={footer}> 
-        <p>Meanwhile please free to read my blogs: 
+        <p style={block}>Meanwhile please free to read my blogs: 
             {" "}<a style={url} href="https://zackozack.xyz/blogs" target="_blank" rel="noopener noreferrer">zackozack.xyz/blogs</a>
         </p>
     </div>
   </div>
 );
 
+const block: React.CSSProperties = {
+    display: 'block',
+}
+
 const container: React.CSSProperties = {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'stretch',
-    gap: '5px',
+    ...block,
     textAlign: 'left',
     padding: '1rem',
     margin: '1rem',
@@ -60,15 +58,13 @@ const container: React.CSSProperties = {
 }
 
 const header: React.CSSProperties = {
+    ...block,
     fontSize: '1.5rem',
     fontWeight: 'bold',
 }
 
 const chatbubble: React.CSSProperties = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'stretch',
-    justifyContent: 'start',
+    ...block,
     backgroundColor: '#f9f9f9',
     padding: '1rem',
     borderRadius: '3px',
@@ -79,17 +75,20 @@ const chatbubble: React.CSSProperties = {
 }
 
 const chatbubbleHeader: React.CSSProperties = {
+    ...block,
     fontSize: '1rem',
     fontWeight: 'bold',
     color: '#333',
 }
 
 const chatbubbleContent: React.CSSProperties = {
+    ...block,
     fontSize: '1rem',
     color: '#333',
 }
 
 const footer: React.CSSProperties = {
+    ...block,
     paddingTop: '1rem',
     fontSize: '1rem',
     color: '#333',
