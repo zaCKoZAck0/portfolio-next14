@@ -1,6 +1,10 @@
-import Image from "next/image";
-import { H1 } from "~/components/typography";
 import { Hero } from "./_components/hero";
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About Me | zaCKoZAck',
+  description: 'I am a fullstack software engineer who loves to build things for the web.',
+}
 
 export default function Home() {
   return (
