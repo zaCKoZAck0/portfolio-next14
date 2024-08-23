@@ -21,6 +21,8 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FloatingDock } from "~/components/floating-dock";
 import { useToast } from "~/components/ui/use-toast";
 import { MailSentSuccess } from "~/components/animated-icon";
+import { SendEmail } from "~/lib/send-mail";
+import { ContactEmailTemplate } from "~/components/email-templates/contact-email";
 
 const formSchema = z.object({
     name: z.string({
@@ -57,15 +59,35 @@ export function ContactForm(){
   })
  
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values)
+    const res = await SendEmail({
+      email: values.email,
+      subject: values.category,
+      template: ContactEmailTemplate({
+        name: values.name,
+        company: values.company,
+        message: values.message,
+        reason: values.category
+      })
+    });
+
+    if (res.error) {
+      alert(res.errorMessage)
+      toast({
+        title: "Error sending mail",
+        description: "An error occurred while sending the mail.",
+        icon: <SendIcon />,
+        variant: "destructive",
+      });
+      return;
+    } else {
     toast({
         title: "Mail Sent!",
         description: "I will get back to you as soon as possible.",
         icon: <MailSentSuccess />,
-  })
+  })};
 }
   return (
     <>
