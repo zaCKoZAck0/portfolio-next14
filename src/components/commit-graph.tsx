@@ -31,7 +31,7 @@ export function CommitGraph({contributions}: CommitGraphProps) {
     }, [contributions]);
   return (
     <section>
-      <div className="flex flex-col items-center justify-center border-2 border-primary/50 py-3">
+      <div className="flex flex-col items-center justify-center border-2 border-primary/50 md:py-3 py-2">
         <div id="contributions" className="flex gap-1">
           {commitsData.map((week, i) => (
             <div
@@ -46,7 +46,7 @@ export function CommitGraph({contributions}: CommitGraphProps) {
                   key={`week-${i}-day-${j}`}
                   id={`week-${i}-day-${j}`}
                   className={cn(
-                    "h-1 w-1 sm:h-2 sm:w-2 md:h-2.5 md:w-2.5",
+                    "h-[5px] w-[5px] sm:h-2 sm:w-2 md:h-2.5 md:w-2.5",
                     getColor(commitCount),
                   )}
                 />

@@ -16,7 +16,7 @@ export function ResumeAccordion(){
         <Accordion type="single" collapsible defaultValue="about-me">
   <AccordionItem value="about-me">
     <AccordionTrigger className="text-4xl hover:no-underline">
-        <H3 className="text-4xl">
+        <H3 className="md:text-4xl text-3xl">
         About Me
         </H3>
     </AccordionTrigger>
@@ -26,7 +26,7 @@ export function ResumeAccordion(){
   </AccordionItem>
   <AccordionItem value="experience">
   <AccordionTrigger className="text-4xl hover:no-underline">
-        <H3 className="text-4xl">
+        <H3 className="md:text-4xl text-3xl">
         Experience
         </H3>
     </AccordionTrigger>
@@ -36,7 +36,7 @@ export function ResumeAccordion(){
   </AccordionItem>
   <AccordionItem value="skills">
   <AccordionTrigger className="text-4xl hover:no-underline">
-        <H3 className="text-4xl">
+        <H3 className="md:text-4xl text-3xl">
         Skills
         </H3>
     </AccordionTrigger>
@@ -46,7 +46,7 @@ export function ResumeAccordion(){
   </AccordionItem>
   <AccordionItem value="education">
   <AccordionTrigger className="text-4xl hover:no-underline">
-        <H3 className="text-4xl">
+        <H3 className="md:text-4xl text-3xl">
         Education
         </H3>
     </AccordionTrigger>
@@ -56,7 +56,7 @@ export function ResumeAccordion(){
   </AccordionItem>
   <AccordionItem value="open-source">
   <AccordionTrigger className="text-4xl hover:no-underline">
-        <H3 className="text-4xl">
+        <H3 className="md:text-4xl text-3xl">
         Open Source
         </H3>
     </AccordionTrigger>

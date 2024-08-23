@@ -3,7 +3,7 @@ import { CommitGraph } from "~/components/commit-graph";
 import { H3, H4, P } from "~/components/typography";
 import {data} from '~/data/github-data.json';
 
-export function OpenSource() {
+export async function OpenSource() {
     function getLastMonthCommits(){
         return data.user.contributionsCollection.contributionCalendar.weeks.slice(-4).reduce((acc, week) => {
             return acc + week.contributionDays.reduce((acc, day) => {
@@ -12,9 +12,10 @@ export function OpenSource() {
         }, 0);
     }
     return <section>
-        <table className="text-lg">
+        <table className="md:text-lg text-sm">
+            <tbody>
             <tr>
-                <td className="text-muted-foreground pr-4">
+                <td className="text-muted-foreground md:pr-4">
                     Total Repositories:
                 </td>
                 <td className="font-semibold">
@@ -22,7 +23,7 @@ export function OpenSource() {
                 </td>
             </tr>
             <tr>
-                <td className="text-muted-foreground pr-4">
+                <td className="text-muted-foreground md:pr-4">
                     Top Repository:
                 </td>
                 <td className="font-semibold">
@@ -30,30 +31,33 @@ export function OpenSource() {
                 </td>
             </tr>
             <tr>
-                <td className="text-muted-foreground pr-4">
+                <td className="text-muted-foreground md:pr-4">
                     PRs Merged:
                 </td>
                 <td className="font-semibold flex items-center">
                     {data.user.pullRequests.totalCount} 
-                    <GitPullRequest className="inline-block ml-1 text-orange-200 size-5" />
+                    <GitPullRequest className="inline-block ml-3 mr-1 text-orange-200 md:size-5 size-4" />
+                    Pull Requests
                 </td>
             </tr>
             <tr>
-                <td className="text-muted-foreground pr-4">
+                <td className="text-muted-foreground md:pr-4">
                     Issues Open:
                 </td>
                 <td className="font-semibold flex items-center">
                     {data.user.issues.totalCount}
-                    <CircleDot className="inline-block ml-1 text-orange-200 size-5" />
+                    <CircleDot className="inline-block ml-3 mr-1 text-orange-200 md:size-5 size-4" />
+                    Issues
                 </td>
             </tr>
+            </tbody>
         </table>
         <p className="mt-2">github.com/zaCKoZAck0</p>
-        <H3 className="text-muted-foreground">
-            {getLastMonthCommits()} Github Contribution(s) in the last Month
+        <H3 className="text-muted-foreground text-sm md:text-2xl">
+            {getLastMonthCommits()} Github Contributions in the last Month
         </H3>
-        <H4 className="text-muted-foreground mb-1">
-            {data.user.contributionsCollection.contributionCalendar.totalContributions} Github Contribution(s) in the last Year (365 Days)
+        <H4 className="text-muted-foreground mb-1 text-xs md:text-xl">
+            {data.user.contributionsCollection.contributionCalendar.totalContributions} Github Contributions in the last Year (365 Days)
         </H4>
             <CommitGraph contributions={data.user.contributionsCollection.contributionCalendar.weeks} />
         </section>

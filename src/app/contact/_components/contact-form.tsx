@@ -3,7 +3,6 @@ import { Button } from "~/components/ui/button"
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -20,6 +19,8 @@ import { Link, SendHorizonalIcon, SendIcon } from "lucide-react";
 import { FaGithub, FaLinkedin, FaInstagram, FaDiscord } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FloatingDock } from "~/components/floating-dock";
+import { useToast } from "~/components/ui/use-toast";
+import { MailSentSuccess } from "~/components/animated-icon";
 
 const formSchema = z.object({
     name: z.string({
@@ -42,6 +43,7 @@ const formSchema = z.object({
   })
 
 export function ContactForm(){
+    const {toast} = useToast();
     // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -59,14 +61,19 @@ export function ContactForm(){
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values)
-  }
+    toast({
+        title: "Mail Sent!",
+        description: "I will get back to you as soon as possible.",
+        icon: <MailSentSuccess />,
+  })
+}
   return (
     <>
     <H3 className="mt-4">Send a mail Directly</H3>
     <p className="mb-4 text-sm text-muted-foreground">Please feel free to contact me regarding any <span className="text-orange-200">Opportunities</span>, <span className="text-orange-200">Queries</span> or if you <span className="text-orange-200">Need some Help</span> with your project(s).</p>
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <div className="flex items-center gap-4 w-full">
+        <div className="flex md:flex-row flex-col md:items-center gap-4 w-full">
         <FormField
           control={form.control}
           name="name"
@@ -165,41 +172,41 @@ export function ContactForm(){
             </FormItem>
           )}
         />
-        <div className="flex justify-end items-center">
+        <div className="flex justify-between items-center">
         <FloatingDock items={
                     [
                         {
                             title: "GitHub",
-                            icon: <FaGithub className="size-10" />,
+                            icon: <FaGithub className="md:size-10 size-5" />,
                             href: ""
                         },
                         {
                             title: "LinkedIn",
-                            icon: <FaLinkedin className="size-10" />,
+                            icon: <FaLinkedin className="md:size-10 size-5" />,
                             href: ""
                         },
                         {
                             title: "X.com",
-                            icon: <FaXTwitter className="size-10" />,
+                            icon: <FaXTwitter className="md:size-10 size-5" />,
                             href: ""
                         },
                         {
                             title: "Instagram",
-                            icon: <FaInstagram className="size-10" />,
+                            icon: <FaInstagram className="md:size-10 size-5" />,
                             href: ""
                         },
                         {
                             title: "Discord",
-                            icon: <FaDiscord className="size-10" />,
+                            icon: <FaDiscord className="md:size-10 size-5" />,
                             href: ""
                         }
 
                     ]
                 } />
-        <Button type="submit" size='lg'>
-            <H3 className="flex items-center">
+        <Button type="submit">
+            <H3 className="flex items-center text-base">
                 Send Mail
-                <SendHorizonalIcon className="size-7 ml-2" />
+                <SendHorizonalIcon className="md:size-7 size-5 ml-2" />
             </H3>
         </Button>
         </div>

@@ -37,7 +37,7 @@ export function CopyableText({
     <Tooltip>
     <TooltipTrigger asChild>
     <Button size='icon' variant={hasCopied?'success':'ghost'} className="ml-1 h-auto w-auto p-1.5" onClick={copyToClipboard}>
-        {hasCopied ? <Check className="h-5 w-5" /> : <Copy className="h-5 w-5" />}
+        {hasCopied ? <Check className="md:size-5 size-4" /> : <Copy className="md:size-5 size-4" />}
     </Button>
     </TooltipTrigger>
     <TooltipContent>

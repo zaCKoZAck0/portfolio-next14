@@ -1,11 +1,13 @@
 import { CopyableText } from "~/components/typography";
+import { getRelativeDate } from "~/lib/date";
 
 export function AboutMe() {
     return <section>
         <div>
-            <table className="text-lg">
+            <table className="md:text-lg text-xs">
+                <tbody>
                 <tr>
-                    <td className="text-muted-foreground pr-4">
+                    <td className="text-muted-foreground md:pr-4">
                         Name:
                     </td>
                     <td className="font-semibold">
@@ -13,15 +15,15 @@ export function AboutMe() {
                     </td>
                 </tr>
                 <tr>
-                    <td className="text-muted-foreground pr-4">
+                    <td className="text-muted-foreground md:pr-4">
                         Age:
                     </td>
                     <td className="font-semibold">
-                        22 Year(s) 3 Month(s) 12 Day(s)
+                        {getRelativeDate(new Date("2001-11-30"))}
                     </td>
                 </tr>
                 <tr>
-                    <td className="text-muted-foreground pr-4">
+                    <td className="text-muted-foreground md:pr-4">
                         Nationality:
                     </td>
                     <td className="font-semibold">
@@ -30,7 +32,7 @@ export function AboutMe() {
                     </td>
                 </tr>
                 <tr>
-                    <td className="text-muted-foreground pr-4">
+                    <td className="text-muted-foreground md:pr-4">
                         Timezone:
                     </td>
                     <td className="font-semibold">
@@ -38,7 +40,7 @@ export function AboutMe() {
                     </td>
                 </tr>
                 <tr>
-                    <td className="text-muted-foreground pr-4">
+                    <td className="text-muted-foreground md:pr-4">
                         Languages:
                     </td>
                     <td className="font-semibold">
@@ -46,7 +48,7 @@ export function AboutMe() {
                     </td>
                 </tr>
                 <tr>
-                    <td className="text-muted-foreground pr-4">
+                    <td className="text-muted-foreground md:pr-4">
                         Email:
                     </td>
                     <td className="font-semibold">
@@ -56,7 +58,7 @@ export function AboutMe() {
                     </td>
                 </tr>
                 <tr>
-                    <td className="text-muted-foreground pr-4">
+                    <td className="text-muted-foreground md:pr-4">
                         Phone Number:
                     </td>
                     <td className="font-semibold">
@@ -65,6 +67,7 @@ export function AboutMe() {
                         </CopyableText>
                     </td>
                 </tr>
+                </tbody>
             </table>
         </div>
     </section>

@@ -1,11 +1,41 @@
+import { MobileNav } from "./mobile-nav";
 import NavTabs from "./nav-tabs";
+
+export type NavItem = {
+  label: string;
+  pathname: string;
+}
+
+const NavItems: NavItem[] = [
+  {
+      label: 'About Me',
+      pathname: '/'
+  },
+  {
+      label: 'Resume',
+      pathname: '/resume'
+  },
+  {
+      label: 'Projects',
+      pathname: '/projects'
+  },
+  {
+      label: 'Blogs',
+      pathname: '/blogs'
+  },
+  {
+      label: 'Contact Me',
+      pathname: '/contact'
+  },
+];
 
 export function Navbar() {
   return (
-    <div
-    className="flex items-center justify-center w-full p-1 fixed top-0 z-50"
+    <nav
+    className="flex items-center justify-center w-full p-1 fixed top-0 z-50 bg-background md:bg-transparent"
     >
-        <NavTabs tabs={["About Me", "Resume", "Blogs", "Contact Me"]} />
-    </div>
+        <NavTabs tabs={NavItems} />
+        <MobileNav tabs={NavItems} />
+    </nav>
   );
 }

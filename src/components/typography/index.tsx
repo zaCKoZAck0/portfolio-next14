@@ -17,7 +17,7 @@ export function H1({
   ...props
 }: React.HtmlHTMLAttributes<HTMLHeadingElement>) {
   return <h1
-  className={cn(className,"scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl", sora.className)}
+  className={cn(className,"scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl", sora.className, className)}
   {...props}>{children}</h1>;
 }
 
