@@ -1,9 +1,10 @@
 import { CircleDot, GitPullRequest } from "lucide-react";
 import { CommitGraph } from "~/components/commit-graph";
 import { H3, H4, P } from "~/components/typography";
-import {data} from '~/data/github-data.json';
+import json from '~/data/github-data.json';
 
 export async function OpenSource() {
+    const data = json.data;
     function getLastMonthCommits(){
         return data.user.contributionsCollection.contributionCalendar.weeks.slice(-4).reduce((acc, week) => {
             return acc + week.contributionDays.reduce((acc, day) => {

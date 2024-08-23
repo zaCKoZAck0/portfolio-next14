@@ -40,10 +40,11 @@ export function CommitGraph({contributions}: CommitGraphProps) {
               className={cn("flex flex-col gap-1", i < 20 ? "hidden md:flex" : "flex")}
             >
               {week.map((commitCount, j) => (
-                <Tooltip>
+                <Tooltip
+                key={`week-${i}-day-${j}`}
+                >
                   <TooltipTrigger asChild>
                   <div
-                  key={`week-${i}-day-${j}`}
                   id={`week-${i}-day-${j}`}
                   className={cn(
                     "h-[5px] w-[5px] sm:h-2 sm:w-2 md:h-2.5 md:w-2.5",
