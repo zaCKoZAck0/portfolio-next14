@@ -20,10 +20,6 @@ const NavItems: NavItem[] = [
       pathname: '/projects'
   },
   {
-      label: 'Blogs',
-      pathname: '/blogs'
-  },
-  {
       label: 'Contact Me',
       pathname: '/contact'
   },
