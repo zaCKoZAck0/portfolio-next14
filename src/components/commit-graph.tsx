@@ -31,13 +31,13 @@ export function CommitGraph({contributions}: CommitGraphProps) {
     }, [contributions]);
   return (
     <section>
-      <div className="flex flex-col items-center justify-center border-2 border-primary/50 md:py-3 py-2">
-        <div id="contributions" className="flex gap-1">
+      <div className="flex flex-col items-center justify-center overflow-x-auto border-2 p-2 border-primary/50 md:w-fit">
+        <div id="contributions" className="flex gap-1 flex-shrink-0 overflow-x-auto w-full">
           {commitsData.map((week, i) => (
             <div
               key={`week-${i}`}
               id={`week-${i}`}
-              className={cn("flex flex-col gap-1", i < 20 ? "hidden md:flex" : "flex")}
+              className="flex flex-col flex-shrink-0 gap-1"
             >
               {week.map((commitCount, j) => (
                 <Tooltip
@@ -47,7 +47,7 @@ export function CommitGraph({contributions}: CommitGraphProps) {
                   <div
                   id={`week-${i}-day-${j}`}
                   className={cn(
-                    "h-[5px] w-[5px] sm:h-2 sm:w-2 md:h-2.5 md:w-2.5",
+                    "h-2.5 w-2.5 rounded-[2px]",
                     getColor(commitCount),
                   )}
                 />
