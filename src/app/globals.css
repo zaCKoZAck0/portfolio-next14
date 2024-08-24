@@ -58,3 +58,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.link {
+  @apply flex items-center text-lg font-semibold text-orange-200;
+}

@@ -1,4 +1,4 @@
-import { CircleDot, GitPullRequest } from "lucide-react";
+import { ArrowUpRight, CircleDot, GitPullRequest } from "lucide-react";
 import { CommitGraph } from "~/components/commit-graph";
 import { H3, H4, P } from "~/components/typography";
 import json from '~/data/github-data.json';
@@ -53,7 +53,11 @@ export async function OpenSource() {
             </tr>
             </tbody>
         </table>
-        <p className="mt-2">github.com/zaCKoZAck0</p>
+        <a href={data.user.url}>
+        <p className="link group">github.com/zaCKoZAck0
+        <ArrowUpRight className="inline-block ml-1 size-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />   
+        </p>
+        </a>
         <H3 className="text-muted-foreground text-sm md:text-2xl">
             {getLastMonthCommits()} Github Contributions in the last Month
         </H3>
