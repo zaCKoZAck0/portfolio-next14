@@ -72,3 +72,5 @@ export function H2({
   }
 
   export {CopyableText} from "./copy-to-clipboard";
+
+  export {A} from "./link";
