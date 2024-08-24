@@ -1,7 +1,8 @@
 import { Logo } from "~/components/navigation/logo";
-import { H1, H4 } from "~/components/typography";
+import { H1, H4, P } from "~/components/typography";
 import { Button } from "~/components/ui/button";
 import { ArrowRight } from 'lucide-react'
+import { FaDiscord } from "react-icons/fa6";
 
 export function Hero() {
   return (
@@ -15,7 +16,7 @@ export function Hero() {
         <div className="flex md:flex-row flex-col items-center justify-center gap-4">
             <Button className="rounded-full font-semibold text-xl" size='lg'>
                 <H4>
-                    Read More
+                    About Me
                 </H4>
             </Button>
             <Button className="rounded-full font-semibold text-xl group" size='lg' variant='secondary'>
