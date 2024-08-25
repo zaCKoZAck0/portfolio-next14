@@ -3,7 +3,7 @@ dotenv.config();
 const fs = require('fs');
 const username = 'zaCKoZAck0';
 const token  = process.env.GITHUB_PERSONAL_ACCESS_TOKEN;
-export default function init(){
+function init(){
     const headers = {
         'Authorization': `bearer ${token}`,
     }
@@ -54,3 +54,5 @@ export default function init(){
 }
 
 init();
+
+module.exports = init;
