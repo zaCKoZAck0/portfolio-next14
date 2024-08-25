@@ -66,7 +66,7 @@ const FloatingDockMobile = ({
                 <Link
                   href={item.href}
                   key={item.title}
-                  className="h-10 w-10 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center"
+                  className="size-12 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center"
                 >
                   <div>{item.icon}</div>
                 </Link>
@@ -78,7 +78,7 @@ const FloatingDockMobile = ({
       <button
         onClick={() => setOpen(!open)}
         type="button"
-        className="h-10 w-10 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center"
+        className="size-12 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center"
       >
         <Hash className="h-5 w-5" />
       </button>
