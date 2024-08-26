@@ -14,7 +14,7 @@ A portfolio website made with:
 
 ### Pages
 - [x] Hero Section
-- [x] About Me
+- [ ] About Me
 - [x] Resume Page
     - [x] About Me
     - [x] Experience
