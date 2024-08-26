@@ -3,6 +3,7 @@ import { H1, H4, P } from "~/components/typography";
 import { Button } from "~/components/ui/button";
 import { ArrowRight } from 'lucide-react'
 import { FaDiscord } from "react-icons/fa6";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -19,12 +20,14 @@ export function Hero() {
                     About Me
                 </H4>
             </Button>
+            <Link href="/resume">
             <Button className="rounded-full font-semibold text-xl group" size='lg' variant='secondary'>
                 <H4>
                     Resume
                 </H4>
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={24} />
             </Button>
+            </Link>
         </div>
       <div className="absolute size-80 bg-primary rounded-full opacity-15 blur-3xl -z-10" />
     </div>
