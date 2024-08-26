@@ -14,7 +14,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "~
 import * as z from "zod";
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { H3, H4, P } from "~/components/typography";
+import { H2, H3, H4, P } from "~/components/typography";
 import { Link, SendHorizonalIcon, SendIcon } from "lucide-react";
 import { FaGithub, FaLinkedin, FaInstagram, FaDiscord } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -91,8 +91,8 @@ export function ContactForm(){
 }
   return (
     <>
-    <H3 className="mt-4">Send a mail Directly</H3>
-    <p className="mb-4 text-sm text-muted-foreground">Please feel free to contact me regarding any <span className="text-orange-200">Opportunities</span>, <span className="text-orange-200">Queries</span> or if you <span className="text-orange-200">Need some Help</span> with your project(s).</p>
+    <H2>Send a mail</H2>
+    <p className="mb-4 mt-2 text-sm text-muted-foreground">Please feel free to contact me regarding any <span className="text-orange-200">Opportunities</span>, <span className="text-orange-200">Queries</span> or if you <span className="text-orange-200">Need some Help</span> with your project/idea.</p>
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <div className="flex md:flex-row flex-col md:items-center gap-4 w-full">
@@ -133,6 +133,23 @@ export function ContactForm(){
         </div>
         <FormField
           control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem className="w-full">
+              <FormLabel className="text-muted-foreground">
+                <H4 className="text-base">
+                Email
+                </H4>
+              </FormLabel>
+              <FormControl>
+                <Input placeholder="mail@example.com" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
           name="category"
           render={({ field }) => (
             <FormItem>
@@ -156,23 +173,6 @@ export function ContactForm(){
                   <SelectItem value="Others">Others</SelectItem>
                 </SelectContent>
               </Select>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem className="w-full">
-              <FormLabel className="text-muted-foreground">
-                <H4 className="text-base">
-                Email
-                </H4>
-              </FormLabel>
-              <FormControl>
-                <Input placeholder="mail@example.com" {...field} />
-              </FormControl>
               <FormMessage />
             </FormItem>
           )}
