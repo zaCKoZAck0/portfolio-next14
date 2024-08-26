@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "~/components/navigation";
 import { cn } from "~/lib/utils";
 import { Providers } from "./providers";
+import { ResumeDownloadButton } from "~/components/download-resume-button";
 
 const mono = JetBrains_Mono({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       <Providers>
         <Navbar />
         {children}
+        <ResumeDownloadButton />
         </Providers>
         </body>
     </html>

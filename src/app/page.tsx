@@ -1,7 +1,5 @@
-import Link from "next/link";
 import { Hero } from "./_components/hero";
 import type { Metadata } from 'next'
-import { ArrowUpRight } from "lucide-react";
 import { A } from "~/components/typography";
 
 export const metadata: Metadata = {
