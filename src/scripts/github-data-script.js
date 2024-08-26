@@ -49,7 +49,7 @@ function init(){
     }
     const response = fetch('https://api.github.com/graphql', { method: 'POST', body: JSON.stringify(body), headers: headers })
     response.then(res => res.json()).then(data => {
-        fs.writeFileSync('src/data/github-data.json', JSON.stringify(data, null, 2));
+        fs.writeFileSync('data/github-data.json', JSON.stringify(data, null, 2));
     })
 }
 

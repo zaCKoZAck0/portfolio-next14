@@ -1,7 +1,7 @@
-import { ArrowUpRight, CircleDot, GitPullRequest } from "lucide-react";
+import { CircleDot, GitPullRequest } from "lucide-react";
 import { CommitGraph } from "~/components/commit-graph";
-import { A, H3, H4, P } from "~/components/typography";
-import json from '~/data/github-data.json';
+import { A, H3, H4 } from "~/components/typography";
+import json from '../../../../data/github-data.json';
 
 export async function OpenSource() {
     const data = json.data;
