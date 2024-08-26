@@ -4,6 +4,8 @@ import "./globals.css";
 import { Navbar } from "~/components/navigation";
 import { cn } from "~/lib/utils";
 import { Providers } from "./providers";
+import { Analytics } from '@vercel/analytics/react';
+
 
 const mono = JetBrains_Mono({ subsets: ["latin"] });
 
@@ -22,7 +24,9 @@ export default function RootLayout({
         <Providers>
       <body className={cn(mono.className, "mt-12")}>
         <Navbar />
-        {children}</body>
+        {children}
+        <Analytics />
+        </body>
         </Providers>
     </html>
   );
