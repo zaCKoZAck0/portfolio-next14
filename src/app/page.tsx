@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { A } from "~/components/typography";
 
 export const metadata: Metadata = {
-  title: 'About Me | zaCKoZAck',
+  title: 'Portfolio | zaCKoZAck',
   description: 'I am a fullstack software engineer who loves to build things for the web.',
 }
 

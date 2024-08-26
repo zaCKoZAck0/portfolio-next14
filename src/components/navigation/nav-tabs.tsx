@@ -7,6 +7,7 @@ import { H4 } from "../typography";
 import { Logo } from "./logo";
 import { NavItem } from ".";
 import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
 interface TabProps {
   text: string;
@@ -22,12 +23,16 @@ export default function NavTabs({ tabs }: { tabs: NavItem[] }) {
     const matchedTab = tabs.find((tab) => tab.pathname === pathname);
     if (matchedTab) {
       setSelected(matchedTab.pathname);
+    } else {
+      setSelected('');
     }
   }, [pathname, tabs]);
 
   return (
     <div className="md:flex flex-wrap items-center justify-center gap-2 bg-secondary rounded-full border-2 p-2 hidden">
+      <Link href='/'>
       <Logo className="text-xl px-3" />
+      </Link>
       {tabs.map((tab) => (
         <Tab text={tab.label} selected={selected === tab.pathname} url={tab.pathname} key={tab.label} />
       ))}
@@ -44,7 +49,7 @@ const Tab = ({ text, selected, url }: TabProps) => {
       })} 
       className={cn(
         "relative rounded-full px-4 py-1 text-sm transition-all",
-        selected ? "text-primary-foreground" : "text-secondary-foreground hover:font-bold"
+        selected ? "text-primary-foreground" : "text-secondary-foreground hover:text-primary"
       )}
     >
       <H4 className="relative z-50 min-w-20">{text}</H4>
