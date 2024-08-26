@@ -1,6 +1,6 @@
 import { Tooltip } from "@radix-ui/react-tooltip";
 import React, { useMemo } from "react";
-import {ContributionCalendar} from '~/data/github-data'
+import {ContributionCalendar} from '~/types/github-data'
 
 import { cn } from "~/lib/utils";
 import { TooltipContent, TooltipTrigger } from "./ui/tooltip";
