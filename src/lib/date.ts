@@ -1,25 +1,32 @@
 export function getRelativeDate(date: Date): string {
     const now = new Date();
-    let relativeDate = '';
-    const diff = now.getTime() - date.getTime();
-    const seconds = Math.floor(diff / 1000);
-    const minutes = Math.floor(seconds / 60);
-    const hours = Math.floor(minutes / 60);
-    const totalDays = Math.floor(hours / 24);
-    const years = Math.floor(totalDays / 365);
-    const remainingDaysAfterYrs = totalDays % 365;
-    const months = Math.floor(remainingDaysAfterYrs / 30);
-    const remainingDays = remainingDaysAfterYrs % 30;
+    
+    let years = now.getFullYear() - date.getFullYear();
+    let months = now.getMonth() - date.getMonth();
+    let days = now.getDate() - date.getDate();
 
+    if (days < 0) {
+        months -= 1;
+        const previousMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+        days += previousMonth.getDate();
+    }
 
-    if(years>0){
-        relativeDate = relativeDate + years + ' year' + (years>1?'s':'');
+    if (months < 0) {
+        years -= 1;
+        months += 12;
     }
-    if(months>0){
-        relativeDate = relativeDate + (relativeDate.length>0?', ':'') + months + ' month' + (months>1?'s':'');
+
+    const parts: string[] = [];
+
+    if (years > 0) {
+        parts.push(`${years} year${years > 1 ? 's' : ''}`);
     }
-    if(remainingDays>0){
-        relativeDate = relativeDate + (relativeDate.length>0?', ':'') + remainingDays + ' day' + (remainingDays>1?'s':'');
+    if (months > 0) {
+        parts.push(`${months} month${months > 1 ? 's' : ''}`);
     }
-    return relativeDate;
+    if (days > 0) {
+        parts.push(`${days} day${days > 1 ? 's' : ''}`);
+    }
+
+    return parts.join(', ');
 }
