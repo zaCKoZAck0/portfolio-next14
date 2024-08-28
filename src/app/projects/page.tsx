@@ -1,9 +1,12 @@
 import { H1 } from '~/components/typography'
-import Link from 'next/link'
-import {Button} from '~/components/ui/button'
-import {ChevronDown} from 'lucide-react'
 import {ProjectCard} from '~/components/project-card'
 import githubData from '../../../data/github-data.json'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Projects | zackozack',
+    description: 'I am a fullstack software engineer who loves to build things for the web.',
+  }
 
 export default function Projects(){
     return <main className="flex justify-center container">

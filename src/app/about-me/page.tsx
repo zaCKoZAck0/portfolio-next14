@@ -8,6 +8,12 @@ import recommendationsData from '../../../data/recommendations.json'
 import githubData from '../../../data/github-data.json'
 import { ProjectCard } from "~/components/project-card";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'About Me | zackozack',
+    description: 'I am a fullstack software engineer who loves to build things for the web.',
+  }
 
 export default function AboutMe(){
     return <main className="flex justify-center container">
