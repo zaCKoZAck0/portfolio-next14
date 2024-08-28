@@ -1,4 +1,4 @@
-export type ContributionDay = {
+type ContributionDay = {
     color: string;
     contributionCount: number;
     date: string;
@@ -12,19 +12,47 @@ export type ContributionCalendar = {
     firstDay: string;
 };
 
-export type ContributionsCollection = {
+type ContributionsCollection = {
     contributionCalendar: ContributionCalendar;
+};
+
+type CommitNode = {
+    committedDate: string;
+    message: string;
+    url: string;
+};
+
+type CommitHistory = {
+    edges: { node: CommitNode }[];
+};
+
+type DefaultBranchRef = {
+    target: {
+        history: CommitHistory;
+    };
+};
+
+type PrimaryLanguage = {
+    name: string;
+    color: string;
 };
 
 export type RepositoryNode = {
     nameWithOwner: string;
+    description: string | null; // Description might be null if not specified
+    stargazerCount: number;
+    forkCount: number;
+    url: string;
+    homepageUrl: string | null; // Homepage might be null if not specified
+    primaryLanguage: PrimaryLanguage | null; // Language might be null if not specified
+    defaultBranchRef: DefaultBranchRef | null; // Branch reference might be null if not available
 };
 
-export type TopRepositories = {
+type TopRepositories = {
     nodes: RepositoryNode[];
 };
 
-export type User = {
+type User = {
     name: string;
     issues: { totalCount: number };
     pullRequests: { totalCount: number };
@@ -34,10 +62,6 @@ export type User = {
     contributionsCollection: ContributionsCollection;
 };
 
-export type Data = {
+type Data = {
     user: User;
-};
-
-export type GithubData = {
-    data: Data;
 };

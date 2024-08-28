@@ -1,0 +1,24 @@
+{
+    "recommendations": [
+        {
+        "linkedinURL": "",
+        "name": "dummy record",
+        "designation": "",
+        "company": "",
+        "relation": "",
+        "recommendation": "",
+        "image": "",
+        "isPinned": false
+        },
+        {
+            "linkedinURL": "https://www.linkedin.com/in/akshattrivedi9/",
+            "name": "Akshat Trivedi",
+            "designation": "Systems Engineer",
+            "company": "Infosys",
+            "relation": "Akshat worked with Ayush on the same college project team",
+            "recommendation": "I made 2 projects with Ayush, The last one also our final year project (NFT Marketplace), with ayush as the team leader. He managed the projects really well and managed tasks efficiently, he also helped us tackle many challenging situations as our project was a different and difficult one.",
+            "image": "https://utfs.io/f/e468694b-d3a3-4b0a-a0a1-fd2bcf039e22-5eotnz.jpg",
+            "isPinned": true
+        }
+    ]
+}

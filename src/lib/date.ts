@@ -1,4 +1,4 @@
-export function getRelativeDate(date: Date): string {
+export function getRelativeDate(date: Date, short = false): string {
     const now = new Date();
     
     let years = now.getFullYear() - date.getFullYear();
@@ -26,6 +26,10 @@ export function getRelativeDate(date: Date): string {
     }
     if (days > 0) {
         parts.push(`${days} day${days > 1 ? 's' : ''}`);
+    }
+
+    if (short) {
+        return parts[0];
     }
 
     return parts.join(', ');
