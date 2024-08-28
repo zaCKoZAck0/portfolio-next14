@@ -1,8 +1,7 @@
 import { Logo } from "~/components/navigation/logo";
-import { H1, H4, P } from "~/components/typography";
+import { H1, H4 } from "~/components/typography";
 import { Button } from "~/components/ui/button";
 import { ArrowRight } from 'lucide-react'
-import { FaDiscord } from "react-icons/fa6";
 import Link from "next/link";
 
 export function Hero() {
@@ -15,11 +14,13 @@ export function Hero() {
         </span>
         </H1>
         <div className="flex md:flex-row flex-col items-center justify-center gap-4">
+            <Link href="/about-me">
             <Button className="rounded-full font-semibold text-xl" size='lg'>
                 <H4>
                     About Me
                 </H4>
             </Button>
+            </Link>
             <Link href="/resume">
             <Button className="rounded-full font-semibold text-xl group" size='lg' variant='secondary'>
                 <H4>
