@@ -19,7 +19,7 @@ export default function AboutMe(){
     return <main className="flex justify-center container">
     <section className="flex flex-col h-[calc(100vh-48px)] w-full max-w-3xl mt-10">
         <H2>Introduction</H2>
-        <table className="mb-10">
+        <table className="mb-5">
             <tbody>
                 <tr className="flex md:flex-row flex-col items-center justify-between">
                     <td className="w-fit">
