@@ -25,10 +25,10 @@ export function RecommendationCard({key, linkedinURL, name, designation, company
             <A href={linkedinURL}>
             <H3 className="text-xl">{name}</H3>
             </A>
-            <div className="flex items-center gap-2 text-muted-foreground">
-            <H4 className="text-lg">{designation}</H4> at <H4 className="text-lg">{company}</H4>
+            <div className="flex items-center md:gap-2 gap-1 text-muted-foreground text-xs">
+            <H4 className="text-xs text-nowrap overflow-hidden">{designation}</H4> at <H4 className="text-xs text-nowrap overflow-hidden">{company}</H4>
             </div>
-            <H4 className="text-sm font-light text-muted-foreground">{relation}</H4>
+            <H4 className="md:text-sm text-xs mt-1 font-light text-muted-foreground">{relation}</H4>
             <p className="text-xs pt-2 text-justify text-secondary-foreground">{recommendation}</p>
         </div>
      </div>   

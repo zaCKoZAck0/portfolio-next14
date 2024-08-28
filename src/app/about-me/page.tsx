@@ -21,7 +21,7 @@ export default function AboutMe(){
         <H2>Introduction</H2>
         <table className="mb-10">
             <tbody>
-                <tr className="flex items-center justify-between">
+                <tr className="flex md:flex-row flex-col items-center justify-between">
                     <td className="w-fit">
                         <ImageCarousel
                         items={
@@ -39,7 +39,7 @@ export default function AboutMe(){
                         }
                         />
                     </td>
-                    <td className="pl-10 text-justify text-secondary-foreground">
+                    <td className="md:pl-10 pt-3 md:pt-0 text-justify text-secondary-foreground">
                         <P>
                             {"Hello! I'm Ayush, also known as ZackoZack, depending on where you know me from. I'm a Fullstack Software Developer based in India 🇮🇳 with a passion for building web applications. I have expertise in Next.js, React, Node.js, and TypeScript, and I'm also well-versed in Java and Spring Boot. Currently, I work as a Software Engineer at Volkswagen Group."}
                         </P>

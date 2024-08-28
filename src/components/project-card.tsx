@@ -21,15 +21,16 @@ export function ProjectCard({
     primaryLanguage,
     defaultBranchRef
 }: ProjectCardProps){
-    return <div key={key} className="p-2">
-    <div className="space-y-1 p-4 bg-muted rounded-md">
-        <div className="flex justify-between items-center">
+    return <div key={key} className="md:p-2 py-2">
+    <div className="space-y-1 md:p-4 p-3 bg-muted rounded-md">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center">
         <A href={url}>
-            <FaGithub size={24} className="mr-2" /> {nameWithOwner}
+            <FaGithub size={24} className="mr-2 flex-shrink-0" /> 
+            <p className="text-sm md:text-base">{nameWithOwner}</p>
         </A>
-        <div className="flex items-center text-sm">
-        {stargazerCount>0 && <>{formatLargeNumber(stargazerCount)}<Star size={18} className="mx-2" /></>}
-        {forkCount>0 && <>{formatLargeNumber(forkCount)}<GitFork size={18} className="ml-2" /></>}
+        <div className="flex items-center md:text-sm text-xs md:pt-0 pt-1">
+        {stargazerCount>0 && <>{formatLargeNumber(stargazerCount)}<Star className="mx-2 size-4" /></>}
+        {forkCount>0 && <>{formatLargeNumber(forkCount)}<GitFork className="ml-2 size-4" /></>}
         </div>
         </div>
         {
@@ -46,7 +47,7 @@ export function ProjectCard({
                 </span>
             </a>
         }
-        <div className="flex items-center gap-6 text-xs text-secondary-foreground">
+        <div className="flex md:flex-row flex-col md:items-center md:gap-6 gap-1 text-xs text-secondary-foreground">
             {
                 defaultBranchRef?.target.history.edges.length && <div className="flex items-center">
                     <p>{getRelativeDate(new Date(defaultBranchRef.target.history.edges[0].node.committedDate || 0), true)} ago</p>
@@ -54,7 +55,7 @@ export function ProjectCard({
                     <p>on main</p>
                     </div>
             }
-        {primaryLanguage && <div className="flex text-sm text-muted-foreground items-center gap-2">
+        {primaryLanguage && <div className="md:flex text-sm hidden text-muted-foreground items-center gap-2">
             <div className="w-3 h-3 rounded-full" style={{backgroundColor: primaryLanguage.color}} />
             <p>{primaryLanguage.name}</p>
         </div>}
