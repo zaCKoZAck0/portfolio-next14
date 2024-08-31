@@ -6,7 +6,7 @@
         "totalCount": 9
       },
       "pullRequests": {
-        "totalCount": 30
+        "totalCount": 31
       },
       "url": "https://github.com/zaCKoZAck0",
       "repositoriesContributedTo": {
@@ -17,7 +17,7 @@
           {
             "nameWithOwner": "typehero/typehero",
             "description": "Connect, collaborate, and grow with a community of TypeScript developers",
-            "stargazerCount": 5656,
+            "stargazerCount": 5670,
             "forkCount": 406,
             "url": "https://github.com/typehero/typehero",
             "homepageUrl": "https://typehero.dev",
@@ -31,9 +31,9 @@
                   "edges": [
                     {
                       "node": {
-                        "committedDate": "2023-12-10T16:23:57Z",
-                        "message": "bug: background blur color fix on light mode (#1303)\n\nCo-authored-by: bautistaaa <chrisbautistaaa@gmail.com>",
-                        "url": "https://github.com/typehero/typehero/commit/175d1f5b4c4064ff27d93394a4885aa3b1032d2f"
+                        "committedDate": "2024-08-30T13:53:03Z",
+                        "message": "chore: fix light mode mentions (#1531)\n\n* chore: fix light mode mentions\r\n\r\n* refactor: update bio light mode visibility",
+                        "url": "https://github.com/typehero/typehero/commit/fe6e3da54c3472d6d83d0efc2015fc6251611adf"
                       }
                     }
                   ]
@@ -58,9 +58,9 @@
                   "edges": [
                     {
                       "node": {
-                        "committedDate": "2024-08-26T15:38:41Z",
-                        "message": "chore: Update readme",
-                        "url": "https://github.com/zaCKoZAck0/portfolio-next14/commit/8c3c92ab2e5d2e7b394abb5e65a2174af03e641e"
+                        "committedDate": "2024-08-28T17:47:27Z",
+                        "message": "refactor: added links",
+                        "url": "https://github.com/zaCKoZAck0/portfolio-next14/commit/808fc810e2a1c2f8249fee755547c0566126e789"
                       }
                     }
                   ]
@@ -152,8 +152,8 @@
           {
             "nameWithOwner": "formbricks/formbricks",
             "description": "Open Source Survey Platform",
-            "stargazerCount": 6344,
-            "forkCount": 1060,
+            "stargazerCount": 6354,
+            "forkCount": 1062,
             "url": "https://github.com/formbricks/formbricks",
             "homepageUrl": "https://formbricks.com",
             "primaryLanguage": {
@@ -294,7 +294,7 @@
             "#30a14e",
             "#216e39"
           ],
-          "totalContributions": 216,
+          "totalContributions": 223,
           "months": [
             {
               "totalWeeks": 1,
@@ -2815,10 +2815,22 @@
                   "weekday": 2
                 },
                 {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
+                  "color": "#40c463",
+                  "contributionCount": 5,
                   "date": "2024-08-28",
                   "weekday": 3
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-08-29",
+                  "weekday": 4
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 2,
+                  "date": "2024-08-30",
+                  "weekday": 5
                 }
               ],
               "firstDay": "2024-08-25"

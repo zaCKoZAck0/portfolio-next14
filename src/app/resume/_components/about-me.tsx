@@ -4,7 +4,7 @@ import { getRelativeDate } from "~/lib/date";
 import { Greet } from "./greet";
 
 export function AboutMe() {
-    let time = new Date().toLocaleTimeString("en-In",{
+    const time = new Date().toLocaleTimeString("en-In",{
         timeZone: "Asia/Kolkata",
         hour: "numeric",
         minute: "numeric",

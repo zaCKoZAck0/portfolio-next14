@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { ArrowLeftRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeftRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "~/lib/utils";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
@@ -20,10 +20,6 @@ export function ImageCarousel({ items: initialItems }: IImageCarouselProps) {
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % initialItems.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + initialItems.length) % initialItems.length);
   };
 
   const visibleIndices = [

@@ -62,6 +62,6 @@ type User = {
     contributionsCollection: ContributionsCollection;
 };
 
-type Data = {
+export type Data = {
     user: User;
 };
