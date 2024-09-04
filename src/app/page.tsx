@@ -1,6 +1,6 @@
 import { Hero } from './_components/hero';
 import type { Metadata } from 'next';
-import { A } from '~/components/typography';
+// import { A } from '~/components/typography';
 
 export const metadata: Metadata = {
   title: 'Portfolio | zaCKoZAck',
