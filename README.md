@@ -14,19 +14,21 @@ A portfolio website made with:
 
 ### Pages
 - [x] Hero Section
-- [ ] About Me
+- [x] About Me
 - [x] Resume Page
     - [x] About Me
     - [x] Experience
     - [x] Skills
     - [x] Eduction
     - [x] Open Source
-- [ ] Projects
+- [x] Projects
 - [ ] Blogs
 - [x] Contact Me
 
-### Features
-wip
+### Todo
+- [ ] Footer
+- [ ] Accessibility audit
+- [ ] Blog page / schema / interactions
 
 **Please :star star this repo, if you found this project helpful**
 
