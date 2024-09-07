@@ -3,10 +3,10 @@
     "user": {
       "name": "Ayush Kumar Yadav",
       "issues": {
-        "totalCount": 9
+        "totalCount": 10
       },
       "pullRequests": {
-        "totalCount": 31
+        "totalCount": 34
       },
       "url": "https://github.com/zaCKoZAck0",
       "repositoriesContributedTo": {
@@ -17,8 +17,8 @@
           {
             "nameWithOwner": "typehero/typehero",
             "description": "Connect, collaborate, and grow with a community of TypeScript developers",
-            "stargazerCount": 5670,
-            "forkCount": 406,
+            "stargazerCount": 5713,
+            "forkCount": 407,
             "url": "https://github.com/typehero/typehero",
             "homepageUrl": "https://typehero.dev",
             "primaryLanguage": {
@@ -31,9 +31,9 @@
                   "edges": [
                     {
                       "node": {
-                        "committedDate": "2024-08-30T13:53:03Z",
-                        "message": "chore: fix light mode mentions (#1531)\n\n* chore: fix light mode mentions\r\n\r\n* refactor: update bio light mode visibility",
-                        "url": "https://github.com/typehero/typehero/commit/fe6e3da54c3472d6d83d0efc2015fc6251611adf"
+                        "committedDate": "2024-09-07T01:21:18Z",
+                        "message": "refactor: improve URL shortener form (#1556)\n\n* refactor: improve URL shortener form",
+                        "url": "https://github.com/typehero/typehero/commit/144e48963d76a36afb6754a368926de49f7d4ed8"
                       }
                     }
                   ]
@@ -58,9 +58,33 @@
                   "edges": [
                     {
                       "node": {
-                        "committedDate": "2024-08-28T17:47:27Z",
-                        "message": "refactor: added links",
-                        "url": "https://github.com/zaCKoZAck0/portfolio-next14/commit/808fc810e2a1c2f8249fee755547c0566126e789"
+                        "committedDate": "2024-09-04T01:09:15Z",
+                        "message": "refactor: eslint issues",
+                        "url": "https://github.com/zaCKoZAck0/portfolio-next14/commit/60f4e7e1b45dae6f5604d50f21ce2e55e4c36c08"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "nameWithOwner": "zaCKoZAck0/leetcode",
+            "description": null,
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/leetcode",
+            "homepageUrl": null,
+            "primaryLanguage": null,
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": [
+                    {
+                      "node": {
+                        "committedDate": "2024-09-04T19:45:34Z",
+                        "message": "Create greedy.md",
+                        "url": "https://github.com/zaCKoZAck0/leetcode/commit/24c33c986b0ca365052a595f0589d32d850e1c1f"
                       }
                     }
                   ]
@@ -152,8 +176,8 @@
           {
             "nameWithOwner": "formbricks/formbricks",
             "description": "Open Source Survey Platform",
-            "stargazerCount": 6354,
-            "forkCount": 1062,
+            "stargazerCount": 6503,
+            "forkCount": 1092,
             "url": "https://github.com/formbricks/formbricks",
             "homepageUrl": "https://formbricks.com",
             "primaryLanguage": {
@@ -206,7 +230,7 @@
           {
             "nameWithOwner": "tryabby/abby",
             "description": "Open-Source Feature Flags, Remote Config & A/B Tests for Developers ⛳🧪",
-            "stargazerCount": 127,
+            "stargazerCount": 128,
             "forkCount": 17,
             "url": "https://github.com/tryabby/abby",
             "homepageUrl": "https://www.tryabby.com",
@@ -256,33 +280,6 @@
                 }
               }
             }
-          },
-          {
-            "nameWithOwner": "zaCKoZAck0/frontend-quizz-app",
-            "description": null,
-            "stargazerCount": 0,
-            "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/frontend-quizz-app",
-            "homepageUrl": "https://frontend-quizz-app-two.vercel.app",
-            "primaryLanguage": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": [
-                    {
-                      "node": {
-                        "committedDate": "2023-12-15T15:24:48Z",
-                        "message": "fix accessibility",
-                        "url": "https://github.com/zaCKoZAck0/frontend-quizz-app/commit/7a949da8c9f911f8e88b0f65ae135a62d20ecfb1"
-                      }
-                    }
-                  ]
-                }
-              }
-            }
           }
         ]
       },
@@ -294,14 +291,10 @@
             "#30a14e",
             "#216e39"
           ],
-          "totalContributions": 223,
+          "totalContributions": 258,
           "months": [
             {
-              "totalWeeks": 1,
-              "firstDay": "2023-08-01"
-            },
-            {
-              "totalWeeks": 4,
+              "totalWeeks": 3,
               "firstDay": "2023-09-01"
             },
             {
@@ -347,103 +340,13 @@
             {
               "totalWeeks": 4,
               "firstDay": "2024-08-01"
+            },
+            {
+              "totalWeeks": 2,
+              "firstDay": "2024-09-01"
             }
           ],
           "weeks": [
-            {
-              "contributionDays": [
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-08-27",
-                  "weekday": 0
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-08-28",
-                  "weekday": 1
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-08-29",
-                  "weekday": 2
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-08-30",
-                  "weekday": 3
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-08-31",
-                  "weekday": 4
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-09-01",
-                  "weekday": 5
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-09-02",
-                  "weekday": 6
-                }
-              ],
-              "firstDay": "2023-08-27"
-            },
-            {
-              "contributionDays": [
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 1,
-                  "date": "2023-09-03",
-                  "weekday": 0
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-09-04",
-                  "weekday": 1
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-09-05",
-                  "weekday": 2
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-09-06",
-                  "weekday": 3
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-09-07",
-                  "weekday": 4
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 3,
-                  "date": "2023-09-08",
-                  "weekday": 5
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-09-09",
-                  "weekday": 6
-                }
-              ],
-              "firstDay": "2023-09-03"
-            },
             {
               "contributionDays": [
                 {
@@ -2831,9 +2734,73 @@
                   "contributionCount": 2,
                   "date": "2024-08-30",
                   "weekday": 5
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 4,
+                  "date": "2024-08-31",
+                  "weekday": 6
                 }
               ],
               "firstDay": "2024-08-25"
+            },
+            {
+              "contributionDays": [
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-09-01",
+                  "weekday": 0
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-09-02",
+                  "weekday": 1
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 2,
+                  "date": "2024-09-03",
+                  "weekday": 2
+                },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 7,
+                  "date": "2024-09-04",
+                  "weekday": 3
+                },
+                {
+                  "color": "#30a14e",
+                  "contributionCount": 12,
+                  "date": "2024-09-05",
+                  "weekday": 4
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 2,
+                  "date": "2024-09-06",
+                  "weekday": 5
+                },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 5,
+                  "date": "2024-09-07",
+                  "weekday": 6
+                }
+              ],
+              "firstDay": "2024-09-01"
+            },
+            {
+              "contributionDays": [
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 3,
+                  "date": "2024-09-08",
+                  "weekday": 0
+                }
+              ],
+              "firstDay": "2024-09-08"
             }
           ]
         }
