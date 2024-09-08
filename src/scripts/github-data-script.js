@@ -2,14 +2,14 @@ const dotenv = require('dotenv');
 dotenv.config();
 const fs = require('fs');
 const username = 'zaCKoZAck0';
-const id = "MDQ6VXNlcjY5ODg5Mzgy";
-const token  = process.env.GITHUB_PERSONAL_ACCESS_TOKEN;
-function init(){
-    const headers = {
-        'Authorization': `bearer ${token}`,
-    }
-    const body = {
-        "query": `{
+const id = 'MDQ6VXNlcjY5ODg5Mzgy';
+const token = process.env.GITHUB_PERSONAL_ACCESS_TOKEN;
+function init() {
+  const headers = {
+    Authorization: `bearer ${token}`,
+  };
+  const body = {
+    query: `{
   user(login: "${username}") {
     name
     issues {
@@ -22,7 +22,7 @@ function init(){
     repositoriesContributedTo {
       totalCount
     }
-    topRepositories(orderBy: { field: STARGAZERS, direction: DESC }, first: 10) {
+    topRepositories(orderBy: { field: STARGAZERS, direction: DESC }, first: 100) {
       nodes {
         nameWithOwner
         description
@@ -71,12 +71,18 @@ function init(){
       }
     }
   }
-}`
-    }
-    const response = fetch('https://api.github.com/graphql', { method: 'POST', body: JSON.stringify(body), headers: headers })
-    response.then(res => res.json()).then(data => {
-        fs.writeFileSync('data/github-data.json', JSON.stringify(data, null, 2));
-    })
+}`,
+  };
+  const response = fetch('https://api.github.com/graphql', {
+    method: 'POST',
+    body: JSON.stringify(body),
+    headers: headers,
+  });
+  response
+    .then((res) => res.json())
+    .then((data) => {
+      fs.writeFileSync('data/github-data.json', JSON.stringify(data, null, 2));
+    });
 }
 
 init();

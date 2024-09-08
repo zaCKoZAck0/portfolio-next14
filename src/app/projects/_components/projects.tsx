@@ -41,8 +41,12 @@ export function Projects() {
         setFilteredProjects(
           allProjects.current.sort(
             (a, b) =>
-              new Date(b.defaultBranchRef.target.history.edges[0].node.committedDate).getTime() -
-              new Date(a.defaultBranchRef.target.history.edges[0].node.committedDate).getTime(),
+              new Date(
+                b.defaultBranchRef?.target?.history?.edges[0]?.node?.committedDate ?? '',
+              ).getTime() -
+              new Date(
+                a.defaultBranchRef?.target?.history?.edges[0]?.node?.committedDate ?? '',
+              ).getTime(),
           ),
         );
         break;
@@ -81,7 +85,7 @@ export function Projects() {
         <H1>Projects</H1>
         <P>Here are some of the projects I have worked on / contributed to.</P>
         <p className="py-1">
-          <A href="/">
+          <A href="https://github.com/zaCKoZAck0">
             <FaGithub className="mr-2 inline-block" />
             View all projects on Github
           </A>
