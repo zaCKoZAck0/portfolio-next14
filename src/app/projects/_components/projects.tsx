@@ -130,7 +130,7 @@ export function Projects() {
         )}
         <div className="mt-4">
           {filteredProjects.length === 0 && (
-            <div className="p-10 text-center text-xl font-bold text-secondary-foreground opacity-75">
+            <div className="p-10 text-center text-lg font-bold text-secondary-foreground opacity-75 md:text-xl">
               <H3>{'No projects found :('}</H3>
             </div>
           )}
