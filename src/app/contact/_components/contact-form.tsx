@@ -22,9 +22,6 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { H2, H3, H4 } from '~/components/typography';
 import { SendHorizonalIcon, SendIcon } from 'lucide-react';
-import { FaGithub, FaLinkedin, FaInstagram, FaDiscord } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
-import { FloatingDock } from '~/components/floating-dock';
 import { useToast } from '~/components/ui/use-toast';
 import { MailSentSuccess } from '~/components/animated-icon';
 import { SendEmail } from '~/lib/send-mail';
@@ -207,35 +204,6 @@ export function ContactForm() {
             )}
           />
           <div className="flex items-center justify-between">
-            <FloatingDock
-              items={[
-                {
-                  title: 'GitHub',
-                  icon: <FaGithub className="size-5 md:size-10" />,
-                  href: '',
-                },
-                {
-                  title: 'LinkedIn',
-                  icon: <FaLinkedin className="size-5 md:size-10" />,
-                  href: '',
-                },
-                {
-                  title: 'X.com',
-                  icon: <FaXTwitter className="size-5 md:size-10" />,
-                  href: '',
-                },
-                {
-                  title: 'Instagram',
-                  icon: <FaInstagram className="size-5 md:size-10" />,
-                  href: '',
-                },
-                {
-                  title: 'Discord',
-                  icon: <FaDiscord className="size-5 md:size-10" />,
-                  href: '',
-                },
-              ]}
-            />
             <Button type="submit">
               <H3 className="flex items-center text-base">
                 Send Mail

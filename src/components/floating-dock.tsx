@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { cn } from "~/lib/utils";
+import { cn } from '~/lib/utils';
 import {
   AnimatePresence,
   MotionValue,
@@ -8,10 +8,10 @@ import {
   useMotionValue,
   useSpring,
   useTransform,
-} from "framer-motion";
-import Link from "next/link";
-import { useRef, useState } from "react";
-import { Hash } from "lucide-react";
+} from 'framer-motion';
+import Link from 'next/link';
+import { useRef, useState } from 'react';
+import { Hash } from 'lucide-react';
 
 export const FloatingDock = ({
   items,
@@ -39,12 +39,12 @@ const FloatingDockMobile = ({
 }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className={cn("relative block md:hidden", className)}>
+    <div className={cn('relative block md:hidden', className)}>
       <AnimatePresence>
         {open && (
           <motion.div
             layoutId="nav"
-            className="absolute bottom-full mb-2 inset-x-0 flex flex-col gap-2"
+            className="absolute inset-x-0 bottom-full mb-2 flex flex-col gap-2"
           >
             {items.map((item, idx) => (
               <motion.div
@@ -66,9 +66,10 @@ const FloatingDockMobile = ({
                 <Link
                   href={item.href}
                   key={item.title}
-                  className="size-12 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center"
+                  className="flex w-fit items-center justify-center gap-2 rounded-full bg-foreground px-4 py-2 text-secondary"
                 >
                   <div>{item.icon}</div>
+                  <div>{item.title}</div>
                 </Link>
               </motion.div>
             ))}
@@ -78,9 +79,10 @@ const FloatingDockMobile = ({
       <button
         onClick={() => setOpen(!open)}
         type="button"
-        className="size-12 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center"
+        className="mt-2 flex items-center justify-center rounded-full bg-secondary px-4 py-2 text-secondary-foreground"
       >
-        <Hash className="h-5 w-5" />
+        <Hash className="mr-2 h-5 w-5" />
+        Find me on
       </button>
     </div>
   );
@@ -98,10 +100,7 @@ const FloatingDockDesktop = ({
     <motion.div
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
-      className={cn(
-        "mx-auto hidden md:flex h-16 gap-4 items-end  rounded-2xl px-4 pb-3",
-        className
-      )}
+      className={cn('mx-auto hidden h-16 items-end gap-4 rounded-2xl py-3 md:flex', className)}
     >
       {items.map((item) => (
         <IconContainer mouseX={mouseX} key={item.title} {...item} />
@@ -133,11 +132,7 @@ function IconContainer({
   const heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
 
   const widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
-  const heightTransformIcon = useTransform(
-    distance,
-    [-150, 0, 150],
-    [20, 40, 20]
-  );
+  const heightTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
 
   const width = useSpring(widthTransform, {
     mass: 0.1,
@@ -170,15 +165,15 @@ function IconContainer({
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="aspect-square rounded-full bg-secondary text-secondary-foreground flex items-center justify-center relative will-change-transform"
+        className="relative flex aspect-square items-center justify-center rounded-full bg-secondary text-secondary-foreground will-change-transform"
       >
         <AnimatePresence>
           {hovered && (
             <motion.div
-              initial={{ opacity: 0, y: 10, x: "-50%" }}
-              animate={{ opacity: 1, y: 0, x: "-50%" }}
-              exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="px-2 py-0.5 whitespace-pre rounded-md bg-gray-100 border dark:bg-neutral-800 dark:border-neutral-900 dark:text-white border-gray-200 text-neutral-700 absolute left-1/2 -translate-x-1/2 -top-8 w-fit text-xs"
+              initial={{ opacity: 0, y: 10, x: '-50%' }}
+              animate={{ opacity: 1, y: 0, x: '-50%' }}
+              exit={{ opacity: 0, y: 2, x: '-50%' }}
+              className="absolute -top-8 left-1/2 w-fit -translate-x-1/2 whitespace-pre rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs text-neutral-700 dark:border-neutral-900 dark:bg-neutral-800 dark:text-white"
             >
               {title}
             </motion.div>
