@@ -6,7 +6,7 @@ import { P } from '~/components/typography';
 
 export function Introduction() {
   return (
-    <table className="mb-5 mt-20 flex min-h-screen items-center justify-center md:mt-0">
+    <table className="mb-5 mt-10 flex min-h-screen items-center justify-center md:mt-0">
       <tbody>
         <tr className="flex flex-col items-center justify-between md:flex-row md:gap-4">
           <td className="w-fit">
