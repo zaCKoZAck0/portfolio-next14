@@ -1,27 +1,26 @@
-import { ChevronDown } from "lucide-react";
-import { ProjectCard } from "~/components/project-card";
-import { H2, P } from "~/components/typography";
-import { Button } from "~/components/ui/button";
-import githubData from "../../../../data/github-data.json";
-import Link from "next/link";
+import { ChevronDown } from 'lucide-react';
+import { ProjectCard } from '~/components/project-card';
+import { H2, P } from '~/components/typography';
+import { Button } from '~/components/ui/button';
+import githubData from '../../../../data/github-data.json';
+import Link from 'next/link';
 
 export function InterestsAndGoals() {
   return (
     <div className="py-20">
       <H2 className="w-full text-center">Interests and Goals</H2>
       <div className="mb-10">
-        <P className="text-sm text-center">
+        <P className="text-center text-sm text-secondary-foreground">
           {
-            "I'm passionate about web development and dedicated to creating applications that address real-world challenges. I believe open-source software should excel in delivering an outstanding user experience, robust security, and comprehensive accessibility."
+            "I'm passionate about contributing to open source and enjoy crafting weekend projects, fueling my creativity and technical growth."
           }
         </P>
-        <P className="text-sm text-center">
-          {
-            "Here are the top open-source projects I've contributed to and maintain."
-          }
+        <P className="text-center text-sm text-secondary-foreground">
+          {"Here are the top open-source projects I've contributed to."}
         </P>
         <div>
           {githubData.data.user.topRepositories.nodes
+            .sort((x, y) => y.stargazerCount - x.stargazerCount)
             .slice(0, 2)
             .map((repo, index) => {
               return <ProjectCard key={index} {...repo} />;
@@ -35,7 +34,7 @@ export function InterestsAndGoals() {
             </Button>
           </Link>
         </div>
-        <P className="text-sm text-center">
+        <P className="text-center text-sm text-muted-foreground">
           {
             "I'm also going to start a blog soon, where I'll share my experiences, insights, and learnings from my journey as a developer."
           }

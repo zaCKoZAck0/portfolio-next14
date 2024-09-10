@@ -1,15 +1,9 @@
-import { FaGithub } from "react-icons/fa6";
-import { RepositoryNode } from "~/types/github-data";
-import { A, H4 } from "./typography";
-import {
-  ArrowUpRight,
-  GitFork,
-  GitMergeIcon,
-  GitPullRequest,
-  Star,
-} from "lucide-react";
-import { formatLargeNumber } from "~/lib/numbers";
-import { getRelativeDate } from "~/lib/date";
+import { FaGithub } from 'react-icons/fa6';
+import { RepositoryNode } from '~/types/github-data';
+import { A, H4 } from './typography';
+import { ArrowUpRight, GitFork, GitMergeIcon, GitPullRequest, Star } from 'lucide-react';
+import { formatLargeNumber } from '~/lib/numbers';
+import { getRelativeDate } from '~/lib/date';
 
 type ProjectCardProps = {
   key: number;
@@ -26,14 +20,14 @@ export function ProjectCard({
   defaultBranchRef,
 }: ProjectCardProps) {
   return (
-    <div key={key} className="md:p-2 py-2">
-      <div className="space-y-1 md:p-4 p-3 bg-muted rounded-md">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+    <div key={key} className="py-2 md:p-2">
+      <div className="space-y-1 rounded-md bg-muted p-3 md:p-4">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           <A href={url}>
             <FaGithub size={24} className="mr-2 flex-shrink-0" />
             <p className="text-sm md:text-base">{nameWithOwner}</p>
           </A>
-          <div className="flex items-center md:text-sm text-xs md:pt-0 pt-1">
+          <div className="flex items-center pt-1 text-xs md:pt-0 md:text-sm">
             {stargazerCount > 0 && (
               <>
                 {formatLargeNumber(stargazerCount)}
@@ -51,7 +45,7 @@ export function ProjectCard({
         {description && (
           <H4
             title={description}
-            className="text-sm text-secondary-foreground w-[90%] font-normal overflow-hidden text-nowrap text-ellipsis"
+            className="w-[90%] overflow-hidden text-ellipsis text-nowrap text-sm font-normal text-muted-foreground"
           >
             {description}
           </H4>
@@ -59,25 +53,22 @@ export function ProjectCard({
         {(defaultBranchRef?.target.history.edges.length || 0 > 0) && (
           <a
             href={defaultBranchRef?.target.history.edges[0].node.url}
-            className="flex text-xs items-center pt-3 hover:underline underline-offset-2"
+            className="flex items-center pt-3 text-xs underline-offset-2 hover:underline"
           >
             <GitPullRequest size={20} className="mr-2 flex-shrink-0" />
-            <span className="w-[90%] overflow-hidden text-nowrap text-ellipsis font-semibold">
+            <span className="w-[90%] overflow-hidden text-ellipsis text-nowrap font-semibold">
               {defaultBranchRef?.target.history.edges[0].node.message}
             </span>
           </a>
         )}
-        <div className="flex md:flex-row flex-col md:items-center md:gap-6 gap-1 text-xs text-secondary-foreground">
+        <div className="flex flex-col gap-1 text-xs text-secondary-foreground md:flex-row md:items-center md:gap-6">
           {defaultBranchRef?.target.history.edges.length && (
             <div className="flex items-center">
               <p>
                 {getRelativeDate(
-                  new Date(
-                    defaultBranchRef.target.history.edges[0].node
-                      .committedDate || 0,
-                  ),
+                  new Date(defaultBranchRef.target.history.edges[0].node.committedDate || 0),
                   true,
-                )}{" "}
+                )}{' '}
                 ago
               </p>
               <GitMergeIcon size={18} className="mx-2" />
@@ -88,12 +79,12 @@ export function ProjectCard({
             <div>
               <a
                 href={homepageUrl}
-                className="text-sm hover:underline underline-offset-2 group text-orange-200"
+                className="group text-sm text-orange-200 underline-offset-2 hover:underline"
               >
-                {homepageUrl.replace(/(^\w+:|^)\/\//, "")}
+                {homepageUrl.replace(/(^\w+:|^)\/\//, '')}
                 <ArrowUpRight
                   size={16}
-                  className="inline-block transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  className="inline-block transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                 />
               </a>
             </div>

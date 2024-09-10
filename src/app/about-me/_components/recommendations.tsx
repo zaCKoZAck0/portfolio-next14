@@ -1,29 +1,29 @@
-import { ChevronDown } from "lucide-react";
-import { FaLinkedin } from "react-icons/fa6";
-import { RecommendationCard } from "~/components/recommendation-card";
-import { H2, P, H3 } from "~/components/typography";
-import { Button } from "~/components/ui/button";
-import recommendationsData from "../../../../data/recommendations.json";
+import { ChevronDown } from 'lucide-react';
+import { FaLinkedin } from 'react-icons/fa6';
+import { RecommendationCard } from '~/components/recommendation-card';
+import { H2, P, H3 } from '~/components/typography';
+import { Button } from '~/components/ui/button';
+import recommendationsData from '../../../../data/recommendations.json';
 
 export function Recommendations() {
   return (
-    <div className="md:min-h-screen md:flex flex-col items-center justify-center md:pt-0 pt-20">
+    <div className="flex-col items-center justify-center pt-20 md:flex md:min-h-screen md:pt-0">
       <H2 className="w-full text-center">Recommendations</H2>
       <div>
         <div>
-          <P className="text-sm text-center">
+          <P className="text-center text-sm text-secondary-foreground">
             {
               "Here are some of the recommendations I've received from my colleagues and peers. I'm grateful for their kind words and support."
             }
           </P>
         </div>
-        <div className="w-full flex justify-center mb-2 mt-4">
+        <div className="mb-2 mt-4 flex w-full justify-center">
           <a
             href="https://www.linkedin.com/in/ayush-kumar-yadav/edit/forms/recommendation/write/?profileFormEntryPoint=PROFILE_SECTION&profileUrn=urn%3Ali%3Afsd_profile%3AACoAAC_FOPQBNboYueAWvsHwP66NJxIybljtgys"
             target="_blank"
             rel="noreferrer"
           >
-            <Button variant="outline" size="lg">
+            <Button variant="secondary" size="lg">
               <FaLinkedin className="mr-2" size={20} />
               <H3 className="text-lg">Add Recommendation</H3>
             </Button>

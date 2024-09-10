@@ -4,6 +4,7 @@ import { ArrowLeftRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '~/lib/utils';
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip';
+import Image from 'next/image';
 
 interface ICarouselItem {
   id: number;
@@ -33,16 +34,23 @@ export function ImageCarousel({ items: initialItems }: IImageCarouselProps) {
           <div
             key={item.id}
             className={cn(
-              'absolute h-[250px] w-[200px] animate-fadeIn rounded-xl border-4 border-orange-200 bg-primary bg-cover bg-center shadow-md hover:scale-105',
+              'absolute h-[250px] w-[200px] animate-fadeIn overflow-hidden rounded-xl border-4 border-orange-200 bg-primary shadow-md hover:scale-105',
             )}
             style={{
-              backgroundImage: `url(${item.image})`,
-              backgroundSize: 'cover',
               transform: index === 1 ? 'scale(1.1) rotate(5deg)' : 'translateX(-30%) rotate(-5deg)',
               transition: 'transform 0.5s ease, filter 0.5s ease',
               filter: index === 1 ? 'none' : 'grayscale(100%)',
             }}
-          />
+          >
+            <Image
+              src={item.image}
+              alt={item.title}
+              layout="fill"
+              objectFit="cover"
+              className="rounded-xl transition-transform duration-300 hover:scale-105"
+              priority
+            />
+          </div>
         ))}
       </div>
       <div className="flex items-center justify-center gap-2 md:pr-10">
