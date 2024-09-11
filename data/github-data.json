@@ -17,9 +17,12 @@
           {
             "nameWithOwner": "typehero/typehero",
             "description": "Connect, collaborate, and grow with a community of TypeScript developers",
-            "stargazerCount": 5713,
+            "stargazerCount": 5718,
             "forkCount": 407,
             "url": "https://github.com/typehero/typehero",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/143282211?v=4"
+            },
             "homepageUrl": "https://typehero.dev",
             "primaryLanguage": {
               "name": "TypeScript",
@@ -47,6 +50,9 @@
             "stargazerCount": 1,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/portfolio-next14",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "https://zackozack.xyz",
             "primaryLanguage": {
               "name": "TypeScript",
@@ -58,9 +64,39 @@
                   "edges": [
                     {
                       "node": {
-                        "committedDate": "2024-09-07T22:48:12Z",
-                        "message": "Update README.md",
-                        "url": "https://github.com/zaCKoZAck0/portfolio-next14/commit/5f84b56c3d94581c3ae741ad26d80666e0f91c9f"
+                        "committedDate": "2024-09-10T15:32:49Z",
+                        "message": "refactor: Added animations and improved responsiveness",
+                        "url": "https://github.com/zaCKoZAck0/portfolio-next14/commit/c0d62ff6ada9672a7ea7fc57bab8a0b850f0bdce"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "nameWithOwner": "zaCKoZAck0/my-redis",
+            "description": null,
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/my-redis",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
+            "homepageUrl": null,
+            "primaryLanguage": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": [
+                    {
+                      "node": {
+                        "committedDate": "2024-09-09T11:57:57Z",
+                        "message": "CONFIG GET",
+                        "url": "https://github.com/zaCKoZAck0/my-redis/commit/f7737547c32ba147619e242510af54b983d3b0e5"
                       }
                     }
                   ]
@@ -74,6 +110,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/leetcode",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": null,
             "defaultBranchRef": {
@@ -98,6 +137,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/ProBoard",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "TypeScript",
@@ -125,6 +167,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/project-details-server",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "TypeScript",
@@ -152,6 +197,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/Everything_JAVA",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "Java",
@@ -176,9 +224,12 @@
           {
             "nameWithOwner": "formbricks/formbricks",
             "description": "Open Source Survey Platform",
-            "stargazerCount": 6503,
-            "forkCount": 1092,
+            "stargazerCount": 6519,
+            "forkCount": 1095,
             "url": "https://github.com/formbricks/formbricks",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/105877416?v=4"
+            },
             "homepageUrl": "https://formbricks.com",
             "primaryLanguage": {
               "name": "TypeScript",
@@ -201,11 +252,44 @@
             }
           },
           {
+            "nameWithOwner": "zaCKoZAck0/ai-styling",
+            "description": "This is a weekend project that let you write prompt to style your elements, instead of CSS styles / tailwind classes.",
+            "stargazerCount": 1,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/ai-styling",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
+            "homepageUrl": "https://github.com/zaCKoZAck0/ai-styling",
+            "primaryLanguage": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": [
+                    {
+                      "node": {
+                        "committedDate": "2024-09-07T21:04:43Z",
+                        "message": "Update README.md",
+                        "url": "https://github.com/zaCKoZAck0/ai-styling/commit/8dfeab85d6d82480f92acadba594749316c0ebee"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
             "nameWithOwner": "zaCKoZAck0/learning_rust",
             "description": null,
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/learning_rust",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "Rust",
@@ -230,9 +314,12 @@
           {
             "nameWithOwner": "tryabby/abby",
             "description": "Open-Source Feature Flags, Remote Config & A/B Tests for Developers ⛳🧪",
-            "stargazerCount": 128,
+            "stargazerCount": 129,
             "forkCount": 17,
             "url": "https://github.com/tryabby/abby",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/131464195?v=4"
+            },
             "homepageUrl": "https://www.tryabby.com",
             "primaryLanguage": {
               "name": "TypeScript",
@@ -260,6 +347,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/projects-client",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "https://projects-client-blue.vercel.app",
             "primaryLanguage": {
               "name": "TypeScript",
@@ -282,11 +372,41 @@
             }
           },
           {
+            "nameWithOwner": "zaCKoZAck0/built-my-x",
+            "description": "This is a collection of projects I built on codecrafters.io",
+            "stargazerCount": 1,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/built-my-x",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
+            "homepageUrl": "https://app.codecrafters.io/users/zaCKoZAck0",
+            "primaryLanguage": null,
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": [
+                    {
+                      "node": {
+                        "committedDate": "2024-09-09T12:27:08Z",
+                        "message": "Update readme.md with codecrafters.io projects",
+                        "url": "https://github.com/zaCKoZAck0/built-my-x/commit/221446f0c87baff3d45cf0792131a8bb4a5f76ed"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
             "nameWithOwner": "zaCKoZAck0/the_java_bible",
             "description": null,
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/the_java_bible",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": null,
             "defaultBranchRef": {
@@ -311,6 +431,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/frontend-quizz-app",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "https://frontend-quizz-app-two.vercel.app",
             "primaryLanguage": {
               "name": "TypeScript",
@@ -338,6 +461,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/teams",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "TypeScript",
@@ -365,6 +491,9 @@
             "stargazerCount": 28,
             "forkCount": 14,
             "url": "https://github.com/Dun-sin/Threstagram",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/78784850?u=f6a16ce0300010d4b48c614f6db376fff0ea8251&v=4"
+            },
             "homepageUrl": "https://threstagram.vercel.app",
             "primaryLanguage": {
               "name": "TypeScript",
@@ -387,38 +516,14 @@
             }
           },
           {
-            "nameWithOwner": "zaCKoZAck0/ai-styling",
-            "description": "This is a weekend project that let you write prompt to style your elements, instead of CSS styles / tailwind classes.",
-            "stargazerCount": 1,
-            "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/ai-styling",
-            "homepageUrl": "https://github.com/zaCKoZAck0/ai-styling",
-            "primaryLanguage": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": [
-                    {
-                      "node": {
-                        "committedDate": "2024-09-07T21:04:43Z",
-                        "message": "Update README.md",
-                        "url": "https://github.com/zaCKoZAck0/ai-styling/commit/8dfeab85d6d82480f92acadba594749316c0ebee"
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          {
             "nameWithOwner": "zaCKoZAck0/fanzone-server",
             "description": null,
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/fanzone-server",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "TypeScript",
@@ -446,6 +551,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/geek-fit-store-cms",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "TypeScript",
@@ -473,6 +581,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/portfolio-website2023",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "TypeScript",
@@ -500,6 +611,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/image_uploader",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "TypeScript",
@@ -522,11 +636,41 @@
             }
           },
           {
+            "nameWithOwner": "zaCKoZAck0/built-my-own-x",
+            "description": null,
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/built-my-own-x",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
+            "homepageUrl": null,
+            "primaryLanguage": null,
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": [
+                    {
+                      "node": {
+                        "committedDate": "2024-09-09T12:04:14Z",
+                        "message": "Initial commit",
+                        "url": "https://github.com/zaCKoZAck0/built-my-own-x/commit/453c0dcf6f1e1ece7b0d35a3240728383629a83e"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
             "nameWithOwner": "zaCKoZAck0/des-ld",
             "description": null,
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/des-ld",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": null,
             "defaultBranchRef": {
@@ -551,6 +695,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/java_asg_classes",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "Java",
@@ -578,6 +725,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/teamz",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "TypeScript",
@@ -605,6 +755,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/ProKanban",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "TypeScript",
@@ -632,6 +785,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/zaCKoZAck0",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": null,
             "defaultBranchRef": {
@@ -656,6 +812,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/anisha1912066/projects-server",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/139872461?v=4"
+            },
             "homepageUrl": "https://projects-server-ten.vercel.app",
             "primaryLanguage": {
               "name": "TypeScript",
@@ -683,6 +842,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/link-sharing-app",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "TypeScript",
@@ -705,11 +867,96 @@
             }
           },
           {
+            "nameWithOwner": "Arch1mede5/graph-0xplay",
+            "description": "Created with StackBlitz ⚡️",
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/Arch1mede5/graph-0xplay",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/137792880?u=296f78487d05df132656560c035c10cc41e72d89&v=4"
+            },
+            "homepageUrl": "https://stackblitz.com/edit/stackblitz-starters-zwwymy",
+            "primaryLanguage": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": [
+                    {
+                      "node": {
+                        "committedDate": "2023-07-10T15:05:15Z",
+                        "message": "1 file modified",
+                        "url": "https://github.com/Arch1mede5/graph-0xplay/commit/f25b531191b8bb99c87fe408413f909ee74921ed"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "nameWithOwner": "zaCKoZAck0/formbricks",
+            "description": "Open Source Surveys & Experience Management Solution",
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/formbricks",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
+            "homepageUrl": "https://formbricks.com",
+            "primaryLanguage": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": [
+                    {
+                      "node": {
+                        "committedDate": "2023-10-08T03:09:37Z",
+                        "message": "fix: rerender on name change",
+                        "url": "https://github.com/zaCKoZAck0/formbricks/commit/3af649889153d5a82ecefa45e2bd1703fd5e5318"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "nameWithOwner": "zaCKoZAck0/Threstagram",
+            "description": "Convert Your Threads Post to Images",
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/Threstagram",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
+            "homepageUrl": "https://threstagram.vercel.app",
+            "primaryLanguage": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": []
+                }
+              }
+            }
+          },
+          {
             "nameWithOwner": "zaCKoZAck0/abby",
             "description": "Open-Source Feature Flags, Remote Config & A/B Tests for Developers ⛳🧪",
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/abby",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "https://www.tryabby.com",
             "primaryLanguage": {
               "name": "TypeScript",
@@ -724,38 +971,14 @@
             }
           },
           {
-            "nameWithOwner": "zaCKoZAck0/react-login-page",
-            "description": "Created with StackBlitz ⚡️",
-            "stargazerCount": 0,
-            "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/react-login-page",
-            "homepageUrl": "https://stackblitz.com/edit/react-unazan",
-            "primaryLanguage": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": [
-                    {
-                      "node": {
-                        "committedDate": "2023-04-28T22:56:24Z",
-                        "message": "2 files modified",
-                        "url": "https://github.com/zaCKoZAck0/react-login-page/commit/b4ed1c7298b518506a482875834e3d11c0e7bd21"
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          {
             "nameWithOwner": "zaCKoZAck0/strapi",
             "description": "🚀 Strapi is the leading open-source headless CMS. It’s 100% JavaScript, fully customizable and developer-first.",
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/strapi",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "https://strapi.io",
             "primaryLanguage": {
               "name": "JavaScript",
@@ -775,6 +998,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/temp-proboard",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "https://pro-board.vercel.app",
             "primaryLanguage": {
               "name": "TypeScript",
@@ -802,6 +1028,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/http-realtime",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "https://btholt.github.io/complete-intro-to-realtime",
             "primaryLanguage": {
               "name": "JavaScript",
@@ -816,12 +1045,15 @@
             }
           },
           {
-            "nameWithOwner": "Arch1mede5/graph-0xplay",
-            "description": "Created with StackBlitz ⚡️",
+            "nameWithOwner": "zaCKoZAck0/supabase",
+            "description": "The open source Firebase alternative.",
             "stargazerCount": 0,
             "forkCount": 0,
-            "url": "https://github.com/Arch1mede5/graph-0xplay",
-            "homepageUrl": "https://stackblitz.com/edit/stackblitz-starters-zwwymy",
+            "url": "https://github.com/zaCKoZAck0/supabase",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
+            "homepageUrl": "https://supabase.com",
             "primaryLanguage": {
               "name": "TypeScript",
               "color": "#3178c6"
@@ -829,15 +1061,7 @@
             "defaultBranchRef": {
               "target": {
                 "history": {
-                  "edges": [
-                    {
-                      "node": {
-                        "committedDate": "2023-07-10T15:05:15Z",
-                        "message": "1 file modified",
-                        "url": "https://github.com/Arch1mede5/graph-0xplay/commit/f25b531191b8bb99c87fe408413f909ee74921ed"
-                      }
-                    }
-                  ]
+                  "edges": []
                 }
               }
             }
@@ -848,6 +1072,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/expense-mgmt-springboot",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "Java",
@@ -867,6 +1094,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/Arch1mede5/0xPlay",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/137792880?u=296f78487d05df132656560c035c10cc41e72d89&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "TypeScript",
@@ -894,6 +1124,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/BuyMeACoffee-contracts",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "JavaScript",
@@ -921,6 +1154,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/frontend-mentors-challange",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "https://frontend-mentors-challange.vercel.app",
             "primaryLanguage": {
               "name": "CSS",
@@ -948,6 +1184,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/share_promts_ai",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "TypeScript",
@@ -975,6 +1214,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/TodoBlockchain",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "TypeScript",
@@ -1002,6 +1244,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/event-mgmt-server",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "TypeScript",
@@ -1024,145 +1269,18 @@
             }
           },
           {
-            "nameWithOwner": "zaCKoZAck0/express-crud",
-            "description": "Created with StackBlitz ⚡️",
-            "stargazerCount": 0,
-            "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/express-crud",
-            "homepageUrl": "https://stackblitz.com/edit/express-simple-eedqnc",
-            "primaryLanguage": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": [
-                    {
-                      "node": {
-                        "committedDate": "2023-05-01T12:10:09Z",
-                        "message": "3 files modified, 2 added",
-                        "url": "https://github.com/zaCKoZAck0/express-crud/commit/a041157dfecffa052b58a713c6465c9d17ecc34f"
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          {
-            "nameWithOwner": "zaCKoZAck0/html2canvasdemo",
-            "description": null,
-            "stargazerCount": 0,
-            "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/html2canvasdemo",
-            "homepageUrl": null,
-            "primaryLanguage": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": [
-                    {
-                      "node": {
-                        "committedDate": "2023-04-26T23:08:26Z",
-                        "message": "yo",
-                        "url": "https://github.com/zaCKoZAck0/html2canvasdemo/commit/4e6a67ddc7c8940168c9fe1a82acb039e0ca2c00"
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          {
             "nameWithOwner": "zaCKoZAck0/lwc",
             "description": "⚡️ LWC - A Blazing Fast, Enterprise-Grade Web Components Foundation",
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/lwc",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "https://lwc.dev",
             "primaryLanguage": {
               "name": "JavaScript",
               "color": "#f1e05a"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": []
-                }
-              }
-            }
-          },
-          {
-            "nameWithOwner": "zaCKoZAck0/Threstagram",
-            "description": "Convert Your Threads Post to Images",
-            "stargazerCount": 0,
-            "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/Threstagram",
-            "homepageUrl": "https://threstagram.vercel.app",
-            "primaryLanguage": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": []
-                }
-              }
-            }
-          },
-          {
-            "nameWithOwner": "zaCKoZAck0/saleor-dashboard",
-            "description": "A GraphQL-powered, single-page dashboard application for Saleor.",
-            "stargazerCount": 0,
-            "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/saleor-dashboard",
-            "homepageUrl": "https://demo.saleor.io/dashboard",
-            "primaryLanguage": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": []
-                }
-              }
-            }
-          },
-          {
-            "nameWithOwner": "zaCKoZAck0/saleor",
-            "description": "Saleor Core: the high performance, composable, headless commerce API.",
-            "stargazerCount": 0,
-            "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/saleor",
-            "homepageUrl": "https://saleor.io",
-            "primaryLanguage": {
-              "name": "Python",
-              "color": "#3572A5"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": []
-                }
-              }
-            }
-          },
-          {
-            "nameWithOwner": "zaCKoZAck0/supabase",
-            "description": "The open source Firebase alternative.",
-            "stargazerCount": 0,
-            "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/supabase",
-            "homepageUrl": "https://supabase.com",
-            "primaryLanguage": {
-              "name": "TypeScript",
-              "color": "#3178c6"
             },
             "defaultBranchRef": {
               "target": {
@@ -1178,6 +1296,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/typehero",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "https://typehero.dev",
             "primaryLanguage": {
               "name": "TypeScript",
@@ -1200,12 +1321,59 @@
             }
           },
           {
-            "nameWithOwner": "zaCKoZAck0/formbricks",
-            "description": "Open Source Surveys & Experience Management Solution",
+            "nameWithOwner": "zaCKoZAck0/saleor-dashboard",
+            "description": "A GraphQL-powered, single-page dashboard application for Saleor.",
             "stargazerCount": 0,
             "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/formbricks",
-            "homepageUrl": "https://formbricks.com",
+            "url": "https://github.com/zaCKoZAck0/saleor-dashboard",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
+            "homepageUrl": "https://demo.saleor.io/dashboard",
+            "primaryLanguage": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": []
+                }
+              }
+            }
+          },
+          {
+            "nameWithOwner": "zaCKoZAck0/saleor",
+            "description": "Saleor Core: the high performance, composable, headless commerce API.",
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/saleor",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
+            "homepageUrl": "https://saleor.io",
+            "primaryLanguage": {
+              "name": "Python",
+              "color": "#3572A5"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": []
+                }
+              }
+            }
+          },
+          {
+            "nameWithOwner": "zaCKoZAck0/express-crud",
+            "description": "Created with StackBlitz ⚡️",
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/express-crud",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
+            "homepageUrl": "https://stackblitz.com/edit/express-simple-eedqnc",
             "primaryLanguage": {
               "name": "TypeScript",
               "color": "#3178c6"
@@ -1216,9 +1384,9 @@
                   "edges": [
                     {
                       "node": {
-                        "committedDate": "2023-10-08T03:09:37Z",
-                        "message": "fix: rerender on name change",
-                        "url": "https://github.com/zaCKoZAck0/formbricks/commit/3af649889153d5a82ecefa45e2bd1703fd5e5318"
+                        "committedDate": "2023-05-01T12:10:09Z",
+                        "message": "3 files modified, 2 added",
+                        "url": "https://github.com/zaCKoZAck0/express-crud/commit/a041157dfecffa052b58a713c6465c9d17ecc34f"
                       }
                     }
                   ]
@@ -1232,9 +1400,42 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/glowing-spoon",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": null,
             "defaultBranchRef": null
+          },
+          {
+            "nameWithOwner": "zaCKoZAck0/Go-Tech-Interview",
+            "description": null,
+            "stargazerCount": 0,
+            "forkCount": 2,
+            "url": "https://github.com/zaCKoZAck0/Go-Tech-Interview",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
+            "homepageUrl": null,
+            "primaryLanguage": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": [
+                    {
+                      "node": {
+                        "committedDate": "2022-10-09T12:38:54Z",
+                        "message": "new",
+                        "url": "https://github.com/zaCKoZAck0/Go-Tech-Interview/commit/0886f407c3aa68723b57cecc7801b9bf84bad9c3"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
           },
           {
             "nameWithOwner": "zaCKoZAck0/react-draft-wysiwyg",
@@ -1242,6 +1443,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/react-draft-wysiwyg",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "",
             "primaryLanguage": {
               "name": "JavaScript",
@@ -1261,6 +1465,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/ondemand",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "JavaScript",
@@ -1288,6 +1495,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/editor.md",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "http://editor.md.ipandao.com/",
             "primaryLanguage": {
               "name": "JavaScript",
@@ -1307,6 +1517,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/courses",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "https://DeiAsPie.github.io/courses",
             "primaryLanguage": {
               "name": "JavaScript",
@@ -1326,6 +1539,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/netstats",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "https://DeiAsPie.github.io/netstats/",
             "primaryLanguage": {
               "name": "HTML",
@@ -1353,6 +1569,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/deiaspie.github.io",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "https://DeiAsPie.github.io",
             "primaryLanguage": {
               "name": "HTML",
@@ -1380,6 +1599,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/grind",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "",
             "primaryLanguage": {
               "name": "JavaScript",
@@ -1407,6 +1629,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/NFTMarketplace",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "",
             "primaryLanguage": {
               "name": "JavaScript",
@@ -1434,6 +1659,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/zaCKoZAck0.github.io",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "HTML",
@@ -1456,11 +1684,14 @@
             }
           },
           {
-            "nameWithOwner": "zaCKoZAck0/Go-Tech-Interview",
+            "nameWithOwner": "LuC-9/Go-Tech-Interview",
             "description": null,
             "stargazerCount": 0,
-            "forkCount": 2,
-            "url": "https://github.com/zaCKoZAck0/Go-Tech-Interview",
+            "forkCount": 0,
+            "url": "https://github.com/LuC-9/Go-Tech-Interview",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/68937277?u=47420dd1bd87a320cfeeb51557484c4ff1b37fa9&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "JavaScript",
@@ -1472,9 +1703,9 @@
                   "edges": [
                     {
                       "node": {
-                        "committedDate": "2022-10-09T12:38:54Z",
-                        "message": "new",
-                        "url": "https://github.com/zaCKoZAck0/Go-Tech-Interview/commit/0886f407c3aa68723b57cecc7801b9bf84bad9c3"
+                        "committedDate": "2022-09-06T19:28:45Z",
+                        "message": "first-commit",
+                        "url": "https://github.com/LuC-9/Go-Tech-Interview/commit/722842b10eabbe80bcf9e91d46849882ddad4c97"
                       }
                     }
                   ]
@@ -1488,6 +1719,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/portfolio-next",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "portfolio-next-ten-blue.vercel.app",
             "primaryLanguage": {
               "name": "TypeScript",
@@ -1515,6 +1749,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/BOOKSTORE",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "",
             "primaryLanguage": {
               "name": "Go",
@@ -1542,6 +1779,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/portfolio",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "JavaScript",
@@ -1569,6 +1809,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/social",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "JavaScript",
@@ -1596,6 +1839,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/voting-backend-django",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "Python",
@@ -1623,6 +1869,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/metro-e-token",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": null,
             "defaultBranchRef": {
@@ -1647,6 +1896,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/p2p-exchange",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": null,
             "defaultBranchRef": {
@@ -1671,6 +1923,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/flutter_phone_authentication",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "",
             "primaryLanguage": {
               "name": "Dart",
@@ -1690,6 +1945,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/fnc-test",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": null,
             "defaultBranchRef": {
@@ -1714,6 +1972,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/task-2-appium",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "Python",
@@ -1736,12 +1997,15 @@
             }
           },
           {
-            "nameWithOwner": "zaCKoZAck0/image",
-            "description": "Image Block for Editor.js",
+            "nameWithOwner": "zaCKoZAck0/asg-meragaon-client",
+            "description": null,
             "stargazerCount": 0,
             "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/image",
-            "homepageUrl": "",
+            "url": "https://github.com/zaCKoZAck0/asg-meragaon-client",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
+            "homepageUrl": "https://asg-meragaon-client.vercel.app",
             "primaryLanguage": {
               "name": "JavaScript",
               "color": "#f1e05a"
@@ -1749,7 +2013,75 @@
             "defaultBranchRef": {
               "target": {
                 "history": {
-                  "edges": []
+                  "edges": [
+                    {
+                      "node": {
+                        "committedDate": "2023-02-12T22:47:02Z",
+                        "message": "new api",
+                        "url": "https://github.com/zaCKoZAck0/asg-meragaon-client/commit/30ed721fd2e1f8314225b2872cac8eb80b67a83a"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "nameWithOwner": "zaCKoZAck0/react-login-page",
+            "description": "Created with StackBlitz ⚡️",
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/react-login-page",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
+            "homepageUrl": "https://stackblitz.com/edit/react-unazan",
+            "primaryLanguage": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": [
+                    {
+                      "node": {
+                        "committedDate": "2023-04-28T22:56:24Z",
+                        "message": "2 files modified",
+                        "url": "https://github.com/zaCKoZAck0/react-login-page/commit/b4ed1c7298b518506a482875834e3d11c0e7bd21"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "nameWithOwner": "zaCKoZAck0/html2canvasdemo",
+            "description": null,
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/html2canvasdemo",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
+            "homepageUrl": null,
+            "primaryLanguage": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": [
+                    {
+                      "node": {
+                        "committedDate": "2023-04-26T23:08:26Z",
+                        "message": "yo",
+                        "url": "https://github.com/zaCKoZAck0/html2canvasdemo/commit/4e6a67ddc7c8940168c9fe1a82acb039e0ca2c00"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -1760,6 +2092,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/backendShopGPT-main",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "JavaScript",
@@ -1787,6 +2122,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/ShopGPT-main",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "JavaScript",
@@ -1814,6 +2152,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/ShopGPT",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "https://stackblitz.com/edit/react-9yknhw",
             "primaryLanguage": {
               "name": "JavaScript",
@@ -1841,6 +2182,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/backendShopGPT",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "https://stackblitz.com/edit/express-simple-ugeq3n",
             "primaryLanguage": {
               "name": "JavaScript",
@@ -1868,6 +2212,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/kool-css",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "SCSS",
@@ -1895,6 +2242,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/Resume-Writer",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "SCSS",
@@ -1922,6 +2272,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/TrustPlex-Frontend",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "https://stackblitz.com/edit/react-ts-9wphl6",
             "primaryLanguage": {
               "name": "JavaScript",
@@ -1949,6 +2302,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/asg-meragaon-server",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "JavaScript",
@@ -1971,57 +2327,14 @@
             }
           },
           {
-            "nameWithOwner": "zaCKoZAck0/asg-meragaon-client",
-            "description": null,
-            "stargazerCount": 0,
-            "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/asg-meragaon-client",
-            "homepageUrl": "https://asg-meragaon-client.vercel.app",
-            "primaryLanguage": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": [
-                    {
-                      "node": {
-                        "committedDate": "2023-02-12T22:47:02Z",
-                        "message": "new api",
-                        "url": "https://github.com/zaCKoZAck0/asg-meragaon-client/commit/30ed721fd2e1f8314225b2872cac8eb80b67a83a"
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          {
-            "nameWithOwner": "zaCKoZAck0/quote",
-            "description": "Quote Tool for Editor.js 2.0",
-            "stargazerCount": 0,
-            "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/quote",
-            "homepageUrl": "",
-            "primaryLanguage": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": []
-                }
-              }
-            }
-          },
-          {
             "nameWithOwner": "zaCKoZAck0/python-Flikr-api-test",
             "description": "It tests API call using requests Library",
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/python-Flikr-api-test",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "Python",
@@ -2044,11 +2357,58 @@
             }
           },
           {
+            "nameWithOwner": "zaCKoZAck0/quote",
+            "description": "Quote Tool for Editor.js 2.0",
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/quote",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
+            "homepageUrl": "",
+            "primaryLanguage": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": []
+                }
+              }
+            }
+          },
+          {
+            "nameWithOwner": "zaCKoZAck0/image",
+            "description": "Image Block for Editor.js",
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/image",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
+            "homepageUrl": "",
+            "primaryLanguage": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": []
+                }
+              }
+            }
+          },
+          {
             "nameWithOwner": "zaCKoZAck0/editor.js",
             "description": "A block-style editor with clean JSON output",
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/editor.js",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": "https://editorjs.io",
             "primaryLanguage": {
               "name": "TypeScript",
@@ -2068,6 +2428,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/Course",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "TypeScript",
@@ -2095,6 +2458,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/VW_JAVA_TRAINING",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "Java",
@@ -2122,6 +2488,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/Courses0",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": null,
             "defaultBranchRef": null
@@ -2132,6 +2501,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/trust-plex0",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "JavaScript",
@@ -2159,6 +2531,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/trust-plexx",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "JavaScript",
@@ -2186,6 +2561,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/trust-plex",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "JavaScript",
@@ -2213,6 +2591,9 @@
             "stargazerCount": 0,
             "forkCount": 0,
             "url": "https://github.com/zaCKoZAck0/Leetcode-Helpers",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=6f17149cef736c6627d13bf0af52d9921e9f152d&v=4"
+            },
             "homepageUrl": null,
             "primaryLanguage": {
               "name": "Python",
@@ -2233,33 +2614,6 @@
                 }
               }
             }
-          },
-          {
-            "nameWithOwner": "LuC-9/Go-Tech-Interview",
-            "description": null,
-            "stargazerCount": 0,
-            "forkCount": 0,
-            "url": "https://github.com/LuC-9/Go-Tech-Interview",
-            "homepageUrl": null,
-            "primaryLanguage": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": [
-                    {
-                      "node": {
-                        "committedDate": "2022-09-06T19:28:45Z",
-                        "message": "first-commit",
-                        "url": "https://github.com/LuC-9/Go-Tech-Interview/commit/722842b10eabbe80bcf9e91d46849882ddad4c97"
-                      }
-                    }
-                  ]
-                }
-              }
-            }
           }
         ]
       },
@@ -2271,7 +2625,7 @@
             "#30a14e",
             "#216e39"
           ],
-          "totalContributions": 260,
+          "totalContributions": 328,
           "months": [
             {
               "totalWeeks": 3,
@@ -2424,7 +2778,7 @@
             {
               "contributionDays": [
                 {
-                  "color": "#30a14e",
+                  "color": "#216e39",
                   "contributionCount": 11,
                   "date": "2023-09-24",
                   "weekday": 0
@@ -2436,7 +2790,7 @@
                   "weekday": 1
                 },
                 {
-                  "color": "#40c463",
+                  "color": "#30a14e",
                   "contributionCount": 7,
                   "date": "2023-09-26",
                   "weekday": 2
@@ -2507,7 +2861,7 @@
                   "weekday": 5
                 },
                 {
-                  "color": "#9be9a8",
+                  "color": "#40c463",
                   "contributionCount": 4,
                   "date": "2023-10-07",
                   "weekday": 6
@@ -2518,7 +2872,7 @@
             {
               "contributionDays": [
                 {
-                  "color": "#9be9a8",
+                  "color": "#40c463",
                   "contributionCount": 4,
                   "date": "2023-10-08",
                   "weekday": 0
@@ -2530,13 +2884,13 @@
                   "weekday": 1
                 },
                 {
-                  "color": "#9be9a8",
+                  "color": "#40c463",
                   "contributionCount": 4,
                   "date": "2023-10-10",
                   "weekday": 2
                 },
                 {
-                  "color": "#30a14e",
+                  "color": "#216e39",
                   "contributionCount": 12,
                   "date": "2023-10-11",
                   "weekday": 3
@@ -2636,7 +2990,7 @@
                   "weekday": 3
                 },
                 {
-                  "color": "#9be9a8",
+                  "color": "#40c463",
                   "contributionCount": 4,
                   "date": "2023-10-26",
                   "weekday": 4
@@ -2742,7 +3096,7 @@
                   "weekday": 5
                 },
                 {
-                  "color": "#9be9a8",
+                  "color": "#40c463",
                   "contributionCount": 4,
                   "date": "2023-11-11",
                   "weekday": 6
@@ -2759,7 +3113,7 @@
                   "weekday": 0
                 },
                 {
-                  "color": "#9be9a8",
+                  "color": "#40c463",
                   "contributionCount": 4,
                   "date": "2023-11-13",
                   "weekday": 1
@@ -2859,7 +3213,7 @@
                   "weekday": 1
                 },
                 {
-                  "color": "#9be9a8",
+                  "color": "#40c463",
                   "contributionCount": 4,
                   "date": "2023-11-28",
                   "weekday": 2
@@ -2971,7 +3325,7 @@
                   "weekday": 4
                 },
                 {
-                  "color": "#9be9a8",
+                  "color": "#40c463",
                   "contributionCount": 4,
                   "date": "2023-12-15",
                   "weekday": 5
@@ -4663,13 +5017,13 @@
                   "weekday": 4
                 },
                 {
-                  "color": "#30a14e",
+                  "color": "#216e39",
                   "contributionCount": 10,
                   "date": "2024-08-23",
                   "weekday": 5
                 },
                 {
-                  "color": "#30a14e",
+                  "color": "#216e39",
                   "contributionCount": 11,
                   "date": "2024-08-24",
                   "weekday": 6
@@ -4680,7 +5034,7 @@
             {
               "contributionDays": [
                 {
-                  "color": "#9be9a8",
+                  "color": "#40c463",
                   "contributionCount": 4,
                   "date": "2024-08-25",
                   "weekday": 0
@@ -4716,7 +5070,7 @@
                   "weekday": 5
                 },
                 {
-                  "color": "#9be9a8",
+                  "color": "#40c463",
                   "contributionCount": 4,
                   "date": "2024-08-31",
                   "weekday": 6
@@ -4745,13 +5099,13 @@
                   "weekday": 2
                 },
                 {
-                  "color": "#40c463",
+                  "color": "#30a14e",
                   "contributionCount": 7,
                   "date": "2024-09-04",
                   "weekday": 3
                 },
                 {
-                  "color": "#30a14e",
+                  "color": "#216e39",
                   "contributionCount": 12,
                   "date": "2024-09-05",
                   "weekday": 4
@@ -4775,9 +5129,27 @@
               "contributionDays": [
                 {
                   "color": "#40c463",
-                  "contributionCount": 5,
+                  "contributionCount": 6,
                   "date": "2024-09-08",
                   "weekday": 0
+                },
+                {
+                  "color": "#216e39",
+                  "contributionCount": 66,
+                  "date": "2024-09-09",
+                  "weekday": 1
+                },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 5,
+                  "date": "2024-09-10",
+                  "weekday": 2
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-09-11",
+                  "weekday": 3
                 }
               ],
               "firstDay": "2024-09-08"

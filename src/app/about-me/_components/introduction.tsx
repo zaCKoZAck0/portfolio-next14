@@ -2,11 +2,12 @@ import { ImageCarousel } from '~/components/image-carousel';
 import { FaGithub, FaLinkedin, FaInstagram, FaDiscord } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { FloatingDock } from '~/components/floating-dock';
-import { P } from '~/components/typography';
+// import { P } from '~/components/typography';
+import { WaveReveal } from '~/components/typography/animated/wave-reveal';
 
 export function Introduction() {
   return (
-    <table className="my-5 flex min-h-screen items-center justify-center md:mt-0">
+    <table className="flex min-h-screen items-center justify-center md:mt-0">
       <tbody>
         <tr className="flex flex-col items-center justify-between md:flex-row md:gap-4">
           <td className="w-fit">
@@ -26,11 +27,11 @@ export function Introduction() {
             />
           </td>
           <td className="pt-3 text-justify font-semibold text-secondary-foreground md:pl-10 md:pt-0">
-            <P>
-              {
-                "Hello! I'm Ayush, also known as ZackoZack, depending on where you know me from. I'm a Fullstack Software Developer based in India 🇮🇳 with a passion for building web applications. I have expertise in Next.js, React, Node.js, and TypeScript, and I'm also well-versed in Java and Spring Boot. Currently, I work as a Software Engineer at Volkswagen Group."
-              }
-            </P>
+            <WaveReveal
+              duration="300ms"
+              className="leading-8"
+              text="Hello! I'm Ayush, also known as ZackoZack, depending on where you know me from. I'm a Fullstack Software Developer based in India with a passion for building web applications. I have expertise in Next.js, React, Node.js, and TypeScript, and I'm also well-versed in Java and Spring Boot. Currently, I work as a Software Engineer at Volkswagen Group."
+            />
             <FloatingDock
               items={[
                 {

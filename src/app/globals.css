@@ -49,7 +49,6 @@
   }
 }
 
-
 @layer base {
   * {
     @apply border-border;
@@ -60,5 +59,5 @@
 }
 
 .link {
-  @apply flex items-center text-lg font-semibold text-orange-200;
+  @apply flex items-center font-semibold text-orange-200;
 }

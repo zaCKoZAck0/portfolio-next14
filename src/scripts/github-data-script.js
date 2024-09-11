@@ -29,6 +29,9 @@ function init() {
         stargazerCount
         forkCount
         url
+        owner {
+          avatarUrl
+        }
         homepageUrl
         primaryLanguage {
           name

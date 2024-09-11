@@ -85,8 +85,8 @@ export function Projects() {
         <H1>Projects</H1>
         <P>Here are some of the projects I have worked on / contributed to.</P>
         <p className="py-1">
-          <A href="https://github.com/zaCKoZAck0">
-            <FaGithub className="mr-2 inline-block" />
+          <A href="https://github.com/zaCKoZAck0" className="text-sm">
+            <FaGithub className="mr-2 inline-block flex-shrink-0" />
             View all projects on Github
           </A>
         </p>
