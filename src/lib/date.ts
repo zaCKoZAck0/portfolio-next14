@@ -1,4 +1,4 @@
-"use client"
+'use client';
 function getHoursBetweenDates(date1: Date, date2: Date): number {
   const millisecondsPerHour = 1000 * 60 * 60;
   const differenceInMilliseconds = Math.abs(date2.getTime() - date1.getTime());
@@ -31,20 +31,20 @@ export function getRelativeDate(date: Date, short = false): string {
   const parts: string[] = [];
 
   if (years > 0) {
-    parts.push(`${years} year${years > 1 ? "s" : ""}`);
+    parts.push(`${years} year${years > 1 ? 's' : ''}`);
   }
   if (months > 0) {
-    parts.push(`${months} month${months > 1 ? "s" : ""}`);
+    parts.push(`${months} month${months > 1 ? 's' : ''}`);
   }
   if (days > 0) {
-    parts.push(`${days} day${days > 1 ? "s" : ""}`);
+    parts.push(`${days} day${days > 1 ? 's' : ''}`);
   }
 
   if (short) {
     return parts[0];
   }
 
-  return parts.join(", ");
+  return parts.join(', ');
 }
 
 export function getRelativeTime(date: Date): string {
@@ -55,10 +55,10 @@ export function getRelativeTime(date: Date): string {
   const hours = Math.floor(minutes / 60);
 
   if (hours > 0) {
-    return `${hours} hour${hours > 1 ? "s" : ""}`;
+    return `${hours} hour${hours > 1 ? 's' : ''}`;
   }
   if (minutes > 0) {
-    return `${minutes} minute${minutes > 1 ? "s" : ""}`;
+    return `${minutes} minute${minutes > 1 ? 's' : ''}`;
   }
-  return `${seconds} second${seconds > 1 ? "s" : ""}`;
+  return `${seconds} second${seconds > 1 ? 's' : ''}`;
 }
