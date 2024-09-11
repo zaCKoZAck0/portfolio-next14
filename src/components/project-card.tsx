@@ -5,12 +5,9 @@ import { formatLargeNumber } from '~/lib/numbers';
 import { getRelativeDate } from '~/lib/date';
 import Image from 'next/image';
 
-type ProjectCardProps = {
-  key: number;
-} & RepositoryNode;
+type ProjectCardProps = RepositoryNode;
 
 export function ProjectCard({
-  key,
   nameWithOwner,
   description,
   stargazerCount,
@@ -21,7 +18,7 @@ export function ProjectCard({
   defaultBranchRef,
 }: ProjectCardProps) {
   return (
-    <div key={key} className="py-2 md:p-2">
+    <div className="py-2 md:p-2">
       <div className="space-y-1 rounded-md bg-muted p-3 md:p-4">
         <div className="flex gap-2">
           <Image

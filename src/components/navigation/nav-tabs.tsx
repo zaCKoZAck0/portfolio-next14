@@ -1,13 +1,13 @@
-"use client";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+'use client';
+import { useEffect, useState } from 'react';
+import { motion, useScroll } from 'framer-motion';
 
-import { cn } from "~/lib/utils";
-import { H4 } from "../typography";
-import { Logo } from "./logo";
-import { NavItem } from ".";
-import { usePathname, useRouter } from "next/navigation";
-import Link from "next/link";
+import { cn } from '~/lib/utils';
+import { H4 } from '../typography';
+import { Logo } from './logo';
+import { NavItem } from '.';
+import { usePathname, useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 interface TabProps {
   text: string;
@@ -18,6 +18,22 @@ interface TabProps {
 export default function NavTabs({ tabs }: { tabs: NavItem[] }) {
   const pathname = usePathname();
   const [selected, setSelected] = useState<string>('');
+  const [navStyle, setNavStyle] = useState<string>('shadow-none');
+
+  const scroll = useScroll();
+  const scrollY = scroll.scrollY;
+
+  useEffect(() => {
+    const unsubscribe = scrollY.on('change', (latest) => {
+      if (latest > 0) {
+        setNavStyle('shadow-md bg-secondary/75 backdrop-blur-md');
+      } else {
+        setNavStyle('shadow-none bg-secondary');
+      }
+    });
+
+    return () => unsubscribe();
+  }, [scrollY]);
 
   useEffect(() => {
     const matchedTab = tabs.find((tab) => tab.pathname === pathname);
@@ -29,12 +45,22 @@ export default function NavTabs({ tabs }: { tabs: NavItem[] }) {
   }, [pathname, tabs]);
 
   return (
-    <div className="md:flex flex-wrap items-center justify-center gap-2 bg-secondary rounded-full border-2 p-2 hidden">
-      <Link href='/'>
-      <Logo className="text-xl px-3" />
+    <div
+      className={cn(
+        'm-2 hidden flex-wrap items-center justify-center gap-2 rounded-full border-2 bg-secondary p-2 md:flex',
+        navStyle,
+      )}
+    >
+      <Link href="/">
+        <Logo className="px-3 text-xl" />
       </Link>
       {tabs.map((tab) => (
-        <Tab text={tab.label} selected={selected === tab.pathname} url={tab.pathname} key={tab.label} />
+        <Tab
+          text={tab.label}
+          selected={selected === tab.pathname}
+          url={tab.pathname}
+          key={tab.label}
+        />
       ))}
     </div>
   );
@@ -44,19 +70,21 @@ const Tab = ({ text, selected, url }: TabProps) => {
   const router = useRouter();
   return (
     <button
-      onClick={() => router.push(url, {
-        scroll: false,
-      })} 
+      onClick={() =>
+        router.push(url, {
+          scroll: false,
+        })
+      }
       className={cn(
-        "relative rounded-full px-4 py-1 text-sm transition-all",
-        selected ? "text-primary-foreground" : "text-secondary-foreground hover:text-primary"
+        'relative rounded-full px-4 py-1 text-sm transition-all',
+        selected ? 'text-primary-foreground' : 'text-secondary-foreground hover:text-primary',
       )}
     >
       <H4 className="relative z-50 min-w-20">{text}</H4>
       {selected && (
         <motion.span
           layoutId="tabs"
-          transition={{ type: "spring", duration: 0.5 }}
+          transition={{ type: 'spring', duration: 0.5 }}
           className="absolute inset-0 rounded-full bg-primary text-primary-foreground"
         />
       )}

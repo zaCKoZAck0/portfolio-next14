@@ -1,49 +1,77 @@
-"use client";
-import { Menu, Zap } from "lucide-react";
-import { Button } from "../ui/button";
-import { Logo } from "./logo";
+'use client';
+import { Menu } from 'lucide-react';
+import { Button } from '../ui/button';
+import { Logo } from './logo';
 
-import {
-    Sheet,
-    SheetContent,
-    SheetTrigger,
-  } from "~/components/ui/sheet"
-import { NavItem } from ".";
-import { H3 } from "../typography";
-import { usePathname } from "next/navigation";
-import { cn } from "~/lib/utils";
-import Link from "next/link";
+import { Sheet, SheetContent, SheetTrigger } from '~/components/ui/sheet';
+import { NavItem } from '.';
+import { H3 } from '../typography';
+import { usePathname, useRouter } from 'next/navigation';
+import { cn } from '~/lib/utils';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { useScroll } from 'framer-motion';
 
-export function MobileNav({tabs}: {tabs: NavItem[]}) {
-    const pathname = usePathname();
-    return (
-        <div className="bg-secondary text-secondary-foreground flex md:hidden justify-between w-full items-center">
-            <div>
-                <Logo className="text-xl px-3" />
-            </div>
-            <Sheet>
-  <SheetTrigger asChild>
-    <Button variant='ghost' size='icon'>
-        <Menu className="h-6 w-6" />
-    </Button>
-  </SheetTrigger>
-  <SheetContent>
-   <ul>
-         {tabs.map((tab, idx) => (
-            <li key={idx} className="p-4">
-                <Link href={tab.pathname}>
-                <H3 className={cn("flex items-center gap-1",tab.pathname===pathname?"text-primary leading-relaxed":"text-muted-foreground")}>
-                {tab.label}
-                {tab.pathname===pathname && <span className="text-orange-200">
-                    <Zap className="h-5 w-5" />
-                    </span>}
-                </H3>
-                </Link>
-            </li>
-         ))}
-   </ul>
-  </SheetContent>
-</Sheet>
-        </div>
-    )
+export function MobileNav({ tabs }: { tabs: NavItem[] }) {
+  const [open, setOpen] = useState(false);
+  const [navStyle, setNavStyle] = useState('shadow-none');
+  const router = useRouter();
+  const scroll = useScroll();
+  const scrollY = scroll.scrollY;
+
+  useEffect(() => {
+    const unsubscribe = scrollY.on('change', (latest) => {
+      if (latest > 0) {
+        setNavStyle('shadow-md bg-secondary/75 backdrop-blur-md');
+      } else {
+        setNavStyle('shadow-none bg-secondary');
+      }
+    });
+
+    return () => unsubscribe();
+  }, [scrollY]);
+  function onTabClick(url: string) {
+    router.push(url, {
+      scroll: true,
+    });
+    setOpen(false);
+  }
+  const pathname = usePathname();
+  return (
+    <div
+      className={cn(
+        'mx-2 mt-2 flex w-full items-center justify-between rounded-full bg-secondary px-2 text-secondary-foreground md:hidden',
+        navStyle,
+      )}
+    >
+      <Link href="/">
+        <Logo className="px-3 text-xl" />
+      </Link>
+      <Sheet open={open} onOpenChange={setOpen}>
+        <SheetTrigger asChild>
+          <Button variant="ghost" size="icon">
+            <Menu className="h-6 w-6" />
+          </Button>
+        </SheetTrigger>
+        <SheetContent>
+          <ul>
+            {tabs.map((tab, idx) => (
+              <li key={idx} className="p-4">
+                <button onClick={() => onTabClick(tab.pathname)}>
+                  <H3
+                    className={cn(
+                      'flex items-center gap-1',
+                      tab.pathname === pathname ? 'text-primary' : 'text-muted-foreground',
+                    )}
+                  >
+                    {tab.label}
+                  </H3>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </SheetContent>
+      </Sheet>
+    </div>
+  );
 }

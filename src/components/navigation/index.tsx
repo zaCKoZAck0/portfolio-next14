@@ -27,10 +27,8 @@ const NavItems: NavItem[] = [
 
 export function Navbar() {
   return (
-    <nav className="fixed top-0 z-50 flex w-full items-center justify-center bg-background p-1 md:bg-transparent">
-      <div className="hidden md:inline-block">
-        <NavTabs tabs={NavItems} />
-      </div>
+    <nav className="fixed top-0 z-50 flex w-full items-center justify-center bg-transparent">
+      <NavTabs tabs={NavItems} />
       <MobileNav tabs={NavItems} />
     </nav>
   );
