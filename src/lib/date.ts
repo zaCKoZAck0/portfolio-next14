@@ -1,3 +1,4 @@
+"use client"
 function getHoursBetweenDates(date1: Date, date2: Date): number {
   const millisecondsPerHour = 1000 * 60 * 60;
   const differenceInMilliseconds = Math.abs(date2.getTime() - date1.getTime());
