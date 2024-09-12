@@ -53,15 +53,17 @@ export function MobileNav({ tabs }: { tabs: NavItem[] }) {
             <Menu className="h-6 w-6" />
           </Button>
         </SheetTrigger>
-        <SheetContent>
+        <SheetContent className="flex w-fit items-center justify-center bg-background/50 backdrop-blur-xl">
           <ul>
             {tabs.map((tab, idx) => (
               <li key={idx} className="p-4">
                 <button onClick={() => onTabClick(tab.pathname)}>
                   <H3
                     className={cn(
-                      'flex items-center gap-1',
-                      tab.pathname === pathname ? 'text-primary' : 'text-muted-foreground',
+                      'flex w-full items-center gap-1 rounded-full px-4 py-2 text-center',
+                      tab.pathname === pathname
+                        ? 'bg-primary text-primary-foreground'
+                        : 'text-muted-foreground',
                     )}
                   >
                     {tab.label}
