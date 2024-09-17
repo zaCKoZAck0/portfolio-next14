@@ -3,7 +3,7 @@ import { FaLinkedin } from 'react-icons/fa6';
 import { RecommendationCard } from '~/components/recommendation-card';
 import { H2, P, H3 } from '~/components/typography';
 import { Button } from '~/components/ui/button';
-import recommendationsData from '../../../../data/recommendations.json';
+import recommendationsData from '../../../../../data/recommendations.json';
 
 export function Recommendations() {
   return (

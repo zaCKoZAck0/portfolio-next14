@@ -1,0 +1,87 @@
+p {
+  padding-top: 0.75rem /* 12px */;
+  padding-bottom: 0.75rem /* 12px */;
+  line-height: 1.75;
+}
+
+ul {
+  list-style-type: none;
+  padding-top: 0.75rem /* 12px */;
+  padding-bottom: 0.75rem /* 12px */;
+}
+
+li::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(254, 215, 170)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='m12 5 7 7-7 7'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+b {
+  color: hsl(var(--secondary-foreground));
+  font-weight: 500;
+}
+
+a {
+  color: rgb(254, 215, 170);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 1.5rem /* 24px */;
+  font-weight: 500;
+  padding-top: 2.5rem /* 20px */;
+  padding-bottom: 0.75rem /* 12px */;
+  color: hsl(var(--secondary-foreground));
+}
+
+h3 {
+  font-size: 1.25rem /* 20px */;
+  font-weight: 500;
+  padding-top: 2rem /* 32px */;
+  padding-bottom: 0.75rem /* 12px */;
+  color: hsl(var(--secondary-foreground));
+}
+
+h4 {
+  font-size: 1.125rem /* 18px */;
+  font-weight: 500;
+  padding-top: 1.5rem /* 24px */;
+  padding-bottom: 0.75rem /* 12px */;
+  color: hsl(var(--secondary-foreground));
+}
+
+aside h4 {
+  font-size: 1rem /* 16px */;
+  font-weight: 500;
+  padding-top: 0.5rem /* 24px */;
+  padding-bottom: 0.5rem /* 12px */;
+  color: white;
+}
+
+aside b {
+  color: white;
+}
+
+code {
+  color: rgb(254, 215, 170);
+  background-color: rgb(254, 215, 170, 0.05);
+  padding: 0rem 0.25rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.25rem /* 4px */;
+  border: 1px solid rgb(254, 215, 170, 0.25);
+}
+
+aside {
+  padding-top: 0.75rem /* 12px */;
+  padding-bottom: 0.75rem /* 12px */;
+}

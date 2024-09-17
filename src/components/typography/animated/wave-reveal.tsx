@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 import { cn } from '~/lib/utils';
+import { H4 } from '..';
 
 interface WaveRevealProps {
   /**
@@ -78,7 +79,7 @@ const Word = ({
     <>
       {word.split('').map((letter, letterIndex) => {
         return (
-          <span
+          <H4
             key={`${letter}_${letterIndex}_${index}`}
             className={cn({
               [className]: !isWordMode,
@@ -93,7 +94,7 @@ const Word = ({
             }}
           >
             {letter}
-          </span>
+          </H4>
         );
       })}
     </>

@@ -1,7 +1,7 @@
 'use client';
 import { A, H1, H3, P } from '~/components/typography';
 import { ProjectCard } from '~/components/project-card';
-import githubData from '../../../../data/github-data.json';
+import githubData from '../../../../../data/github-data.json';
 import { Input } from '~/components/ui/input';
 import { Button } from '~/components/ui/button';
 import {

@@ -1,0 +1,15 @@
+{
+  "title": "Under the hood: Git Internals",
+  "description": "This is a test page",
+  "created_at": "09-15-2024",
+  "updated_at": "09-15-2024",
+  "author": "zackozack",
+  "tags": ["test", "example"],
+  "categories": ["test"],
+  "content": [
+    {
+      "type": "text",
+      "content": "We all have worked with <a href=\"https://git-scm.com/\">Git</a> before, and we all know how to use it. But do we know how it works? In this blog, <b>I will explain how Git works under the hood.</b>"
+    }
+  ]
+}

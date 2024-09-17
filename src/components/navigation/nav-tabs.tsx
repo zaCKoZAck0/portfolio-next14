@@ -47,7 +47,7 @@ export default function NavTabs({ tabs }: { tabs: NavItem[] }) {
   return (
     <div
       className={cn(
-        'm-2 hidden flex-wrap items-center justify-center gap-2 rounded-full border-2 bg-secondary p-2 md:flex',
+        'm-2 hidden flex-wrap items-center justify-center gap-2 rounded-full bg-secondary p-2 md:flex',
         navStyle,
       )}
     >

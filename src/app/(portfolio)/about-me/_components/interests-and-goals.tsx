@@ -2,7 +2,7 @@ import { ChevronDown } from 'lucide-react';
 import { ProjectCard } from '~/components/project-card';
 import { H2, P } from '~/components/typography';
 import { Button } from '~/components/ui/button';
-import githubData from '../../../../data/github-data.json';
+import githubData from '../../../../../data/github-data.json';
 import Link from 'next/link';
 
 export function InterestsAndGoals() {
