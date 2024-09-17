@@ -54,7 +54,7 @@ export function BlogPage({ blog }: BlogPageProps) {
             </span>
           </H4>
         </div>
-        <div className={cn('my-4 text-sm text-muted-foreground', sora.className)}>
+        <div id="blog" className={cn('my-4 text-sm text-muted-foreground', sora.className)}>
           {blog.sections.map((section, idx) => {
             switch (section.type) {
               case 'heading':

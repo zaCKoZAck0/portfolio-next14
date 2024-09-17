@@ -1,16 +1,16 @@
-p {
+#blog p {
   padding-top: 0.75rem /* 12px */;
   padding-bottom: 0.75rem /* 12px */;
   line-height: 1.75;
 }
 
-ul {
+#blog ul {
   list-style-type: none;
   padding-top: 0.75rem /* 12px */;
   padding-bottom: 0.75rem /* 12px */;
 }
 
-li::before {
+#blog li::before {
   content: '';
   display: inline-block;
   width: 20px;
@@ -22,21 +22,21 @@ li::before {
   vertical-align: middle;
 }
 
-b {
+#blog b {
   color: hsl(var(--secondary-foreground));
   font-weight: 500;
 }
 
-a {
+#blog a {
   color: rgb(254, 215, 170);
   text-decoration: none;
 }
 
-a:hover {
+#blog a:hover {
   text-decoration: underline;
 }
 
-h2 {
+#blog h2 {
   font-size: 1.5rem /* 24px */;
   font-weight: 500;
   padding-top: 2.5rem /* 20px */;
@@ -44,7 +44,7 @@ h2 {
   color: hsl(var(--secondary-foreground));
 }
 
-h3 {
+#blog h3 {
   font-size: 1.25rem /* 20px */;
   font-weight: 500;
   padding-top: 2rem /* 32px */;
@@ -52,7 +52,7 @@ h3 {
   color: hsl(var(--secondary-foreground));
 }
 
-h4 {
+#blog h4 {
   font-size: 1.125rem /* 18px */;
   font-weight: 500;
   padding-top: 1.5rem /* 24px */;
@@ -60,7 +60,7 @@ h4 {
   color: hsl(var(--secondary-foreground));
 }
 
-aside h4 {
+#blog aside h4 {
   font-size: 1rem /* 16px */;
   font-weight: 500;
   padding-top: 0.5rem /* 24px */;
@@ -68,11 +68,11 @@ aside h4 {
   color: white;
 }
 
-aside b {
+#blog aside b {
   color: white;
 }
 
-code {
+#blog code {
   color: rgb(254, 215, 170);
   background-color: rgb(254, 215, 170, 0.05);
   padding: 0rem 0.25rem;
@@ -81,7 +81,7 @@ code {
   border: 1px solid rgb(254, 215, 170, 0.25);
 }
 
-aside {
+#blog aside {
   padding-top: 0.75rem /* 12px */;
   padding-bottom: 0.75rem /* 12px */;
 }
