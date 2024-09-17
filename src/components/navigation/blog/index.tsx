@@ -2,10 +2,10 @@
 import { Button } from '~/components/ui/button';
 import { Logo } from '../logo';
 import { SearchIcon } from 'lucide-react';
-import Link from 'next/link';
 import { H4 } from '~/components/typography';
 import { motion, useScroll } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const navVariants = {
   initial: {
@@ -24,6 +24,7 @@ const navVariants = {
 
 export function BlogNavigation() {
   const { scrollY } = useScroll();
+  const router = useRouter();
   const [navState, setNavState] = useState<keyof typeof navVariants>('initial');
 
   useEffect(() => {
@@ -45,12 +46,12 @@ export function BlogNavigation() {
       className="fixed top-0 z-50 flex w-full items-center justify-center bg-transparent"
     >
       <div className="flex w-full max-w-3xl items-center justify-between gap-2 transition-all duration-300">
-        <div className="flex items-center text-xl">
+        <button onClick={() => router.push('/blog')} className="flex items-center text-xl">
           <Logo short className="text-3xl" />
           <H4 className="rounded-full bg-orange-200 px-2 py-0.5 text-xs font-semibold text-secondary will-change-auto">
             Blogs
           </H4>
-        </div>
+        </button>
         <div className="flex gap-2">
           <Button size="icon" variant="ghost">
             <SearchIcon size={20} />

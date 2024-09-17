@@ -1,3 +1,5 @@
+import '../../blog.css';
+
 import { notFound } from 'next/navigation';
 import { blogs } from '../_blogs';
 import { BlogPage } from './_components/blog';
