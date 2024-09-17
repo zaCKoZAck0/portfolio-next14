@@ -3,7 +3,6 @@ import { A, H3, H4 } from './typography';
 import Image from 'next/image';
 
 type RecommendationCardProps = {
-  key: number;
   linkedinURL: string;
   name: string;
   designation: string;
@@ -15,7 +14,6 @@ type RecommendationCardProps = {
 };
 
 export function RecommendationCard({
-  key,
   linkedinURL,
   name,
   designation,
@@ -25,15 +23,16 @@ export function RecommendationCard({
   recommendation,
 }: RecommendationCardProps) {
   return (
-    <div key={key} className="p-4">
-      <div className="flex items-start gap-4 rounded-md bg-muted p-4">
-        <div className="flex flex-shrink-0 flex-col items-center gap-4">
+    <div className="p-4">
+      <div className="relative flex items-start gap-4 overflow-hidden rounded-md bg-muted/50 p-4">
+        <div className="absolute h-24 w-10 bg-[#0072b1]/75 blur-3xl" />
+        <div className="z-10 flex flex-shrink-0 flex-col items-center gap-4">
           {image.length ? (
-            <Image src={image} alt={name} className="rounded-md" height={48} width={48} />
+            <Image src={image} alt={name} className="rounded-md shadow" height={48} width={48} />
           ) : (
             <FaUser size={48} />
           )}
-          <FaLinkedin size={24} />
+          <FaLinkedin className="text-[#0072b1] shadow" size={24} />
         </div>
         <div className="flex flex-col">
           <A href={linkedinURL}>

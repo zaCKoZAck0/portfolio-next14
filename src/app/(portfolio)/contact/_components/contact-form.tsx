@@ -21,7 +21,7 @@ import * as z from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { H2, H3, H4 } from '~/components/typography';
-import { SendHorizonalIcon, SendIcon } from 'lucide-react';
+import { MailIcon, SendIcon } from 'lucide-react';
 import { useToast } from '~/components/ui/use-toast';
 import { MailSentSuccess } from '~/components/animated-icon';
 import { SendEmail } from '~/lib/send-mail';
@@ -203,11 +203,11 @@ export function ContactForm() {
               </FormItem>
             )}
           />
-          <div className="flex items-center justify-between">
-            <Button type="submit">
+          <div className="flex items-center justify-end">
+            <Button type="submit" className="w-full md:w-fit">
               <H3 className="flex items-center text-base">
                 Send Mail
-                <SendHorizonalIcon className="ml-2 size-5 md:size-7" />
+                <MailIcon className="ml-2 size-4 md:size-5" />
               </H3>
             </Button>
           </div>

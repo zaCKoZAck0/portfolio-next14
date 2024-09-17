@@ -28,7 +28,7 @@ export default function NavTabs({ tabs }: { tabs: NavItem[] }) {
       if (latest > 0) {
         setNavStyle('shadow-md bg-secondary/75 backdrop-blur-md');
       } else {
-        setNavStyle('shadow-none bg-secondary');
+        setNavStyle('shadow-none bg-secondary/50');
       }
     });
 
@@ -47,11 +47,14 @@ export default function NavTabs({ tabs }: { tabs: NavItem[] }) {
   return (
     <div
       className={cn(
-        'm-2 hidden flex-wrap items-center justify-center gap-2 rounded-full bg-secondary p-2 md:flex',
+        'relative m-2 hidden flex-wrap items-center justify-center gap-2 overflow-hidden rounded-full bg-secondary/50 p-2 md:flex',
         navStyle,
       )}
     >
-      <Link href="/">
+      {pathname === '/' && (
+        <div className="absolute left-0 size-40 rounded-full bg-primary/15 blur-xl transition-all" />
+      )}
+      <Link href="/" className="z-10">
         <Logo className="px-3 text-xl" />
       </Link>
       {tabs.map((tab) => (
@@ -85,7 +88,7 @@ const Tab = ({ text, selected, url }: TabProps) => {
         <motion.span
           layoutId="tabs"
           transition={{ type: 'spring', duration: 0.5 }}
-          className="absolute inset-0 rounded-full bg-primary text-primary-foreground"
+          className="absolute inset-0 rounded-full bg-primary text-primary-foreground shadow-2xl shadow-primary"
         />
       )}
     </button>

@@ -5,7 +5,8 @@ import { SearchIcon } from 'lucide-react';
 import { H4 } from '~/components/typography';
 import { motion, useScroll } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { blogs } from '~/app/(blog)/blog/_blogs';
 
 const navVariants = {
   initial: {
@@ -25,18 +26,28 @@ const navVariants = {
 export function BlogNavigation() {
   const { scrollY } = useScroll();
   const router = useRouter();
+  const pathname = usePathname();
+  const isBlog = pathname.startsWith('/blog');
+  const blogPath = isBlog ? (pathname.split('/')[2] ?? null) : null;
+  const blogTitle = blogPath ? blogs[blogPath]?.title : '';
+
   const [navState, setNavState] = useState<keyof typeof navVariants>('initial');
+  const [showBlogTitle, setShowBlogTitle] = useState(false);
 
   useEffect(() => {
     const unsubscribe = scrollY.on('change', (latest) => {
       if (latest > 150) {
         setNavState('scrolled');
+        if (latest > 300) {
+          setShowBlogTitle(true);
+        }
       } else if (latest === 0) {
         setNavState('initial');
+        setShowBlogTitle(false);
       }
     });
     return () => unsubscribe();
-  }, [scrollY]);
+  }, [scrollY, showBlogTitle]);
 
   return (
     <motion.nav
@@ -46,12 +57,26 @@ export function BlogNavigation() {
       className="fixed top-0 z-50 flex w-full items-center justify-center bg-transparent"
     >
       <div className="flex w-full max-w-3xl items-center justify-between gap-2 transition-all duration-300">
-        <button onClick={() => router.push('/blog')} className="flex items-center text-xl">
-          <Logo short className="text-3xl" />
-          <H4 className="rounded-full bg-orange-200 px-2 py-0.5 text-xs font-semibold text-secondary will-change-auto">
+        <button onClick={() => router.push('/blog')} className="flex items-center">
+          <Logo short className="text-2xl" />
+          <p className="rounded-full bg-orange-200 px-1.5 text-xs font-semibold text-secondary will-change-auto">
             Blogs
-          </H4>
+          </p>
         </button>
+        {showBlogTitle && (
+          <H4 className="hidden text-base font-semibold text-secondary-foreground md:block">
+            <motion.span
+              initial={{ y: 20, opacity: 0 }}
+              animate={{
+                y: 0,
+                opacity: 1,
+                transition: { delay: 0.2, duration: 1 },
+              }}
+            >
+              {blogTitle}
+            </motion.span>
+          </H4>
+        )}
         <div className="flex gap-2">
           <Button size="icon" variant="ghost">
             <SearchIcon size={20} />

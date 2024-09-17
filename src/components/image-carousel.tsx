@@ -38,6 +38,7 @@ export function ImageCarousel({ items: initialItems }: IImageCarouselProps) {
             )}
             style={{
               transform: index === 1 ? 'scale(1.1) rotate(5deg)' : 'translateX(-30%) rotate(-5deg)',
+              opacity: index === 1 ? 1 : 0.5,
               transition: 'transform 0.5s ease, filter 0.5s ease',
               filter: index === 1 ? 'none' : 'grayscale(100%)',
             }}

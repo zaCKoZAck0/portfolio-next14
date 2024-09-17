@@ -19,14 +19,18 @@ export function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className="py-2 md:p-2">
-      <div className="space-y-1 rounded-md bg-muted p-3 md:p-4">
-        <div className="flex gap-2">
+      <div className="space-y-1 overflow-hidden rounded-md bg-muted/50 p-3 md:p-4">
+        <div className="relative flex gap-2">
+          <div
+            className="absolute left-0 h-24 w-20 rounded-full bg-cover opacity-50 blur-3xl"
+            style={{ backgroundImage: `url(${avatarUrl})` }}
+          />
           <Image
             src={avatarUrl}
             alt={nameWithOwner}
             width={50}
             height={50}
-            className="mr-1 size-14 flex-shrink-0 rounded-md md:mr-2 md:size-10"
+            className="relative z-10 mr-1 size-14 flex-shrink-0 rounded-md shadow md:mr-2 md:size-10"
           />
           <div className="flex-grow overflow-hidden">
             <div className="flex w-full flex-col md:flex-row md:items-center md:justify-between">

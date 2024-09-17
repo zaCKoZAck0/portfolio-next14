@@ -24,7 +24,7 @@ export function MobileNav({ tabs }: { tabs: NavItem[] }) {
       if (latest > 0) {
         setNavStyle('shadow-md bg-secondary/75 backdrop-blur-md');
       } else {
-        setNavStyle('shadow-none bg-secondary');
+        setNavStyle('shadow-none bg-secondary/50');
       }
     });
 
@@ -40,7 +40,7 @@ export function MobileNav({ tabs }: { tabs: NavItem[] }) {
   return (
     <div
       className={cn(
-        'mx-2 mt-2 flex w-full items-center justify-between rounded-full bg-secondary px-2 text-secondary-foreground md:hidden',
+        'mx-2 mt-2 flex w-full items-center justify-between rounded-full bg-secondary/50 px-2 text-secondary-foreground md:hidden',
         navStyle,
       )}
     >

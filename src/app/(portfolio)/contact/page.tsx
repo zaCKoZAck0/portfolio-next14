@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <main className="bg-background text-foreground md:container">
       <section className="flex h-[calc(100vh-48px)] flex-col items-center justify-center">
-        <div className="w-full max-w-3xl border-primary/50 px-6 py-4 md:border-2">
+        <div className="w-full max-w-3xl rounded-lg border-primary/50 px-6 py-4 md:border-2 md:bg-primary/5">
           <ContactForm />
         </div>
       </section>

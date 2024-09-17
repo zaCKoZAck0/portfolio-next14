@@ -3,6 +3,7 @@ import { cn } from '~/lib/utils';
 import { BashShell, Output } from '../[slug]/_components/code';
 import { Aside } from '../[slug]/_components/aside';
 import { BlogImage } from '../[slug]/_components/img';
+import '../../blog.css';
 
 const sora = Sora({ subsets: ['latin'] });
 
@@ -10,7 +11,11 @@ export default function BlogPage() {
   return (
     <main className="flex min-h-screen justify-center md:container">
       <section className="flex w-full max-w-3xl translate-y-[calc(100vh/5)] flex-col p-4 md:translate-y-[calc(100vh/4)]">
-        <div className={cn('my-4 text-sm text-muted-foreground', sora.className)}>
+        <div id="blog" className={cn('my-4 text-sm text-muted-foreground', sora.className)}>
+          <p>
+            We all use Git on a daily basis, but have you ever wondered, how does git works under
+            the hood? <b>In this blog, we are going to explore the internals of Git.</b>
+          </p>
           <p>
             This blog is going to be a long one, so please bear with me and follow along. I promise
             it will be worth it.
