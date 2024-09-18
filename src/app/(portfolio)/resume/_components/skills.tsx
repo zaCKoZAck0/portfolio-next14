@@ -3,8 +3,8 @@ import { SiMongodb, SiNextdotjs, SiPostgresql, SiTailwindcss, SiTypescript } fro
 
 export function Skills() {
   return (
-    <section>
-      <div className="grid grid-cols-3 gap-3 md:grid-cols-4">
+    <section className="rounded-lg bg-primary/5 p-3 md:p-4 md:px-6">
+      <div className="grid grid-cols-3 gap-4 md:grid-cols-4">
         <div className="flex items-center justify-start gap-2 overflow-x-hidden text-sm font-semibold md:text-xl">
           <FaJs className="size-4 shrink-0 text-orange-200 md:size-8" />
           JavaScript

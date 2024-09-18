@@ -46,7 +46,7 @@ export function LocalTime() {
 
   const Icon = Time();
   return (
-    <td className="flex items-center gap-2 font-semibold">
+    <td className="flex items-center gap-2">
       Asia/Kolkata (UTC+5:30) - {time}
       <Greet icon={Icon.icon()} time={Icon.time} />
     </td>

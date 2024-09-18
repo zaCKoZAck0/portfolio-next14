@@ -19,21 +19,19 @@ export async function OpenSource() {
   }
   return (
     <section>
-      <table className="text-sm md:text-lg">
+      <table className="text-sm text-secondary-foreground md:text-lg">
         <tbody>
           <tr>
             <td className="text-muted-foreground md:pr-4">Total Repositories:</td>
-            <td className="font-semibold">
-              Contributed to {data.user.repositoriesContributedTo.totalCount} Repos
-            </td>
+            <td>Contributed to {data.user.repositoriesContributedTo.totalCount} Repos</td>
           </tr>
           <tr>
             <td className="text-muted-foreground md:pr-4">Top Repository:</td>
-            <td className="font-semibold">{data.user.topRepositories.nodes[0].nameWithOwner}</td>
+            <td>{data.user.topRepositories.nodes[0].nameWithOwner}</td>
           </tr>
           <tr>
             <td className="text-muted-foreground md:pr-4">PRs Merged:</td>
-            <td className="flex items-center font-semibold">
+            <td className="flex items-center">
               {data.user.pullRequests.totalCount}
               <GitPullRequest className="ml-3 mr-1 inline-block size-4 text-orange-200 md:size-5" />
               Pull Requests
@@ -41,7 +39,7 @@ export async function OpenSource() {
           </tr>
           <tr>
             <td className="text-muted-foreground md:pr-4">Issues Open:</td>
-            <td className="flex items-center font-semibold">
+            <td className="flex items-center">
               {data.user.issues.totalCount}
               <CircleDot className="ml-3 mr-1 inline-block size-4 text-orange-200 md:size-5" />
               Issues

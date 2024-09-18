@@ -4,21 +4,21 @@ import { LocalTime } from './local-time';
 
 export function AboutMe() {
   return (
-    <section>
+    <section className="rounded-lg bg-primary/5 py-2 pl-3 md:p-4 md:px-6">
       <div>
-        <table className="text-xs md:text-lg">
+        <table className="text-xs text-secondary-foreground md:text-lg">
           <tbody>
             <tr>
               <td className="text-muted-foreground md:pr-4">Name:</td>
-              <td className="font-semibold">Ayush Kumar Yadav</td>
+              <td>Ayush Kumar Yadav</td>
             </tr>
             <tr>
               <td className="text-muted-foreground md:pr-4">Age:</td>
-              <td className="font-semibold">{getRelativeDate(new Date('2001-11-30'))}</td>
+              <td>{getRelativeDate(new Date('2001-11-30'))}</td>
             </tr>
             <tr>
               <td className="text-muted-foreground md:pr-4">Nationality:</td>
-              <td className="font-semibold">Indian 🇮🇳</td>
+              <td>Indian 🇮🇳</td>
             </tr>
             <tr>
               <td className="text-muted-foreground md:pr-4">Timezone:</td>
@@ -26,17 +26,17 @@ export function AboutMe() {
             </tr>
             <tr>
               <td className="text-muted-foreground md:pr-4">Languages:</td>
-              <td className="font-semibold">Hindi, English</td>
+              <td>Hindi, English</td>
             </tr>
             <tr>
               <td className="text-muted-foreground md:pr-4">Email:</td>
-              <td className="font-semibold">
+              <td>
                 <CopyableText>id.ayushkryadav@gmail.com</CopyableText>
               </td>
             </tr>
             <tr>
               <td className="text-muted-foreground md:pr-4">Phone Number:</td>
-              <td className="font-semibold">
+              <td>
                 <CopyableText>+91 9198517250</CopyableText>
               </td>
             </tr>

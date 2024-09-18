@@ -52,7 +52,12 @@ export default function NavTabs({ tabs }: { tabs: NavItem[] }) {
       )}
     >
       {pathname === '/' && (
-        <div className="absolute left-0 size-40 rounded-full bg-primary/15 blur-xl transition-all" />
+        <motion.div
+          initial={{ translateX: -20 }}
+          animate={{ translateX: 0 }}
+          exit={{ translateX: -20 }}
+          className="absolute left-0 size-40 rounded-full bg-primary/15 blur-xl"
+        />
       )}
       <Link href="/" className="z-10">
         <Logo className="px-3 text-xl" />

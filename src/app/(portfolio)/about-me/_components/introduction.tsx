@@ -6,7 +6,7 @@ import { H4 } from '~/components/typography';
 
 export function Introduction() {
   return (
-    <table className="flex min-h-screen items-center justify-center md:mt-0">
+    <table className="relative flex min-h-screen items-center justify-center md:mt-0">
       <tbody>
         <tr className="flex flex-col items-center justify-between md:flex-row md:gap-4">
           <td className="w-fit">

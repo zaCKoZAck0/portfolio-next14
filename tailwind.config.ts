@@ -59,6 +59,24 @@ const config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
+        'dynamic-island-expand': {
+          '0%': { transform: 'scale(.5)', filter: 'blur(0px)', translateY: '-100%' },
+          '50%': { transform: 'scale(1.05)', filter: 'blur(2px)', translateY: '-10%' },
+          '100%': { transform: 'scale(1)', filter: 'blur(0px)', translateY: '0' },
+        },
+        'dynamic-island-contract': {
+          '0%': { transform: 'scale(1)', filter: 'blur(0px)' },
+          '50%': { transform: 'scale(1.1)', filter: 'blur(2px)' },
+          '100%': { transform: 'scale(0)', filter: 'blur(0px)' },
+        },
+        ripple: {
+          '0%, 100%': {
+            transform: 'translate(-50%, -50%) scale(1)',
+          },
+          '50%': {
+            transform: 'translate(-50%, -50%) scale(0.9)',
+          },
+        },
         'reveal-up': {
           '0%': { opacity: '0', transform: 'translateY(80%)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
@@ -91,6 +109,9 @@ const config = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         fadeIn: 'fadeIn 0.5s ease-in',
+        ripple: 'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite',
+        'dynamic-island-expand': 'dynamic-island-expand 0.5s ease-in-out',
+        'dynamic-island-contract': 'dynamic-island-contract 0.5s ease-in-out',
       },
     },
   },
