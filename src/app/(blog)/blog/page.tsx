@@ -3,6 +3,12 @@ import { FaUser, FaXTwitter } from 'react-icons/fa6';
 import { H2, H4 } from '~/components/typography';
 import { Button } from '~/components/ui/button';
 import { blogs } from './_blogs';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Blog | zackozack',
+  description: 'A collection of blogs by zackozack',
+};
 
 export default function BlogPage() {
   const groupedBlogs = Object.keys(blogs).reduce(
@@ -28,14 +34,18 @@ export default function BlogPage() {
             hope you enjoy reading them as much as I enjoy writing them.
           </p>
           <div className="flex items-center justify-end gap-2 py-2">
-            <Button size="sm" variant="secondary" className="rounded-full">
-              <H4 className="mr-2 text-sm font-normal">@zaCKoZAck0</H4>
-              <FaXTwitter size={14} />
-            </Button>
-            <Button size="sm" variant="secondary" className="rounded-full">
-              <H4 className="mr-2 text-sm font-normal">Portfolio</H4>
-              <FaUser size={12} />
-            </Button>
+            <a href="https://x.com/zaCKoZAck0">
+              <Button size="sm" variant="secondary" className="rounded-full">
+                <H4 className="mr-2 text-sm font-normal">@zaCKoZAck0</H4>
+                <FaXTwitter size={14} />
+              </Button>
+            </a>
+            <Link href="/">
+              <Button size="sm" variant="secondary" className="rounded-full">
+                <H4 className="mr-2 text-sm font-normal">Portfolio</H4>
+                <FaUser size={12} />
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="mt-32">

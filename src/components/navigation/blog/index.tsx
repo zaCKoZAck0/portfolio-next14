@@ -56,9 +56,9 @@ export function BlogNavigation() {
       variants={navVariants}
       className="fixed top-0 z-50 flex w-full items-center justify-center bg-transparent"
     >
-      <div className="flex w-full max-w-3xl items-center justify-between gap-2 transition-all duration-300">
+      <div className="flex w-full max-w-3xl items-center justify-between gap-2 py-2 transition-all duration-300">
         <button onClick={() => router.push('/blog')} className="flex items-center">
-          <Logo short className="text-2xl" />
+          <Logo short className="text-3xl" />
           <p className="rounded-full bg-orange-200 px-1.5 text-xs font-semibold text-secondary will-change-auto">
             Blogs
           </p>

@@ -7,6 +7,7 @@ import { BashShell, Code, Output } from './code';
 import { Aside } from './aside';
 import { BlogImage } from './img';
 import { Blog } from '../../_blogs';
+import Link from 'next/link';
 
 const sora = Sora({ subsets: ['latin'] });
 
@@ -21,13 +22,19 @@ export function BlogPage({ blog }: BlogPageProps) {
     <main className="flex min-h-screen justify-center md:container">
       <section className="flex w-full max-w-3xl translate-y-[calc(100vh/5)] flex-col p-4 md:translate-y-[calc(100vh/4)]">
         <div className="py-2">
-          <Button size="sm" variant="link" className="group h-auto items-center rounded-full px-0">
-            <ArrowLeft
-              size={14}
-              className="transition-transform duration-300 group-hover:-translate-x-0.5"
-            />
-            <span className="ml-1 text-xs font-light">Home</span>
-          </Button>
+          <Link href="/blog">
+            <Button
+              size="sm"
+              variant="link"
+              className="group h-auto items-center rounded-full px-0"
+            >
+              <ArrowLeft
+                size={14}
+                className="transition-transform duration-300 group-hover:-translate-x-0.5"
+              />
+              <span className="ml-1 text-xs font-light">Home</span>
+            </Button>
+          </Link>
         </div>
         <H1 className="text-3xl font-semibold text-secondary-foreground lg:text-3xl">
           {blog.title}
