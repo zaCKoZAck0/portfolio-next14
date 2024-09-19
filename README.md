@@ -6,7 +6,8 @@ A portfolio website made with:
 - Framer Motion
 - shadcn/ui
 
-![screenshot](screenshot.png)
+![image](https://github.com/user-attachments/assets/b6eb0ff5-884a-46e7-85c6-e3094555f575)
+
 
 [Portfolio Link](https://zackozack.xyz)
 
