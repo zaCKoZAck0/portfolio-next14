@@ -15,10 +15,7 @@ export function Hero() {
         <H1 className="z-10 text-nowrap text-2xl text-primary">
           {"I'm a"}
           <span className="mx-2 rounded-lg bg-secondary/50">
-            <WordPullUp
-              className="h-auto px-2 py-0 text-secondary-foreground/85"
-              words="Fullstack Developer."
-            />
+            <WordPullUp className="h-auto px-2 py-0" words="Fullstack Developer." />
           </span>
         </H1>
         <div className="z-10 flex flex-col items-center justify-center gap-4 md:flex-row">

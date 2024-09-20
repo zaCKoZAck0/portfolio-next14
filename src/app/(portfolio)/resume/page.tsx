@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 
 export default function Resume() {
   return (
-    <main className="container bg-background text-foreground">
-      <section className="mt-24 flex h-[calc(100vh-48px)] flex-col items-center justify-center">
+    <main className="bg-background px-4 text-foreground md:container">
+      <section className="flex h-[calc(100vh-48px)] flex-col items-center justify-center md:mt-24">
         <ResumeAccordion />
       </section>
     </main>

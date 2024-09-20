@@ -15,9 +15,11 @@ interface WordPullUpProps {
 export function WordPullUp({
   words,
   wrapperFramerProps = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, filter: 'blur(24px)', color: 'rgb(254 215 170)' },
     show: {
       opacity: 1,
+      color: 'hsl(var(--secondary-foreground) / 0.85)',
+      filter: 'blur(0)',
       transition: {
         staggerChildren: 0.2,
       },

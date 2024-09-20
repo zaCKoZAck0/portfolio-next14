@@ -80,7 +80,7 @@ export function Projects() {
   );
 
   return (
-    <main className="container flex justify-center">
+    <main className="flex justify-center px-4 md:container">
       <section className="mt-10 flex w-full max-w-3xl flex-col">
         <H1>Projects</H1>
         <P>Here are some of the projects I have worked on / contributed to.</P>
@@ -90,7 +90,7 @@ export function Projects() {
             View all projects on Github
           </A>
         </p>
-        <div className="mt-4 flex items-center gap-2 p-2">
+        <div className="mt-4 flex items-center gap-2">
           <DropdownMenu>
             <DropdownMenuTrigger>
               <Tooltip>

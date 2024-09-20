@@ -23,7 +23,7 @@ export function Recommendations() {
             target="_blank"
             rel="noreferrer"
           >
-            <Button variant="secondary" size="lg">
+            <Button variant="secondary" size="lg" className="w-full md:w-auto">
               <FaLinkedin className="mr-2" size={20} />
               <H3 className="text-lg">Add Recommendation</H3>
             </Button>

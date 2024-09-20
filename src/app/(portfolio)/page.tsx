@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="container bg-background text-foreground">
-      <section className="flex h-[calc(100vh-48px)] flex-col items-center justify-center">
+      <section className="flex h-[calc(100vh-48px)] flex-col items-center justify-center overflow-hidden">
         {/* <p className="my-2 flex items-center gap-2">Read my blogs here <A href="/blogs">Blogs</A>
       </p> */}
         <Hero />
