@@ -31,7 +31,7 @@ A portfolio website made with:
 - [ ] Blog page / interactions
 - [ ] SEO
 
-**Please :star star this repo, if you found this project helpful**
+**Please ⭐ star this repo, if you found this project helpful**
 
 
 
