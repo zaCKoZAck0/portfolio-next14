@@ -20,16 +20,16 @@ A portfolio website made with:
     - [x] About Me
     - [x] Experience
     - [x] Skills
-    - [x] Eduction
+    - [x] Education
     - [x] Open Source
 - [x] Projects
 - [ ] Blogs
 - [x] Contact Me
 
-### Todo
-- [ ] Footer
+### WIP
 - [ ] Accessibility audit
-- [ ] Blog page / schema / interactions
+- [ ] Blog page / interactions
+- [ ] SEO
 
 **Please :star star this repo, if you found this project helpful**
 
