@@ -1,3 +1,4 @@
+"use client";
 import { SiNextdotjs } from 'react-icons/si';
 import data from '../../../data/github-data.json';
 import { getRelativeDate } from '~/lib/date';
