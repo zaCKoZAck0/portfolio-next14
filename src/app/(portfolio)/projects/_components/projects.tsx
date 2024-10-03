@@ -17,6 +17,7 @@ import { FaGithub } from 'react-icons/fa6';
 import { SortDesc } from 'lucide-react';
 import { useCallback, useRef, useState } from 'react';
 import { Tooltip, TooltipContent, TooltipTrigger } from '~/components/ui/tooltip';
+import { Footer } from '~/components/navigation/footer';
 
 export function Projects() {
   const allProjects = useRef(
@@ -138,6 +139,7 @@ export function Projects() {
             return <ProjectCard key={index} {...repo} />;
           })}
         </div>
+        <Footer />
       </section>
     </main>
   );

@@ -14,6 +14,7 @@ if (!token) {
 }
 
 interface GitHubResponse {
+  last_updated: Date;
   data: Data;
 }
 
@@ -99,6 +100,7 @@ async function init(): Promise<void> {
     });
 
     const data = (await response.json()) as GitHubResponse;
+    data.last_updated = new Date();
     fs.writeFileSync('data/github-data.json', JSON.stringify(data, null, 2));
   } catch (error) {
     console.error('Error fetching data from GitHub:', error);

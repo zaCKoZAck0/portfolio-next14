@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { Introduction } from './_components/introduction';
 import { InterestsAndGoals } from './_components/interests-and-goals';
 import { Recommendations } from './_components/recommendations';
+import { Footer } from '~/components/navigation/footer';
 
 export const metadata: Metadata = {
   title: 'About Me | zackozack',
@@ -15,6 +16,7 @@ export default function AboutMe() {
         <Introduction />
         <InterestsAndGoals />
         <Recommendations />
+        <Footer />
       </section>
     </main>
   );
