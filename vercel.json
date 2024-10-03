@@ -2,7 +2,7 @@
   "crons": [
     {
       "path": "/api/cron/github-data",
-      "schedule": "0 10 * * 4"
+      "schedule": "0 0 * * *"
     }
   ]
 }

@@ -22,7 +22,7 @@ export function ProjectCard({
   return (
     <div className="py-2 md:p-2">
       <div className="relative space-y-1 overflow-hidden rounded-md bg-muted/50 p-3 md:p-4">
-        <div className="absolute -right-10 text-primary opacity-5 md:-right-10 md:bottom-0 md:p-4">
+        <div className="absolute -bottom-2 -right-10 text-primary opacity-5 md:-right-10 md:bottom-0 md:p-4">
           <FaGithub className="size-36" />
         </div>
         <div className="relative flex gap-2">
