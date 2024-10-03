@@ -10,9 +10,10 @@ export function LocalTime() {
     hour12: true,
   });
   const hour = Number(time.split(':')[0]);
-  const am = time.split(' ')[1];
+  const ampm = time.split(' ')[1].toLowerCase();
+
   const Time = () => {
-    if (am === 'am') {
+    if (ampm === 'am') {
       if (hour >= 5 && hour < 12) {
         return {
           icon: () => <SunriseIcon className="size-4 md:size-5" />,
