@@ -19,7 +19,7 @@ export function InterestsAndGoals() {
           {"Here are the top open-source projects I've contributed to."}
         </P>
         <div>
-          {githubData.data.user.topRepositories.nodes
+          {githubData?.data?.user?.topRepositories?.nodes
             .sort((x, y) => y.stargazerCount - x.stargazerCount)
             .slice(0, 2)
             .map((repo, index) => {
