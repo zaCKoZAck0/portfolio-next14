@@ -1,0 +1,18 @@
+export enum TAGS {
+  'internal_working',
+  'backend',
+  'frontend',
+  'devops',
+  'testing',
+  'security',
+  'database',
+  'cloud',
+  'architecture',
+  'design',
+  'system_design',
+  'data-structure',
+  'algorithms',
+  'programming',
+  'web_development',
+  'api_development',
+}

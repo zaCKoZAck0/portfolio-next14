@@ -1,15 +1,8 @@
 import { ArrowLeft } from 'lucide-react';
 import { H1, H4 } from '~/components/typography';
 import { Button } from '~/components/ui/button';
-import { Sora } from 'next/font/google';
-import { cn } from '~/lib/utils';
-import { BashShell, Code, Output } from './code';
-import { Aside } from './aside';
-import { BlogImage } from './img';
 import { Blog } from '../../_blogs';
 import Link from 'next/link';
-
-const sora = Sora({ subsets: ['latin'] });
 
 interface BlogPageProps {
   blog: Blog;
@@ -61,52 +54,7 @@ export function BlogPage({ blog }: BlogPageProps) {
             </span>
           </H4>
         </div>
-        <div id="blog" className={cn('my-4 text-sm text-muted-foreground', sora.className)}>
-          {blog.sections.map((section, idx) => {
-            switch (section.type) {
-              case 'heading':
-                switch (section.level) {
-                  case 'h2':
-                    return <h2 dangerouslySetInnerHTML={{ __html: section.content }} key={idx} />;
-                  case 'h3':
-                    return <h3 dangerouslySetInnerHTML={{ __html: section.content }} key={idx} />;
-                  default:
-                    return <h4 dangerouslySetInnerHTML={{ __html: section.content }} key={idx} />;
-                }
-              case 'code':
-                switch (section.codeType) {
-                  case 'shell':
-                    return (
-                      <BashShell code={section.code} highlight={section.highlight} key={idx} />
-                    );
-                  case 'code':
-                    return (
-                      <Code
-                        key={idx}
-                        code={section.code}
-                        language={section.language ?? 'plaintext'}
-                        lines={section.highlight}
-                        title={section.title}
-                      />
-                    );
-                  default:
-                    return <Output code={section.code} key={idx} />;
-                }
-              case 'image':
-                return <BlogImage key={idx} src={section.src} alt={section.alt} />;
-              case 'aside':
-                return (
-                  <Aside
-                    key={idx}
-                    type={section.tag}
-                    dangerouslySetInnerHTML={{ __html: section.content }}
-                  />
-                );
-              default:
-                return <p dangerouslySetInnerHTML={{ __html: section.content }} key={idx} />;
-            }
-          })}
-        </div>
+        {blog.content}
       </section>
     </main>
   );

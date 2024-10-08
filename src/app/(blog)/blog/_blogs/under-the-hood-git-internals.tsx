@@ -1,18 +1,21 @@
+import { Blog } from './index';
 import { Sora } from 'next/font/google';
 import { cn } from '~/lib/utils';
 import { BashShell, Output } from '../[slug]/_components/code';
 import { Aside } from '../[slug]/_components/aside';
 import { BlogImage } from '../[slug]/_components/img';
 import '../../blog.css';
+import { TAGS } from './_tags';
 
 const sora = Sora({ subsets: ['latin'] });
 
-export default function BlogPage() {
+const BlogPage = () => {
   return (
     <div id="blog" className={cn('my-4 text-sm text-muted-foreground', sora.className)}>
       <p>
-        We all use Git on a daily basis, but have you ever wondered, how does git works under the
-        hood? <b>In this blog, we are going to explore the internals of Git.</b>
+        We all use <a href="https://git-scm.com/">Git</a> on a daily basis, but have you ever
+        wondered, how does git works under the hood?{' '}
+        <b>In this blog, we are going to explore the internals of Git.</b>
       </p>
       <p>
         This blog is going to be a long one, so please bear with me and follow along. I promise it
@@ -206,7 +209,7 @@ git hash-object -w filename.txt
       blob
       `}
       />
-      <h3>Tree Objects</h3>
+      <h3 id="tree-objects">Tree Objects</h3>
       <p>
         The <b>tree object</b> is used to store the directory structure of your project. It contains
         the file names, permissions, and the hash of the <code>blob</code> objects.
@@ -245,6 +248,177 @@ git hash-object -w filename.txt
         </p>
       </Aside>
       <h3>Commit Objects</h3>
+      <p>
+        The <b>commit object</b> is used to store the metadata of a commit. It contains the author,
+        committer, commit message, and the hash of the tree object that represents the state of the
+        repository at the time of the commit.
+      </p>
+      <p>
+        To create a commit object we need to commit our changes, as usual by using{' '}
+        <code>git commit -m</code> command.
+      </p>
+      <BashShell
+        code={`git add .
+git commit -m "Initial commit"`}
+      />
+      <Output
+        code={`
+      [master (root-commit) 3b18e51] Initial commit
+1 file changed, 1 insertion(+)
+create mode 100644 filename.txt
+      `}
+      />
+      <p>
+        To check the contents of the commit object, we can use the <code>cat-file</code> command.
+      </p>
+      <BashShell
+        code={`
+      git cat-file -p 3b18e51
+      `}
+        highlight={['cat-file', '3b18e51']}
+      />
+      <Output
+        code={`tree 3b18e512dba79e4c8300dd08aeb37f8e728b8dad
+author John Doe <john@example.com> 1632347200 +0530
+committer John Doe <john@example.com> 1632347200 +0530
+
+First Commit`}
+      />
+      <Aside type="info">
+        <p>
+          Note that you can use the first few characters of the hash <b>e.g. 3b18e51</b> instead of
+          the full hash to reference an object, as long as it is unique.
+        </p>
+      </Aside>
+      <h4>Multiple Commits</h4>
+      <p>
+        You can create multiple commits in your repository, each commit will have a unique hash and
+        will point to the previous commit in the commit history.
+      </p>
+      <BashShell
+        code={`echo "new content" > filename2.txt
+git add .
+git commit -m "Second commit"
+echo "more content" > filename3.txt
+git add .
+git commit -m "Third commit"
+`}
+        highlight={[
+          'echo',
+          'add',
+          'filename2.txt',
+          'filename3.txt',
+          'commit',
+          'Second commit',
+          'Third commit',
+        ]}
+      />
+      <Output
+        code={`[master 3b18e51] Second commit
+1 file changed, 1 insertion(+)
+create mode 100644 filename2.txt
+
+[master 3b18e51] Third commit
+1 file changed, 1 insertion(+)
+create mode 100644 filename3.txt
+`}
+      />
+      <p>
+        Now if we check the commit history using the <code>git log</code> command, we can see the
+        commit history.
+      </p>
+      <BashShell code={`git log --oneline`} highlight={['log']} />
+      <Output
+        code={`3b18e51 (HEAD -> master) Third commit
+fdd3213 Second commit
+a90a709 Initial commit`}
+      />
+      <p>
+        Now if we check the contents of the commit object <b>3b18e51</b>
+      </p>
+      <BashShell
+        code={`
+      git cat-file -p 3b18e51
+      `}
+        highlight={['cat-file', '3b18e51']}
+      />
+      <Output
+        code={`tree 3b18e512dba79e4c8300dd08aeb37f8e728b8dad
+parent fdd3213
+author John Doe <john@example.com
+committer John Doe <john@example.com
+
+Third commit`}
+      />
+
+      <p>The commit object contains the following information:</p>
+      <ol>
+        <li>
+          <b>Tree:</b> The hash of the <a href="#tree-objects">tree object</a> that represents the
+          state of the repository at the time of the commit.
+        </li>
+        <li>
+          <b>Parent Commit:</b> The hash of the parent commit (if present), it is used to create the
+          commit history.
+        </li>
+        <li>
+          <b>Author:</b> The author of the commit, it contains the name, email, and the timestamp of
+          the author.
+        </li>
+        <li>
+          <b>Committer:</b> The committer of the commit, it contains the name, email, and the
+          timestamp of the committer.
+        </li>
+        <li>
+          <b>Message:</b> The commit message after a blank line.
+        </li>
+      </ol>
+      <Aside type="info">
+        <h4>Author vs Committer. {"What's the difference?"}</h4>
+        <p>
+          The <b>author</b> is the person who originally wrote the work, whereas the{' '}
+          <b>committer</b> is the person who applied the work to the repository.
+        </p>
+        <p>
+          e.g. If you are working on a project and you send a patch to someone else to apply, the
+          author of the patch is you and the committer is the person who applied the patch.
+        </p>
+      </Aside>
+      <h3>Git References</h3>
+      <p>
+        Git references are used to point to specific commits in your repository. They are stored in
+        the <code>refs/</code> directory. There are three types of references in Git:
+      </p>
+      <ol>
+        <li>
+          <b>HEAD:</b> The HEAD reference points to the branch you currently have checked out.
+        </li>
+        <li>
+          <b>Branches:</b> Branch references point to the last commit on the branch.
+        </li>
+        <li>
+          <b>Tags:</b> Tag references point to a specific commit and are used to mark specific
+          points in your project’s history.
+        </li>
+      </ol>
+      <p>
+        You can see the contents of the HEAD file using the <code>cat</code> command.
+      </p>
+      <BashShell code={`cat .git/HEAD`} highlight={['cat', '.git/HEAD']} />
+      <Output code={`ref: refs/heads/master`} />
     </div>
   );
-}
+};
+
+const blog: Blog = {
+  created_at: '2024-09-17',
+  slug: 'under-the-hood-git-internals',
+  updated_at: '2024-10-04',
+  title: 'Under the Hood: Git Internals',
+  tags: [TAGS.internal_working, TAGS.web_development] as unknown as string[],
+  description:
+    'A deep dive into the internals of Git, including the object model, the reflog, the index, and the working directory.',
+  content: BlogPage(),
+};
+
+export default blog;

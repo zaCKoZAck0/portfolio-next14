@@ -1,3 +1,4 @@
+import React from 'react';
 import { BlogNavigation } from '~/components/navigation/blog';
 
 export default function BlogsLayout({

@@ -1,12 +1,11 @@
 'use client';
-import { Button } from '~/components/ui/button';
 import { Logo } from '../logo';
-import { SearchIcon } from 'lucide-react';
 import { H4 } from '~/components/typography';
 import { motion, useScroll } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { blogs } from '~/app/(blog)/blog/_blogs';
+import { BlogSearch } from './search';
 
 const navVariants = {
   initial: {
@@ -77,11 +76,7 @@ export function BlogNavigation() {
             </motion.span>
           </H4>
         )}
-        <div className="flex gap-2">
-          <Button size="icon" variant="ghost">
-            <SearchIcon size={20} />
-          </Button>
-        </div>
+        <BlogSearch />
       </div>
     </motion.nav>
   );

@@ -4,6 +4,9 @@ import { H2, H4 } from '~/components/typography';
 import { Button } from '~/components/ui/button';
 import { blogs } from './_blogs';
 import { Metadata } from 'next';
+import { differenceInDays, format } from 'date-fns';
+import { Badge } from '~/components/ui/badge';
+import { Calendar } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Blog | zackozack',
@@ -53,13 +56,31 @@ export default function BlogPage() {
           <div className="flex flex-col gap-4">
             {Object.keys(blogs).map((slug) => {
               const blog = blogs[slug];
+              const isNew = differenceInDays(new Date(), new Date(blog.created_at)) <= 7;
+              const isUpdated =
+                differenceInDays(new Date(blog.updated_at), new Date(blog.created_at)) > 0 &&
+                differenceInDays(new Date(), new Date(blog.updated_at)) <= 7;
               return (
                 <Link key={slug} href={`/blog/${slug}`}>
-                  <div className="group rounded-lg border-2 border-primary p-4 transition-colors duration-500 hover:bg-primary/10">
-                    <H4 className="text-lg font-normal text-secondary-foreground transition-colors duration-500 group-hover:text-orange-200 md:text-xl">
+                  <div className="group relative overflow-hidden rounded-lg bg-primary/5 p-4 transition-colors duration-500 hover:bg-primary/10">
+                    <H4 className="flex items-center gap-2 text-lg font-normal text-secondary-foreground transition-colors duration-500 group-hover:text-orange-200 md:text-xl">
                       {blog.title}
+                      {isNew && (
+                        <Badge className="border-0 bg-gradient-to-br from-green-400 to-blue-500 text-white">
+                          New
+                        </Badge>
+                      )}
+                      {isUpdated && (
+                        <Badge className="border-0 bg-gradient-to-br from-purple-400 to-pink-500 text-white">
+                          Updated
+                        </Badge>
+                      )}
                     </H4>
                     <p className="mt-1 text-xs text-muted-foreground">{blog.description}</p>
+                    <div className="flex items-center justify-end gap-2 text-xs text-muted-foreground">
+                      <Calendar className="size-3" />
+                      <span>{format(new Date(blog.updated_at), 'MMMM d, yyyy')}</span>
+                    </div>
                   </div>
                 </Link>
               );

@@ -4,6 +4,8 @@ import { themes } from 'prism-react-renderer';
 import { useState } from 'react';
 import { Button } from '~/components/ui/button';
 import { CheckIcon, CopyIcon } from 'lucide-react';
+import { toast } from '~/components/ui/use-toast';
+import { CopySuccessIcon } from '~/components/animated-icon';
 
 interface CodeProps {
   code: string;
@@ -18,6 +20,11 @@ export function Code({ code, language, lines = [], title }: CodeProps) {
   function copyToClipboard() {
     try {
       navigator.clipboard.writeText(code);
+      toast({
+        title: 'Copied!',
+        variant: 'default',
+        icon: <CopySuccessIcon />,
+      });
       setCopied(true);
       setTimeout(() => setCopied(false), 3000);
     } catch (err) {
@@ -70,6 +77,11 @@ export function BashShell({ code, highlight = [] }: { code: string; highlight?: 
     try {
       navigator.clipboard.writeText(code);
       setCopied(true);
+      toast({
+        title: 'Copied!',
+        variant: 'default',
+        icon: <CopySuccessIcon />,
+      });
       setTimeout(() => setCopied(false), 3000);
     } catch (err) {
       console.error(err);

@@ -1,52 +1,22 @@
+import React from 'react';
 import under_the_hood_git_internals from './under-the-hood-git-internals';
-
-interface TextSection {
-  type: 'text';
-  content: string;
-}
-
-interface HeadingSection {
-  type: 'heading';
-  level: 'h2' | 'h3' | 'h4';
-  content: string;
-}
-
-interface CodeSection {
-  type: 'code';
-  codeType: 'output' | 'shell' | 'code';
-  code: string;
-  language?: string;
-  title: string;
-  highlight?: string[];
-}
-
-interface ImageSection {
-  type: 'image';
-  src: string;
-  alt: string;
-  content: string;
-}
-
-interface AsideSection {
-  type: 'aside';
-  tag: 'info' | 'warning' | 'tip';
-  content: string;
-}
-
-type BlogSection = TextSection | HeadingSection | CodeSection | ImageSection | AsideSection;
+import kafka_a_to_z_the_complete_guide from './kafka-a-to-z-the-complete-guide';
 
 export interface Blog {
+  slug: string;
   created_at: string;
   updated_at: string;
   title: string;
   description: string;
-  sections: BlogSection[];
+  tags: string[];
+  content: React.ReactNode;
 }
 
 type BlogStore = {
-  [key: string]: Blog;
+  [slug: string]: Blog;
 };
 
 export const blogs: BlogStore = {
   'under-the-hood-git-internals': under_the_hood_git_internals,
+  'kafka-a-to-z': kafka_a_to_z_the_complete_guide,
 };
