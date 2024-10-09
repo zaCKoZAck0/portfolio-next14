@@ -4,9 +4,7 @@ function getHoursBetweenDates(date1: Date, date2: Date): number {
   return Math.floor(differenceInMilliseconds / millisecondsPerHour);
 }
 
-export function getRelativeDate(date: Date, short = false): string {
-  const now = new Date();
-
+export function getRelativeDate(date: Date, short = false, now: Date = new Date()): string {
   let years = now.getFullYear() - date.getFullYear();
   let months = now.getMonth() - date.getMonth();
   let days = now.getDate() - date.getDate();

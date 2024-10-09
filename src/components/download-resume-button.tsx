@@ -39,7 +39,7 @@ export const ResumeDownloadButton: React.FC = () => {
         whileHover="hover"
         variants={ButtonVariants}
         transition={{ duration: 0.5, ease: 'easeInOut', type: 'spring', stiffness: 300 }}
-        className="fixed bottom-8 right-5 flex h-14 cursor-pointer items-center overflow-hidden rounded-full border-2 border-border/20 bg-orange-200/85 text-primary-foreground shadow-lg shadow-orange-200/50 hover:bg-orange-200"
+        className="fixed bottom-8 right-5 flex h-14 cursor-pointer items-center overflow-hidden rounded-full border-2 border-border/20 bg-orange-200/85 text-primary-foreground shadow shadow-orange-200/50 backdrop-blur-md hover:bg-orange-200"
       >
         <FileDown size={24} />
 

@@ -8,13 +8,13 @@ export function Education() {
         <tbody>
           <tr className="flex flex-col gap-2 md:flex-row md:gap-0">
             <span className="flex items-center gap-4 md:flex-row">
-              <td className="rounded-md bg-white/90 p-2">
+              <td className="rounded-md bg-white/90">
                 <Image
                   src="https://utfs.io/f/a8b81282-9354-497c-b465-c75a94301bcc-4o63ls.webp"
                   alt="AKTU Logo"
                   width={50}
                   height={50}
-                  className="rounded-full opacity-90"
+                  className="size-12 rounded-full opacity-90"
                 />
               </td>
               <td className="text-sm md:px-3 md:text-lg">

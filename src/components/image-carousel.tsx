@@ -57,9 +57,8 @@ export function ImageCarousel({ items: initialItems }: IImageCarouselProps) {
       <div className="flex items-center justify-center gap-2 md:pr-10">
         <Tooltip>
           <TooltipTrigger>
-            <Button onClick={handleNext} size="sm" variant="outline" className="rounded-full">
-              <ArrowLeftRight className="mr-2 size-5" />
-              Switch Images
+            <Button onClick={handleNext} size="icon" variant="outline" className="rounded-full">
+              <ArrowLeftRight className="size-5" />
             </Button>
           </TooltipTrigger>
           <TooltipContent>Switch Images</TooltipContent>

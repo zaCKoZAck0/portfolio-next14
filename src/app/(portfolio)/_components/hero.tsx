@@ -10,12 +10,15 @@ export function Hero() {
   return (
     <div className="relative flex animate-fadeIn flex-col items-center justify-center">
       <Ripple />
-      <div className="relative flex h-[calc(100vh-48px)] w-screen animate-fadeIn flex-col items-center justify-center gap-12">
+      <div className="relative flex h-[calc(100vh-48px)] w-screen animate-fadeIn flex-col items-center justify-center gap-8 md:gap-12">
         <Logo className="z-10 text-5xl md:text-7xl" />
-        <H1 className="z-10 text-nowrap text-2xl text-primary">
+        <H1 className="z-10 text-center text-2xl text-primary md:text-nowrap">
           {"I'm a"}
-          <span className="mx-2 rounded-lg bg-secondary/50">
-            <WordPullUp className="h-auto px-2 py-0" words="Fullstack Developer." />
+          <span className="rounded-lg bg-secondary/50 md:mx-2">
+            <WordPullUp
+              className="block h-auto px-2 py-0 md:inline-block"
+              words="Fullstack Developer."
+            />
           </span>
         </H1>
         <div className="z-10 flex flex-col items-center justify-center gap-4 md:flex-row">

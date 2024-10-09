@@ -1,4 +1,4 @@
-import { ResumeDownloadButton } from '~/components/download-resume-button';
+// import { ResumeDownloadButton } from '~/components/download-resume-button';
 import { Navbar } from '~/components/navigation';
 
 export default function PortfolioLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -6,7 +6,7 @@ export default function PortfolioLayout({ children }: Readonly<{ children: React
     <>
       <Navbar />
       {children}
-      <ResumeDownloadButton />
+      {/* <ResumeDownloadButton /> */}
     </>
   );
 }
