@@ -16,19 +16,16 @@ A portfolio website made with:
 ### Pages
 - [x] Hero Section
 - [x] About Me
-- [x] Resume Page
-    - [x] About Me
-    - [x] Experience
-    - [x] Skills
-    - [x] Education
-    - [x] Open Source
+- [x] Resume
 - [x] Projects
-- [ ] Blogs
+- [x] Blog (WIP)
 - [x] Contact Me
 
 ### WIP
 - [ ] Accessibility audit
-- [ ] Blog page / interactions
+- [x] Blog page
+- [ ] Blog interactions
+- [ ] og Image
 - [ ] SEO
 
 **Please ⭐ star this repo, if you found this project helpful**
