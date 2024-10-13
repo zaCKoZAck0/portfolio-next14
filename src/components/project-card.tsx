@@ -1,6 +1,13 @@
 import { RepositoryNode } from '~/types/github-data';
 import { H4 } from './typography';
-import { ArrowUpRight, GitFork, GitMergeIcon, GitPullRequestIcon, Star } from 'lucide-react';
+import {
+  ArrowUpRight,
+  GitFork,
+  GitMergeIcon,
+  GitPullRequestArrow,
+  GitPullRequestIcon,
+  Star,
+} from 'lucide-react';
 import { formatLargeNumber } from '~/lib/numbers';
 import { getRelativeDate } from '~/lib/date';
 import Image from 'next/image';
@@ -81,8 +88,8 @@ export function ProjectCard({
             </span>
           </a>
         )}
-        <div className="flex flex-col gap-1 text-xs text-secondary-foreground md:flex-row md:items-center md:gap-6">
-          {defaultBranchRef?.target.history.edges.length && (
+        <div className="z-10 flex flex-col gap-1 text-xs text-secondary-foreground md:flex-row md:items-center md:gap-6">
+          {defaultBranchRef?.target.history.edges.length ? (
             <div className="flex items-center">
               <p>
                 {getRelativeDate(
@@ -93,6 +100,11 @@ export function ProjectCard({
               </p>
               <GitMergeIcon className="mx-2 size-4" />
               <p>on main</p>
+            </div>
+          ) : (
+            <div className="flex items-center gap-2 rounded-full border bg-primary/10 px-2 py-0.5">
+              <GitPullRequestArrow className="size-4 text-green-500" />
+              <p>PR in progress</p>
             </div>
           )}
           {homepageUrl && (
