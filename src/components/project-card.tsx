@@ -102,7 +102,7 @@ export function ProjectCard({
               <p>on main</p>
             </div>
           ) : (
-            <div className="flex items-center gap-2 rounded-full border bg-primary/10 px-2 py-0.5">
+            <div className="flex w-fit items-center gap-2 rounded-md border bg-primary/10 px-2 py-0.5">
               <GitPullRequestArrow className="size-4 text-green-500" />
               <p>PR in progress</p>
             </div>
