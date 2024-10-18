@@ -21,7 +21,7 @@ const BlogPage = () => {
         This blog is going to be a long one, so please bear with me and follow along. I promise it
         will be worth it.
       </p>
-      <h2>{"What's inside the .git folder?"}</h2>
+      <h2 id="Whats-inside-the-git-folder">{"What's inside the .git folder?"}</h2>
       <p>
         When you initialize a new empty git repository with <code>git init</code>{' '}
         <a href="https://git-scm.com/docs/git-init">command</a>, a new folder named{' '}
@@ -64,7 +64,7 @@ const BlogPage = () => {
         .
       </p>
 
-      <h2>What are git objects?</h2>
+      <h2 id="git-objects">Git Objects</h2>
       <p>
         Git is a <b>content-addressable filesystem</b>. It means that at the core of Git is a simple{' '}
         {`"key-value"`} data store. Git stores everything in the form of objects. An object is
@@ -109,7 +109,7 @@ git hash-object -w filename.txt
         <b>80/</b>, and the rest of the hash is used as the file name.
       </p>
       <Aside type="info">
-        <h4>Objects folder structure</h4>
+        <h4 id="Objects-folder-structure">Objects folder structure</h4>
         <p>
           The objects folder creates a directory structure based on the first two characters of the
           hash. This is done to prevent having too many files in a single directory, as{' '}
@@ -247,7 +247,7 @@ git hash-object -w filename.txt
           <code>{`git cat-file -p "master^{tree}"`}</code>.
         </p>
       </Aside>
-      <h3>Commit Objects</h3>
+      <h3 id="commit-objects">Commit Objects</h3>
       <p>
         The <b>commit object</b> is used to store the metadata of a commit. It contains the author,
         committer, commit message, and the hash of the tree object that represents the state of the
@@ -290,7 +290,7 @@ First Commit`}
           the full hash to reference an object, as long as it is unique.
         </p>
       </Aside>
-      <h4>Multiple Commits</h4>
+      <h4 id="multiple-commits">Multiple Commits</h4>
       <p>
         You can create multiple commits in your repository, each commit will have a unique hash and
         will point to the previous commit in the commit history.
@@ -384,7 +384,7 @@ Third commit`}
           author of the patch is you and the committer is the person who applied the patch.
         </p>
       </Aside>
-      <h3>Git References</h3>
+      <h2 id="git-references">Git References</h2>
       <p>
         Git references are used to point to specific commits in your repository. They are stored in
         the <code>refs/</code> directory. There are three types of references in Git:
