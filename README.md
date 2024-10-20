@@ -22,7 +22,7 @@ A portfolio website made with:
 - [x] Contact Me
 
 ### WIP
-- [ ] Accessibility audit
+- [ ] Animations
 - [x] Blog page
 - [ ] Blog interactions
 - [ ] og Image
