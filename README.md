@@ -22,8 +22,8 @@ A portfolio website made with:
 - [x] Contact Me
 
 ### WIP
-- [ ] Animations
-- [x] Blog page
+- [ ] Animations (1st iteration)
+- [x] Blog page (1st iteration)
 - [ ] Blog interactions
 - [ ] og Image
 - [ ] SEO
