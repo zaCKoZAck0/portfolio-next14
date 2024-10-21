@@ -26,7 +26,7 @@ A portfolio website made with:
 - [x] Blog page (1st iteration)
 - [ ] Blog interactions
 - [ ] og Image
-- [ ] SEO
+- [ ] SEO / Site Metadata
 
 **Please ⭐ star this repo, if you found this project helpful**
 
