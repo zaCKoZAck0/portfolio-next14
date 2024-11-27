@@ -26,6 +26,7 @@ export function ProjectCard({
   homepageUrl,
   defaultBranchRef,
 }: ProjectCardProps) {
+  if (!defaultBranchRef?.target.history.edges.length) return null;
   return (
     <div className="py-2 md:p-2">
       <div className="relative space-y-1 overflow-hidden rounded-md bg-muted/50 p-3 md:p-4">
