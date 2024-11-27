@@ -1,6 +1,6 @@
 import { CopyableText } from '~/components/typography';
-import { getRelativeDate } from '~/lib/date';
 import { LocalTime } from './local-time';
+import { RelativeDate } from '~/components/relative-date';
 
 export function AboutMe() {
   return (
@@ -14,7 +14,9 @@ export function AboutMe() {
             </tr>
             <tr>
               <td className="text-muted-foreground md:pr-4">Age:</td>
-              <td>{getRelativeDate(new Date('2001-11-30'))}</td>
+              <td>
+                <RelativeDate date={new Date('2001-11-30')} />
+              </td>
             </tr>
             <tr>
               <td className="text-muted-foreground md:pr-4">Nationality:</td>

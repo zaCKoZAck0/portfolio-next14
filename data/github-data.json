@@ -3,47 +3,17 @@
     "user": {
       "name": "Ayush Kumar Yadav",
       "issues": {
-        "totalCount": 51
+        "totalCount": 48
       },
       "pullRequests": {
-        "totalCount": 36
+        "totalCount": 39
       },
       "url": "https://github.com/zaCKoZAck0",
       "repositoriesContributedTo": {
-        "totalCount": 4
+        "totalCount": 3
       },
       "topRepositories": {
         "nodes": [
-          {
-            "nameWithOwner": "typehero/typehero",
-            "description": "Connect, collaborate, and grow with a community of TypeScript developers",
-            "stargazerCount": 5802,
-            "forkCount": 412,
-            "url": "https://github.com/typehero/typehero",
-            "owner": {
-              "avatarUrl": "https://avatars.githubusercontent.com/u/143282211?v=4"
-            },
-            "homepageUrl": "https://typehero.dev",
-            "primaryLanguage": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": [
-                    {
-                      "node": {
-                        "committedDate": "2024-09-07T01:21:18Z",
-                        "message": "refactor: improve URL shortener form (#1556)\n\n* refactor: improve URL shortener form",
-                        "url": "https://github.com/typehero/typehero/commit/144e48963d76a36afb6754a368926de49f7d4ed8"
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          },
           {
             "nameWithOwner": "zaCKoZAck0/portfolio-next14",
             "description": "A portfolio website made with Next.js 14, Tailwind CSS, Framer Motion and shadcn/ui.",
@@ -64,9 +34,39 @@
                   "edges": [
                     {
                       "node": {
-                        "committedDate": "2024-10-03T03:33:39Z",
-                        "message": "Update cron schedule for GitHub data API",
-                        "url": "https://github.com/zaCKoZAck0/portfolio-next14/commit/a90a709a180d7df09366629fa8f64523af0ae3f9"
+                        "committedDate": "2024-10-20T22:16:08Z",
+                        "message": "Merge pull request #9 from zaCKoZAck0/zaCKoZAck0-patch-1\n\nUpdate README.md",
+                        "url": "https://github.com/zaCKoZAck0/portfolio-next14/commit/ec515c0f3d5d2973817bed70c9ff4dadc8b06c09"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "nameWithOwner": "typehero/typehero",
+            "description": "Connect, collaborate, and grow with a community of TypeScript developers",
+            "stargazerCount": 5992,
+            "forkCount": 428,
+            "url": "https://github.com/typehero/typehero",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/143282211?v=4"
+            },
+            "homepageUrl": "https://typehero.dev",
+            "primaryLanguage": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": [
+                    {
+                      "node": {
+                        "committedDate": "2024-09-07T01:21:18Z",
+                        "message": "refactor: improve URL shortener form (#1556)\n\n* refactor: improve URL shortener form",
+                        "url": "https://github.com/typehero/typehero/commit/144e48963d76a36afb6754a368926de49f7d4ed8"
                       }
                     }
                   ]
@@ -162,15 +162,15 @@
             }
           },
           {
-            "nameWithOwner": "zaCKoZAck0/dedash",
-            "description": null,
-            "stargazerCount": 0,
-            "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/dedash",
+            "nameWithOwner": "mfts/papermark",
+            "description": "Papermark is the open-source DocSend alternative with built-in analytics and custom domains.",
+            "stargazerCount": 5683,
+            "forkCount": 762,
+            "url": "https://github.com/mfts/papermark",
             "owner": {
-              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
+              "avatarUrl": "https://avatars.githubusercontent.com/u/4049052?u=5f84e42e789192853341d9b9ed6aa8385dfc3b6f&v=4"
             },
-            "homepageUrl": null,
+            "homepageUrl": "https://papermark.io",
             "primaryLanguage": {
               "name": "TypeScript",
               "color": "#3178c6"
@@ -178,75 +178,7 @@
             "defaultBranchRef": {
               "target": {
                 "history": {
-                  "edges": [
-                    {
-                      "node": {
-                        "committedDate": "2024-09-25T09:09:50Z",
-                        "message": "feat: added onboarding flow v0 (#3)\n\nAdded a basic onboarding flow \r\n#2",
-                        "url": "https://github.com/zaCKoZAck0/dedash/commit/94c863d9cffca4e741045df19fea224edf891465"
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          {
-            "nameWithOwner": "zaCKoZAck0/ProBoard",
-            "description": null,
-            "stargazerCount": 0,
-            "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/ProBoard",
-            "owner": {
-              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
-            },
-            "homepageUrl": null,
-            "primaryLanguage": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": [
-                    {
-                      "node": {
-                        "committedDate": "2023-10-11T18:35:30Z",
-                        "message": "Merge pull request #10 from ProBoard-Task/feat/dashboard\n\nfeat: added org schema",
-                        "url": "https://github.com/zaCKoZAck0/ProBoard/commit/2d6421a693694ff3625753b4f4f612a81e613a26"
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          {
-            "nameWithOwner": "formbricks/formbricks",
-            "description": "Open Source Survey Platform",
-            "stargazerCount": 6676,
-            "forkCount": 1144,
-            "url": "https://github.com/formbricks/formbricks",
-            "owner": {
-              "avatarUrl": "https://avatars.githubusercontent.com/u/105877416?v=4"
-            },
-            "homepageUrl": "https://formbricks.com",
-            "primaryLanguage": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": [
-                    {
-                      "node": {
-                        "committedDate": "2023-10-08T03:09:37Z",
-                        "message": "fix: rerender on name change",
-                        "url": "https://github.com/formbricks/formbricks/commit/3af649889153d5a82ecefa45e2bd1703fd5e5318"
-                      }
-                    }
-                  ]
+                  "edges": []
                 }
               }
             }
@@ -342,6 +274,36 @@
             }
           },
           {
+            "nameWithOwner": "formbricks/formbricks",
+            "description": "Open Source Survey Platform",
+            "stargazerCount": 9192,
+            "forkCount": 1671,
+            "url": "https://github.com/formbricks/formbricks",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/105877416?v=4"
+            },
+            "homepageUrl": "https://formbricks.com",
+            "primaryLanguage": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": [
+                    {
+                      "node": {
+                        "committedDate": "2023-10-08T03:09:37Z",
+                        "message": "fix: rerender on name change",
+                        "url": "https://github.com/formbricks/formbricks/commit/3af649889153d5a82ecefa45e2bd1703fd5e5318"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
             "nameWithOwner": "zaCKoZAck0/built-my-x",
             "description": "This is a collection of projects I built on codecrafters.io",
             "stargazerCount": 1,
@@ -361,36 +323,6 @@
                         "committedDate": "2024-09-13T18:11:45Z",
                         "message": "add git",
                         "url": "https://github.com/zaCKoZAck0/built-my-x/commit/afb5e03f594e58c255b601900593ded8a7812fbd"
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          {
-            "nameWithOwner": "tryabby/abby",
-            "description": "Open-Source Feature Flags, Remote Config & A/B Tests for Developers ⛳🧪",
-            "stargazerCount": 132,
-            "forkCount": 18,
-            "url": "https://github.com/tryabby/abby",
-            "owner": {
-              "avatarUrl": "https://avatars.githubusercontent.com/u/131464195?v=4"
-            },
-            "homepageUrl": "https://www.tryabby.com",
-            "primaryLanguage": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": [
-                    {
-                      "node": {
-                        "committedDate": "2023-10-10T09:00:29Z",
-                        "message": "Improve Onboarding Process #79 (#82)",
-                        "url": "https://github.com/tryabby/abby/commit/9fae5563bb5f49482bac8ff6b7668517ff2bf523"
                       }
                     }
                   ]
@@ -478,36 +410,6 @@
                         "committedDate": "2024-03-03T14:54:24Z",
                         "message": "WIP: Chat window",
                         "url": "https://github.com/zaCKoZAck0/teams/commit/e063213de3e0eadcd213406e33cd4c5bb3f6b6a7"
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          {
-            "nameWithOwner": "Dun-sin/Threstagram",
-            "description": "Convert Your Threads Post to Images",
-            "stargazerCount": 28,
-            "forkCount": 14,
-            "url": "https://github.com/Dun-sin/Threstagram",
-            "owner": {
-              "avatarUrl": "https://avatars.githubusercontent.com/u/78784850?u=6cc0760b3c41de534df46a9be9de9fe32a290d9d&v=4"
-            },
-            "homepageUrl": "https://threstagram.vercel.app",
-            "primaryLanguage": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": [
-                    {
-                      "node": {
-                        "committedDate": "2023-10-06T06:01:48Z",
-                        "message": "feat: Error Handling for Missing Captions (#79) (#81)\n\n* feat: error on no caption thread #79\r\n\r\n* feat: error on no caption thread #79\r\n\r\n* feat: error on no caption thread #79",
-                        "url": "https://github.com/Dun-sin/Threstagram/commit/5f1b5215ee1baa7b55d33ce1f7373dc0bcf93388"
                       }
                     }
                   ]
@@ -606,32 +508,10 @@
             }
           },
           {
-            "nameWithOwner": "mfts/papermark",
-            "description": "Papermark is the open-source DocSend alternative with built-in analytics and custom domains.",
-            "stargazerCount": 3495,
-            "forkCount": 434,
-            "url": "https://github.com/mfts/papermark",
-            "owner": {
-              "avatarUrl": "https://avatars.githubusercontent.com/u/4049052?u=5f84e42e789192853341d9b9ed6aa8385dfc3b6f&v=4"
-            },
-            "homepageUrl": "https://papermark.io",
-            "primaryLanguage": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": []
-                }
-              }
-            }
-          },
-          {
             "nameWithOwner": "codse/animata",
             "description": "Bring your site to life with easy to use animation & interaction code. Copy. Paste. Animate. ",
-            "stargazerCount": 1175,
-            "forkCount": 100,
+            "stargazerCount": 1450,
+            "forkCount": 145,
             "url": "https://github.com/codse/animata",
             "owner": {
               "avatarUrl": "https://avatars.githubusercontent.com/u/26914411?v=4"
@@ -672,6 +552,36 @@
                         "committedDate": "2023-12-05T00:24:01Z",
                         "message": "Updated Readme",
                         "url": "https://github.com/zaCKoZAck0/portfolio-website2023/commit/a536299bd3e709ffcf109f9a3a009f37ad242345"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "nameWithOwner": "zaCKoZAck0/dedash",
+            "description": null,
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/dedash",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
+            },
+            "homepageUrl": "https://dedash-zackozack0s-projects.vercel.app",
+            "primaryLanguage": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": [
+                    {
+                      "node": {
+                        "committedDate": "2024-10-19T20:21:22Z",
+                        "message": "Initial commit\n\nCreated from https://vercel.com/new",
+                        "url": "https://github.com/zaCKoZAck0/dedash/commit/455492107642a7ffcb3b6c2b91fb4985a3ad1944"
                       }
                     }
                   ]
@@ -824,25 +734,28 @@
             }
           },
           {
-            "nameWithOwner": "zaCKoZAck0/zaCKoZAck0",
+            "nameWithOwner": "zaCKoZAck0/temp-proboard",
             "description": null,
             "stargazerCount": 0,
             "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/zaCKoZAck0",
+            "url": "https://github.com/zaCKoZAck0/temp-proboard",
             "owner": {
               "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
             },
-            "homepageUrl": null,
-            "primaryLanguage": null,
+            "homepageUrl": "https://pro-board.vercel.app",
+            "primaryLanguage": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            },
             "defaultBranchRef": {
               "target": {
                 "history": {
                   "edges": [
                     {
                       "node": {
-                        "committedDate": "2023-10-08T09:21:24Z",
-                        "message": "Update README.md",
-                        "url": "https://github.com/zaCKoZAck0/zaCKoZAck0/commit/89540a0c7c8cbcfe7ceea8bb964ed47466b2c0df"
+                        "committedDate": "2023-08-06T04:56:27Z",
+                        "message": "added view all boards functionality",
+                        "url": "https://github.com/zaCKoZAck0/temp-proboard/commit/cb100b99bf955e10cdffa8e1981889de736d4f37"
                       }
                     }
                   ]
@@ -851,23 +764,53 @@
             }
           },
           {
-            "nameWithOwner": "zaCKoZAck0/http-realtime",
-            "description": "Exercises for the Complete Intro to Realtime as taught for Frontend Masters",
+            "nameWithOwner": "zaCKoZAck0/supabase",
+            "description": "The open source Firebase alternative.",
             "stargazerCount": 0,
             "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/http-realtime",
+            "url": "https://github.com/zaCKoZAck0/supabase",
             "owner": {
               "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
             },
-            "homepageUrl": "https://btholt.github.io/complete-intro-to-realtime",
+            "homepageUrl": "https://supabase.com",
             "primaryLanguage": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
+              "name": "TypeScript",
+              "color": "#3178c6"
             },
             "defaultBranchRef": {
               "target": {
                 "history": {
                   "edges": []
+                }
+              }
+            }
+          },
+          {
+            "nameWithOwner": "zaCKoZAck0/ProBoard",
+            "description": null,
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/ProBoard",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
+            },
+            "homepageUrl": null,
+            "primaryLanguage": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": [
+                    {
+                      "node": {
+                        "committedDate": "2023-10-11T18:35:30Z",
+                        "message": "Merge pull request #10 from ProBoard-Task/feat/dashboard\n\nfeat: added org schema",
+                        "url": "https://github.com/zaCKoZAck0/ProBoard/commit/2d6421a693694ff3625753b4f4f612a81e613a26"
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -1149,48 +1092,18 @@
             }
           },
           {
-            "nameWithOwner": "zaCKoZAck0/temp-proboard",
-            "description": null,
+            "nameWithOwner": "zaCKoZAck0/http-realtime",
+            "description": "Exercises for the Complete Intro to Realtime as taught for Frontend Masters",
             "stargazerCount": 0,
             "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/temp-proboard",
+            "url": "https://github.com/zaCKoZAck0/http-realtime",
             "owner": {
               "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
             },
-            "homepageUrl": "https://pro-board.vercel.app",
+            "homepageUrl": "https://btholt.github.io/complete-intro-to-realtime",
             "primaryLanguage": {
-              "name": "TypeScript",
-              "color": "#3178c6"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": [
-                    {
-                      "node": {
-                        "committedDate": "2023-08-06T04:56:27Z",
-                        "message": "added view all boards functionality",
-                        "url": "https://github.com/zaCKoZAck0/temp-proboard/commit/cb100b99bf955e10cdffa8e1981889de736d4f37"
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          {
-            "nameWithOwner": "zaCKoZAck0/saleor-dashboard",
-            "description": "A GraphQL-powered, single-page dashboard application for Saleor.",
-            "stargazerCount": 0,
-            "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/saleor-dashboard",
-            "owner": {
-              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
-            },
-            "homepageUrl": "https://demo.saleor.io/dashboard",
-            "primaryLanguage": {
-              "name": "TypeScript",
-              "color": "#3178c6"
+              "name": "JavaScript",
+              "color": "#f1e05a"
             },
             "defaultBranchRef": {
               "target": {
@@ -1373,6 +1286,72 @@
             }
           },
           {
+            "nameWithOwner": "zaCKoZAck0/papermark",
+            "description": "Papermark is the open-source DocSend alternative with built-in analytics and custom domains.",
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/papermark",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
+            },
+            "homepageUrl": "https://papermark.io",
+            "primaryLanguage": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": []
+                }
+              }
+            }
+          },
+          {
+            "nameWithOwner": "zaCKoZAck0/lwc",
+            "description": "⚡️ LWC - A Blazing Fast, Enterprise-Grade Web Components Foundation",
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/lwc",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
+            },
+            "homepageUrl": "https://lwc.dev",
+            "primaryLanguage": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": []
+                }
+              }
+            }
+          },
+          {
+            "nameWithOwner": "zaCKoZAck0/saleor",
+            "description": "Saleor Core: the high performance, composable, headless commerce API.",
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/saleor",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
+            },
+            "homepageUrl": "https://saleor.io",
+            "primaryLanguage": {
+              "name": "Python",
+              "color": "#3572A5"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": []
+                }
+              }
+            }
+          },
+          {
             "nameWithOwner": "zaCKoZAck0/TodoBlockchain",
             "description": null,
             "stargazerCount": 0,
@@ -1403,37 +1382,15 @@
             }
           },
           {
-            "nameWithOwner": "zaCKoZAck0/lwc",
-            "description": "⚡️ LWC - A Blazing Fast, Enterprise-Grade Web Components Foundation",
+            "nameWithOwner": "zaCKoZAck0/saleor-dashboard",
+            "description": "A GraphQL-powered, single-page dashboard application for Saleor.",
             "stargazerCount": 0,
             "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/lwc",
+            "url": "https://github.com/zaCKoZAck0/saleor-dashboard",
             "owner": {
               "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
             },
-            "homepageUrl": "https://lwc.dev",
-            "primaryLanguage": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": []
-                }
-              }
-            }
-          },
-          {
-            "nameWithOwner": "zaCKoZAck0/supabase",
-            "description": "The open source Firebase alternative.",
-            "stargazerCount": 0,
-            "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/supabase",
-            "owner": {
-              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
-            },
-            "homepageUrl": "https://supabase.com",
+            "homepageUrl": "https://demo.saleor.io/dashboard",
             "primaryLanguage": {
               "name": "TypeScript",
               "color": "#3178c6"
@@ -1447,18 +1404,18 @@
             }
           },
           {
-            "nameWithOwner": "zaCKoZAck0/event-mgmt-server",
+            "nameWithOwner": "zaCKoZAck0/zaCKoZAck0.github.io",
             "description": null,
             "stargazerCount": 0,
             "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/event-mgmt-server",
+            "url": "https://github.com/zaCKoZAck0/zaCKoZAck0.github.io",
             "owner": {
               "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
             },
             "homepageUrl": null,
             "primaryLanguage": {
-              "name": "TypeScript",
-              "color": "#3178c6"
+              "name": "HTML",
+              "color": "#e34c26"
             },
             "defaultBranchRef": {
               "target": {
@@ -1466,9 +1423,9 @@
                   "edges": [
                     {
                       "node": {
-                        "committedDate": "2023-05-16T00:06:10Z",
-                        "message": "first",
-                        "url": "https://github.com/zaCKoZAck0/event-mgmt-server/commit/eb8dd48c22f2c440d44d4624a4ff3928844f51ee"
+                        "committedDate": "2022-07-26T21:26:05Z",
+                        "message": "Update index.html",
+                        "url": "https://github.com/zaCKoZAck0/zaCKoZAck0.github.io/commit/17d9a48e3446ac26a207b97be3fe51cfcce30f4a"
                       }
                     }
                   ]
@@ -1477,39 +1434,34 @@
             }
           },
           {
-            "nameWithOwner": "zaCKoZAck0/saleor",
-            "description": "Saleor Core: the high performance, composable, headless commerce API.",
+            "nameWithOwner": "LuC-9/Go-Tech-Interview",
+            "description": null,
             "stargazerCount": 0,
             "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/saleor",
+            "url": "https://github.com/LuC-9/Go-Tech-Interview",
             "owner": {
-              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
+              "avatarUrl": "https://avatars.githubusercontent.com/u/68937277?u=47420dd1bd87a320cfeeb51557484c4ff1b37fa9&v=4"
             },
-            "homepageUrl": "https://saleor.io",
+            "homepageUrl": null,
             "primaryLanguage": {
-              "name": "Python",
-              "color": "#3572A5"
+              "name": "JavaScript",
+              "color": "#f1e05a"
             },
             "defaultBranchRef": {
               "target": {
                 "history": {
-                  "edges": []
+                  "edges": [
+                    {
+                      "node": {
+                        "committedDate": "2022-09-06T19:28:45Z",
+                        "message": "first-commit",
+                        "url": "https://github.com/LuC-9/Go-Tech-Interview/commit/722842b10eabbe80bcf9e91d46849882ddad4c97"
+                      }
+                    }
+                  ]
                 }
               }
             }
-          },
-          {
-            "nameWithOwner": "zaCKoZAck0/glowing-spoon",
-            "description": null,
-            "stargazerCount": 0,
-            "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/glowing-spoon",
-            "owner": {
-              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
-            },
-            "homepageUrl": null,
-            "primaryLanguage": null,
-            "defaultBranchRef": null
           },
           {
             "nameWithOwner": "zaCKoZAck0/Go-Tech-Interview",
@@ -1698,6 +1650,33 @@
             }
           },
           {
+            "nameWithOwner": "zaCKoZAck0/zaCKoZAck0",
+            "description": null,
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/zaCKoZAck0",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
+            },
+            "homepageUrl": null,
+            "primaryLanguage": null,
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": [
+                    {
+                      "node": {
+                        "committedDate": "2023-10-08T09:21:24Z",
+                        "message": "Update README.md",
+                        "url": "https://github.com/zaCKoZAck0/zaCKoZAck0/commit/89540a0c7c8cbcfe7ceea8bb964ed47466b2c0df"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
             "nameWithOwner": "zaCKoZAck0/grind",
             "description": "Keeping a record of all the Questions I solve daily, so I don't slack off.",
             "stargazerCount": 0,
@@ -1758,18 +1737,18 @@
             }
           },
           {
-            "nameWithOwner": "zaCKoZAck0/zaCKoZAck0.github.io",
+            "nameWithOwner": "zaCKoZAck0/Leetcode-Helpers",
             "description": null,
             "stargazerCount": 0,
             "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/zaCKoZAck0.github.io",
+            "url": "https://github.com/zaCKoZAck0/Leetcode-Helpers",
             "owner": {
               "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
             },
             "homepageUrl": null,
             "primaryLanguage": {
-              "name": "HTML",
-              "color": "#e34c26"
+              "name": "Python",
+              "color": "#3572A5"
             },
             "defaultBranchRef": {
               "target": {
@@ -1777,9 +1756,9 @@
                   "edges": [
                     {
                       "node": {
-                        "committedDate": "2022-07-26T21:26:05Z",
-                        "message": "Update index.html",
-                        "url": "https://github.com/zaCKoZAck0/zaCKoZAck0.github.io/commit/17d9a48e3446ac26a207b97be3fe51cfcce30f4a"
+                        "committedDate": "2022-09-22T04:11:08Z",
+                        "message": "added readme.md",
+                        "url": "https://github.com/zaCKoZAck0/Leetcode-Helpers/commit/0d88ed88e3bb498ac9d1ab8b3edc9a8e12ec20bd"
                       }
                     }
                   ]
@@ -1788,34 +1767,17 @@
             }
           },
           {
-            "nameWithOwner": "LuC-9/Go-Tech-Interview",
+            "nameWithOwner": "zaCKoZAck0/glowing-spoon",
             "description": null,
             "stargazerCount": 0,
             "forkCount": 0,
-            "url": "https://github.com/LuC-9/Go-Tech-Interview",
+            "url": "https://github.com/zaCKoZAck0/glowing-spoon",
             "owner": {
-              "avatarUrl": "https://avatars.githubusercontent.com/u/68937277?u=47420dd1bd87a320cfeeb51557484c4ff1b37fa9&v=4"
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
             },
             "homepageUrl": null,
-            "primaryLanguage": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": [
-                    {
-                      "node": {
-                        "committedDate": "2022-09-06T19:28:45Z",
-                        "message": "first-commit",
-                        "url": "https://github.com/LuC-9/Go-Tech-Interview/commit/722842b10eabbe80bcf9e91d46849882ddad4c97"
-                      }
-                    }
-                  ]
-                }
-              }
-            }
+            "primaryLanguage": null,
+            "defaultBranchRef": null
           },
           {
             "nameWithOwner": "zaCKoZAck0/portfolio-next",
@@ -2101,15 +2063,15 @@
             }
           },
           {
-            "nameWithOwner": "zaCKoZAck0/asg-meragaon-client",
+            "nameWithOwner": "zaCKoZAck0/asg-meragaon-server",
             "description": null,
             "stargazerCount": 0,
             "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/asg-meragaon-client",
+            "url": "https://github.com/zaCKoZAck0/asg-meragaon-server",
             "owner": {
               "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
             },
-            "homepageUrl": "https://asg-meragaon-client.vercel.app",
+            "homepageUrl": null,
             "primaryLanguage": {
               "name": "JavaScript",
               "color": "#f1e05a"
@@ -2120,9 +2082,39 @@
                   "edges": [
                     {
                       "node": {
-                        "committedDate": "2023-02-12T22:47:02Z",
-                        "message": "new api",
-                        "url": "https://github.com/zaCKoZAck0/asg-meragaon-client/commit/30ed721fd2e1f8314225b2872cac8eb80b67a83a"
+                        "committedDate": "2023-02-13T20:13:08Z",
+                        "message": "new origins",
+                        "url": "https://github.com/zaCKoZAck0/asg-meragaon-server/commit/b58785a02563ac6c1cee82a3f6636008d3c077dd"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "nameWithOwner": "zaCKoZAck0/event-mgmt-server",
+            "description": null,
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/event-mgmt-server",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
+            },
+            "homepageUrl": null,
+            "primaryLanguage": {
+              "name": "TypeScript",
+              "color": "#3178c6"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": [
+                    {
+                      "node": {
+                        "committedDate": "2023-05-16T00:06:10Z",
+                        "message": "first",
+                        "url": "https://github.com/zaCKoZAck0/event-mgmt-server/commit/eb8dd48c22f2c440d44d4624a4ff3928844f51ee"
                       }
                     }
                   ]
@@ -2431,36 +2423,6 @@
             }
           },
           {
-            "nameWithOwner": "zaCKoZAck0/asg-meragaon-server",
-            "description": null,
-            "stargazerCount": 0,
-            "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/asg-meragaon-server",
-            "owner": {
-              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
-            },
-            "homepageUrl": null,
-            "primaryLanguage": {
-              "name": "JavaScript",
-              "color": "#f1e05a"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": [
-                    {
-                      "node": {
-                        "committedDate": "2023-02-13T20:13:08Z",
-                        "message": "new origins",
-                        "url": "https://github.com/zaCKoZAck0/asg-meragaon-server/commit/b58785a02563ac6c1cee82a3f6636008d3c077dd"
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          {
             "nameWithOwner": "zaCKoZAck0/python-Flikr-api-test",
             "description": "It tests API call using requests Library",
             "stargazerCount": 0,
@@ -2483,6 +2445,36 @@
                         "committedDate": "2021-07-17T06:05:32Z",
                         "message": "Add files via upload",
                         "url": "https://github.com/zaCKoZAck0/python-Flikr-api-test/commit/f6b2c662ce2ab4d4d32acc593dcdef36030fa642"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "nameWithOwner": "zaCKoZAck0/asg-meragaon-client",
+            "description": null,
+            "stargazerCount": 0,
+            "forkCount": 0,
+            "url": "https://github.com/zaCKoZAck0/asg-meragaon-client",
+            "owner": {
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
+            },
+            "homepageUrl": "https://asg-meragaon-client.vercel.app",
+            "primaryLanguage": {
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            },
+            "defaultBranchRef": {
+              "target": {
+                "history": {
+                  "edges": [
+                    {
+                      "node": {
+                        "committedDate": "2023-02-12T22:47:02Z",
+                        "message": "new api",
+                        "url": "https://github.com/zaCKoZAck0/asg-meragaon-client/commit/30ed721fd2e1f8314225b2872cac8eb80b67a83a"
                       }
                     }
                   ]
@@ -2718,36 +2710,6 @@
                 }
               }
             }
-          },
-          {
-            "nameWithOwner": "zaCKoZAck0/Leetcode-Helpers",
-            "description": null,
-            "stargazerCount": 0,
-            "forkCount": 0,
-            "url": "https://github.com/zaCKoZAck0/Leetcode-Helpers",
-            "owner": {
-              "avatarUrl": "https://avatars.githubusercontent.com/u/69889382?u=36f80320e361c9e123bb2828d9d6003c51b6abc7&v=4"
-            },
-            "homepageUrl": null,
-            "primaryLanguage": {
-              "name": "Python",
-              "color": "#3572A5"
-            },
-            "defaultBranchRef": {
-              "target": {
-                "history": {
-                  "edges": [
-                    {
-                      "node": {
-                        "committedDate": "2022-09-22T04:11:08Z",
-                        "message": "added readme.md",
-                        "url": "https://github.com/zaCKoZAck0/Leetcode-Helpers/commit/0d88ed88e3bb498ac9d1ab8b3edc9a8e12ec20bd"
-                      }
-                    }
-                  ]
-                }
-              }
-            }
           }
         ]
       },
@@ -2759,14 +2721,10 @@
             "#30a14e",
             "#216e39"
           ],
-          "totalContributions": 426,
+          "totalContributions": 358,
           "months": [
             {
-              "totalWeeks": 5,
-              "firstDay": "2023-10-01"
-            },
-            {
-              "totalWeeks": 4,
+              "totalWeeks": 1,
               "firstDay": "2023-11-01"
             },
             {
@@ -2808,385 +2766,17 @@
             {
               "totalWeeks": 5,
               "firstDay": "2024-09-01"
+            },
+            {
+              "totalWeeks": 4,
+              "firstDay": "2024-10-01"
+            },
+            {
+              "totalWeeks": 4,
+              "firstDay": "2024-11-01"
             }
           ],
           "weeks": [
-            {
-              "contributionDays": [
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-10-01",
-                  "weekday": 0
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-10-02",
-                  "weekday": 1
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-10-03",
-                  "weekday": 2
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-10-04",
-                  "weekday": 3
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 2,
-                  "date": "2023-10-05",
-                  "weekday": 4
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 3,
-                  "date": "2023-10-06",
-                  "weekday": 5
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 4,
-                  "date": "2023-10-07",
-                  "weekday": 6
-                }
-              ],
-              "firstDay": "2023-10-01"
-            },
-            {
-              "contributionDays": [
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 4,
-                  "date": "2023-10-08",
-                  "weekday": 0
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 1,
-                  "date": "2023-10-09",
-                  "weekday": 1
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 4,
-                  "date": "2023-10-10",
-                  "weekday": 2
-                },
-                {
-                  "color": "#30a14e",
-                  "contributionCount": 12,
-                  "date": "2023-10-11",
-                  "weekday": 3
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 3,
-                  "date": "2023-10-12",
-                  "weekday": 4
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-10-13",
-                  "weekday": 5
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-10-14",
-                  "weekday": 6
-                }
-              ],
-              "firstDay": "2023-10-08"
-            },
-            {
-              "contributionDays": [
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-10-15",
-                  "weekday": 0
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-10-16",
-                  "weekday": 1
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-10-17",
-                  "weekday": 2
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-10-18",
-                  "weekday": 3
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-10-19",
-                  "weekday": 4
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-10-20",
-                  "weekday": 5
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 2,
-                  "date": "2023-10-21",
-                  "weekday": 6
-                }
-              ],
-              "firstDay": "2023-10-15"
-            },
-            {
-              "contributionDays": [
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 1,
-                  "date": "2023-10-22",
-                  "weekday": 0
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-10-23",
-                  "weekday": 1
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-10-24",
-                  "weekday": 2
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-10-25",
-                  "weekday": 3
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 4,
-                  "date": "2023-10-26",
-                  "weekday": 4
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-10-27",
-                  "weekday": 5
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-10-28",
-                  "weekday": 6
-                }
-              ],
-              "firstDay": "2023-10-22"
-            },
-            {
-              "contributionDays": [
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 2,
-                  "date": "2023-10-29",
-                  "weekday": 0
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 3,
-                  "date": "2023-10-30",
-                  "weekday": 1
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 1,
-                  "date": "2023-10-31",
-                  "weekday": 2
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-11-01",
-                  "weekday": 3
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 2,
-                  "date": "2023-11-02",
-                  "weekday": 4
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 1,
-                  "date": "2023-11-03",
-                  "weekday": 5
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 1,
-                  "date": "2023-11-04",
-                  "weekday": 6
-                }
-              ],
-              "firstDay": "2023-10-29"
-            },
-            {
-              "contributionDays": [
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 2,
-                  "date": "2023-11-05",
-                  "weekday": 0
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 2,
-                  "date": "2023-11-06",
-                  "weekday": 1
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-11-07",
-                  "weekday": 2
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 3,
-                  "date": "2023-11-08",
-                  "weekday": 3
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-11-09",
-                  "weekday": 4
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-11-10",
-                  "weekday": 5
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 4,
-                  "date": "2023-11-11",
-                  "weekday": 6
-                }
-              ],
-              "firstDay": "2023-11-05"
-            },
-            {
-              "contributionDays": [
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 2,
-                  "date": "2023-11-12",
-                  "weekday": 0
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 4,
-                  "date": "2023-11-13",
-                  "weekday": 1
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 1,
-                  "date": "2023-11-14",
-                  "weekday": 2
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 3,
-                  "date": "2023-11-15",
-                  "weekday": 3
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 1,
-                  "date": "2023-11-16",
-                  "weekday": 4
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 2,
-                  "date": "2023-11-17",
-                  "weekday": 5
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-11-18",
-                  "weekday": 6
-                }
-              ],
-              "firstDay": "2023-11-12"
-            },
-            {
-              "contributionDays": [
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 2,
-                  "date": "2023-11-19",
-                  "weekday": 0
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 1,
-                  "date": "2023-11-20",
-                  "weekday": 1
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 1,
-                  "date": "2023-11-21",
-                  "weekday": 2
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-11-22",
-                  "weekday": 3
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-11-23",
-                  "weekday": 4
-                },
-                {
-                  "color": "#ebedf0",
-                  "contributionCount": 0,
-                  "date": "2023-11-24",
-                  "weekday": 5
-                },
-                {
-                  "color": "#9be9a8",
-                  "contributionCount": 1,
-                  "date": "2023-11-25",
-                  "weekday": 6
-                }
-              ],
-              "firstDay": "2023-11-19"
-            },
             {
               "contributionDays": [
                 {
@@ -5217,8 +4807,8 @@
                   "weekday": 0
                 },
                 {
-                  "color": "#40c463",
-                  "contributionCount": 8,
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
                   "date": "2024-09-23",
                   "weekday": 1
                 },
@@ -5229,8 +4819,8 @@
                   "weekday": 2
                 },
                 {
-                  "color": "#30a14e",
-                  "contributionCount": 10,
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
                   "date": "2024-09-25",
                   "weekday": 3
                 },
@@ -5283,17 +4873,387 @@
                 },
                 {
                   "color": "#9be9a8",
-                  "contributionCount": 2,
+                  "contributionCount": 4,
                   "date": "2024-10-03",
                   "weekday": 4
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 3,
+                  "date": "2024-10-04",
+                  "weekday": 5
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-10-05",
+                  "weekday": 6
                 }
               ],
               "firstDay": "2024-09-29"
+            },
+            {
+              "contributionDays": [
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-10-06",
+                  "weekday": 0
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-10-07",
+                  "weekday": 1
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "date": "2024-10-08",
+                  "weekday": 2
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 2,
+                  "date": "2024-10-09",
+                  "weekday": 3
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 3,
+                  "date": "2024-10-10",
+                  "weekday": 4
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-10-11",
+                  "weekday": 5
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "date": "2024-10-12",
+                  "weekday": 6
+                }
+              ],
+              "firstDay": "2024-10-06"
+            },
+            {
+              "contributionDays": [
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-10-13",
+                  "weekday": 0
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 2,
+                  "date": "2024-10-14",
+                  "weekday": 1
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-10-15",
+                  "weekday": 2
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-10-16",
+                  "weekday": 3
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-10-17",
+                  "weekday": 4
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-10-18",
+                  "weekday": 5
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 2,
+                  "date": "2024-10-19",
+                  "weekday": 6
+                }
+              ],
+              "firstDay": "2024-10-13"
+            },
+            {
+              "contributionDays": [
+                {
+                  "color": "#40c463",
+                  "contributionCount": 5,
+                  "date": "2024-10-20",
+                  "weekday": 0
+                },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 7,
+                  "date": "2024-10-21",
+                  "weekday": 1
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-10-22",
+                  "weekday": 2
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-10-23",
+                  "weekday": 3
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-10-24",
+                  "weekday": 4
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-10-25",
+                  "weekday": 5
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-10-26",
+                  "weekday": 6
+                }
+              ],
+              "firstDay": "2024-10-20"
+            },
+            {
+              "contributionDays": [
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-10-27",
+                  "weekday": 0
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-10-28",
+                  "weekday": 1
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-10-29",
+                  "weekday": 2
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-10-30",
+                  "weekday": 3
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-10-31",
+                  "weekday": 4
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-01",
+                  "weekday": 5
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-02",
+                  "weekday": 6
+                }
+              ],
+              "firstDay": "2024-10-27"
+            },
+            {
+              "contributionDays": [
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-03",
+                  "weekday": 0
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-04",
+                  "weekday": 1
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-05",
+                  "weekday": 2
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-06",
+                  "weekday": 3
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-07",
+                  "weekday": 4
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-08",
+                  "weekday": 5
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-09",
+                  "weekday": 6
+                }
+              ],
+              "firstDay": "2024-11-03"
+            },
+            {
+              "contributionDays": [
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-10",
+                  "weekday": 0
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-11",
+                  "weekday": 1
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-12",
+                  "weekday": 2
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-13",
+                  "weekday": 3
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-14",
+                  "weekday": 4
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-15",
+                  "weekday": 5
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-16",
+                  "weekday": 6
+                }
+              ],
+              "firstDay": "2024-11-10"
+            },
+            {
+              "contributionDays": [
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-17",
+                  "weekday": 0
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-18",
+                  "weekday": 1
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-19",
+                  "weekday": 2
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-20",
+                  "weekday": 3
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-21",
+                  "weekday": 4
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-22",
+                  "weekday": 5
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-23",
+                  "weekday": 6
+                }
+              ],
+              "firstDay": "2024-11-17"
+            },
+            {
+              "contributionDays": [
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-24",
+                  "weekday": 0
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-25",
+                  "weekday": 1
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-26",
+                  "weekday": 2
+                },
+                {
+                  "color": "#ebedf0",
+                  "contributionCount": 0,
+                  "date": "2024-11-27",
+                  "weekday": 3
+                }
+              ],
+              "firstDay": "2024-11-24"
             }
           ]
         }
       }
     }
   },
-  "last_updated": "2024-10-03T17:08:46.335Z"
+  "last_updated": "2024-11-27T17:22:19.837Z"
 }

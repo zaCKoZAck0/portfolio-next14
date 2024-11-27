@@ -1,7 +1,7 @@
 'use client';
 import { SiNextdotjs } from 'react-icons/si';
 import data from '../../../data/github-data.json';
-import { getRelativeDate } from '~/lib/date';
+import { RelativeDate } from '../relative-date';
 
 export function Footer() {
   return (
@@ -11,7 +11,7 @@ export function Footer() {
           <p className="flex gap-2">
             Made with Next.js <SiNextdotjs className="size-4" />
           </p>
-          <p>Updated {getRelativeDate(new Date(data.last_updated))} ago</p>
+          <p>Updated <RelativeDate date={new Date(data.last_updated)} /> ago</p>
         </div>
       </div>
     </div>

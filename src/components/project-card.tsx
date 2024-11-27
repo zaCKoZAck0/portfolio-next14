@@ -9,10 +9,10 @@ import {
   Star,
 } from 'lucide-react';
 import { formatLargeNumber } from '~/lib/numbers';
-import { getRelativeDate } from '~/lib/date';
 import Image from 'next/image';
 import { FaGithub } from 'react-icons/fa6';
 import React from 'react';
+import { RelativeDate } from './relative-date';
 
 type ProjectCardProps = RepositoryNode;
 
@@ -92,10 +92,10 @@ export function ProjectCard({
           {defaultBranchRef?.target.history.edges.length ? (
             <div className="flex items-center">
               <p>
-                {getRelativeDate(
-                  new Date(defaultBranchRef.target.history.edges[0].node.committedDate || 0),
-                  true,
-                )}{' '}
+               <RelativeDate
+                  date={new Date(defaultBranchRef.target.history.edges[0].node.committedDate || 0)}
+                  short={true}
+                />
                 ago
               </p>
               <GitMergeIcon className="mx-2 size-4" />
