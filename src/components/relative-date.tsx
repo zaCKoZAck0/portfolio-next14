@@ -48,7 +48,7 @@ export function RelativeDate({date, short = false, now = new Date()}: RelativeDa
     }
   
     if (short) {
-      return <time>parts[0]</time>;
+      return <time>{parts[0]}</time>;
     }
   
     return <time>{parts.join(', ')}</time>;
