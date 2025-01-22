@@ -4,7 +4,7 @@ import { Button } from '~/components/ui/button';
 import Link from 'next/link';
 import { DashboardTableOfContents } from '~/components/navigation/blog/heading-navigation';
 import { Doc } from 'contentlayer/generated';
-import { getTableOfContents } from "~/lib/toc"
+import { getTableOfContents } from '~/lib/toc';
 import { BlogFooter } from './navigation/blog/footer';
 
 interface BlogPageProps {
@@ -15,7 +15,7 @@ interface BlogPageProps {
 export async function BlogPage({ blog, children }: BlogPageProps) {
   const createdDate = new Date(blog.publishedAt);
   const updatedDate = new Date(blog.updatedAt);
-  const toc = await getTableOfContents(blog.body.raw)
+  const toc = await getTableOfContents(blog.body.raw);
 
   return (
     <main className="relative flex min-h-screen items-start justify-center">
@@ -67,7 +67,7 @@ export async function BlogPage({ blog, children }: BlogPageProps) {
                 </span>
               </p>
             </div>
-            <article id='blog' className="prose prose-gray dark:prose-invert max-w-none">
+            <article id="blog" className="prose prose-gray dark:prose-invert max-w-none">
               {children}
             </article>
             <BlogFooter />

@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { FaUser, FaXTwitter } from 'react-icons/fa6';
 import { H2, H4 } from '~/components/typography';
 import { Button } from '~/components/ui/button';
-import { allDocs } from 'contentlayer/generated'
+import { allDocs } from 'contentlayer/generated';
 import { Metadata } from 'next';
 import { differenceInDays, format } from 'date-fns';
 import { Badge } from '~/components/ui/badge';
 import { Calendar } from 'lucide-react';
-import { BlogFooter} from '~/components/navigation/blog/footer';
+import { BlogFooter } from '~/components/navigation/blog/footer';
 
 export const metadata: Metadata = {
   title: 'Blog | zackozack',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  const blogs = allDocs.filter(docs => docs.published)
+  const blogs = allDocs.filter((docs) => docs.published);
   const groupedBlogs = blogs.reduce(
     (acc, blog) => {
       const year = new Date(blog.publishedAt).getFullYear();
@@ -27,12 +27,15 @@ export default function BlogPage() {
   );
   return (
     <main className="flex min-h-screen justify-center md:container">
-      <section className="flex w-full max-w-3xl min-h-screen flex-col p-4 pb-10">
-        <div className='flex justify-center min-h-screen flex-col'>
+      <section className="flex min-h-screen w-full max-w-3xl flex-col p-4 pb-10">
+        <div className="flex min-h-screen flex-col justify-center">
           <p className="w-full rounded-md border-orange-200 p-4 text-justify">
             <span className="w-full text-justify text-secondary-foreground">
-              Hi there! I am Ayush. Welcome to my personal blog. Thus far, I have written only {blogs.length}.
-            </span>{' '} My blogs mostly have content around tools and technologies, tutorials, book / research-paper summaries, etc. 
+              Hi there! I am Ayush. Welcome to my personal blog. Thus far, I have written only{' '}
+              {blogs.length}.
+            </span>{' '}
+            My blogs mostly have content around tools and technologies, tutorials, book /
+            research-paper summaries, etc.
           </p>
           <div className="flex items-center justify-end gap-2 py-2">
             <a href="https://x.com/zaCKoZAck0">
@@ -58,7 +61,7 @@ export default function BlogPage() {
                 differenceInDays(new Date(), new Date(blog.updatedAt)) <= 7;
               return (
                 <Link key={blog.slug} href={`/blog/${blog.slugAsParams}`}>
-                  <div className="group border hover:-translate-y-2 relative overflow-hidden rounded-lg bg-primary/5 p-6 transition-all duration-500 hover:bg-primary/10">
+                  <div className="group relative overflow-hidden rounded-lg border bg-primary/5 p-6 transition-all duration-500 hover:-translate-y-2 hover:bg-primary/10">
                     <H4 className="flex items-center gap-2 text-xl font-normal text-secondary-foreground transition-colors duration-500 group-hover:text-orange-200 md:text-xl">
                       {blog.title}
                       {isNew && (
@@ -73,7 +76,7 @@ export default function BlogPage() {
                       )}
                     </H4>
                     <p className="mt-2 text-sm text-muted-foreground">{blog.description}</p>
-                    <div className="flex items-center justify-end gap-2 text-xs text-muted-foreground mt-2">
+                    <div className="mt-2 flex items-center justify-end gap-2 text-xs text-muted-foreground">
                       <Calendar className="size-3" />
                       <span>{format(new Date(blog.updatedAt), 'MMMM d, yyyy')}</span>
                     </div>
@@ -119,7 +122,7 @@ export default function BlogPage() {
             </div>
           ))}
         </div>
-      <BlogFooter />
+        <BlogFooter />
       </section>
     </main>
   );

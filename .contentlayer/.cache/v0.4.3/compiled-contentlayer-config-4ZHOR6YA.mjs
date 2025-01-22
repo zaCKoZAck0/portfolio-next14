@@ -1,58 +1,58 @@
 // contentlayer.config.js
-import { defineDocumentType, makeSource } from "contentlayer2/source-files";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import codeLines from "rehype-highlight-code-lines";
-import rehypePrettyCode from "rehype-pretty-code";
-import highlight from "rehype-highlight";
-import rehypeSlug from "rehype-slug";
-import remarkGfm from "remark-gfm";
+import { defineDocumentType, makeSource } from 'contentlayer2/source-files';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import codeLines from 'rehype-highlight-code-lines';
+import rehypePrettyCode from 'rehype-pretty-code';
+import highlight from 'rehype-highlight';
+import rehypeSlug from 'rehype-slug';
+import remarkGfm from 'remark-gfm';
 var computedFields = {
   slug: {
-    type: "string",
-    resolve: (doc) => `/${doc._raw.flattenedPath}`
+    type: 'string',
+    resolve: (doc) => `/${doc._raw.flattenedPath}`,
   },
   slugAsParams: {
-    type: "string",
-    resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/")
-  }
+    type: 'string',
+    resolve: (doc) => doc._raw.flattenedPath.split('/').slice(1).join('/'),
+  },
 };
 var Doc = defineDocumentType(() => ({
-  name: "Doc",
+  name: 'Doc',
   filePathPattern: `blogs/**/*.mdx`,
-  contentType: "mdx",
+  contentType: 'mdx',
   fields: {
     title: {
-      type: "string",
-      required: true
+      type: 'string',
+      required: true,
     },
     description: {
-      type: "string",
-      required: true
+      type: 'string',
+      required: true,
     },
     published: {
-      type: "boolean",
-      default: true
+      type: 'boolean',
+      default: true,
     },
     featured: {
-      type: "boolean",
-      default: false
+      type: 'boolean',
+      default: false,
     },
     publishedAt: {
-      type: "date"
+      type: 'date',
     },
     updatedAt: {
-      type: "date"
+      type: 'date',
     },
     tags: {
-      type: "list",
-      of: { type: "string" },
-      required: true
-    }
+      type: 'list',
+      of: { type: 'string' },
+      required: true,
+    },
   },
-  computedFields
+  computedFields,
 }));
 var contentlayer_config_default = makeSource({
-  contentDirPath: "src/content",
+  contentDirPath: 'src/content',
   disableImportAliasWarning: true,
   documentTypes: [Doc],
   mdx: {
@@ -64,35 +64,32 @@ var contentlayer_config_default = makeSource({
         rehypeLines,
         rehypePrettyCode,
         {
-          theme: "catppuccin-mocha",
+          theme: 'catppuccin-mocha',
           onVisitLine(node) {
             if (node.children.length === 0) {
-              node.children = [{ type: "text", value: " " }];
+              node.children = [{ type: 'text', value: ' ' }];
             }
           },
           onVisitHighlightedLine(node) {
             console.log(node);
-            node.properties.className.push("line--highlighted");
+            node.properties.className.push('line--highlighted');
           },
           onVisitHighlightedWord(node) {
-            node.properties.className = ["word--highlighted"];
-          }
-        }
+            node.properties.className = ['word--highlighted'];
+          },
+        },
       ],
       [
         rehypeAutolinkHeadings,
         {
           properties: {
-            className: ["subheading-anchor"],
-            ariaLabel: "Link to section"
-          }
-        }
-      ]
-    ]
-  }
+            className: ['subheading-anchor'],
+            ariaLabel: 'Link to section',
+          },
+        },
+      ],
+    ],
+  },
 });
-export {
-  Doc,
-  contentlayer_config_default as default
-};
+export { Doc, contentlayer_config_default as default };
 //# sourceMappingURL=compiled-contentlayer-config-4ZHOR6YA.mjs.map

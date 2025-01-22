@@ -2715,12 +2715,7 @@
       },
       "contributionsCollection": {
         "contributionCalendar": {
-          "colors": [
-            "#9be9a8",
-            "#40c463",
-            "#30a14e",
-            "#216e39"
-          ],
+          "colors": ["#9be9a8", "#40c463", "#30a14e", "#216e39"],
           "totalContributions": 358,
           "months": [
             {

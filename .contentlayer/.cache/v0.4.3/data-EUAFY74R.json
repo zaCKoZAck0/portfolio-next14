@@ -8,13 +8,7 @@
         "featured": false,
         "publishedAt": "2025-01-22T00:00:00.000Z",
         "updatedAt": "2025-01-22T00:00:00.000Z",
-        "tags": [
-          "react",
-          "s3",
-          "aws",
-          "cloudfront",
-          "cdn"
-        ],
+        "tags": ["react", "s3", "aws", "cloudfront", "cdn"],
         "body": {
           "raw": "\n## Some Background\n\n**Amazon S3:** It is a block storage service provided by AWS to securely keep your files in isolated containers called _buckets_. By default all access to a s3 bucket is blocked by AWS.\n\n**Amaozon CloudFront CDN:** A CDN is used to cache static content like images, videos, html, css, js etc. files in edge locations near to the user. AWS CloudFront allows granual control over each request for more security.\n\n## 1. Build project and store in on S3\n\n- Build your react project using `npm build`.\n- Create an S3 Bucket, it will require you to set a globally unique name.\n- Keep the default permissions, <u>**don't enable**</u> external access to your S3 bucket.\n- Upload only the build files, i.e. only the contents of `/build` folder from your react project to S3.\n- You can do this easily from the UI using the upload button.\n\n",
           "code": "var Component=(()=>{var h=Object.create;var l=Object.defineProperty;var p=Object.getOwnPropertyDescriptor;var m=Object.getOwnPropertyNames;var g=Object.getPrototypeOf,b=Object.prototype.hasOwnProperty;var f=(o,e)=>()=>(e||o((e={exports:{}}).exports,e),e.exports),k=(o,e)=>{for(var t in e)l(o,t,{get:e[t],enumerable:!0})},a=(o,e,t,r)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let i of m(e))!b.call(o,i)&&i!==t&&l(o,i,{get:()=>e[i],enumerable:!(r=p(e,i))||r.enumerable});return o};var y=(o,e,t)=>(t=o!=null?h(g(o)):{},a(e||!o||!o.__esModule?l(t,\"default\",{value:o,enumerable:!0}):t,o)),S=o=>a(l({},\"__esModule\",{value:!0}),o);var s=f((C,c)=>{c.exports=_jsx_runtime});var j={};k(j,{default:()=>u,frontmatter:()=>A});var n=y(s()),A={title:\"Host React application on AWS\",description:\"Host Single Page Applications (SPAs) like React on AWS, utilize a private S3 bucket for storage and serve the content globally through the CloudFront CDN.\",publishedAt:\"2025-01-22\",updatedAt:\"2025-01-22\",tags:[\"react\",\"s3\",\"aws\",\"cloudfront\",\"cdn\"]};function d(o){let e={a:\"a\",code:\"code\",em:\"em\",h2:\"h2\",li:\"li\",p:\"p\",span:\"span\",strong:\"strong\",ul:\"ul\",...o.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsxs)(e.h2,{id:\"some-background\",children:[(0,n.jsx)(e.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#some-background\",children:(0,n.jsx)(e.span,{className:\"icon icon-link\"})}),\"Some Background\"]}),`\n`,(0,n.jsxs)(e.p,{children:[(0,n.jsx)(e.strong,{children:\"Amazon S3:\"}),\" It is a block storage service provided by AWS to securely keep your files in isolated containers called \",(0,n.jsx)(e.em,{children:\"buckets\"}),\". By default all access to a s3 bucket is blocked by AWS.\"]}),`\n`,(0,n.jsxs)(e.p,{children:[(0,n.jsx)(e.strong,{children:\"Amaozon CloudFront CDN:\"}),\" A CDN is used to cache static content like images, videos, html, css, js etc. files in edge locations near to the user. AWS CloudFront allows granual control over each request for more security.\"]}),`\n`,(0,n.jsxs)(e.h2,{id:\"1-build-project-and-store-in-on-s3\",children:[(0,n.jsx)(e.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#1-build-project-and-store-in-on-s3\",children:(0,n.jsx)(e.span,{className:\"icon icon-link\"})}),\"1. Build project and store in on S3\"]}),`\n`,(0,n.jsxs)(e.ul,{children:[`\n`,(0,n.jsxs)(e.li,{children:[\"Build your react project using \",(0,n.jsx)(e.code,{children:\"npm build\"}),\".\"]}),`\n`,(0,n.jsx)(e.li,{children:\"Create an S3 Bucket, it will require you to set a globally unique name.\"}),`\n`,(0,n.jsxs)(e.li,{children:[\"Keep the default permissions, \",(0,n.jsx)(\"u\",{children:(0,n.jsx)(e.strong,{children:\"don't enable\"})}),\" external access to your S3 bucket.\"]}),`\n`,(0,n.jsxs)(e.li,{children:[\"Upload only the build files, i.e. only the contents of \",(0,n.jsx)(e.code,{children:\"/build\"}),\" folder from your react project to S3.\"]}),`\n`,(0,n.jsx)(e.li,{children:\"You can do this easily from the UI using the upload button.\"}),`\n`]})]})}function u(o={}){let{wrapper:e}=o.components||{};return e?(0,n.jsx)(e,{...o,children:(0,n.jsx)(d,{...o})}):d(o)}return S(j);})();\n;return Component;"
@@ -31,7 +25,7 @@
         "slug": "/blogs/deploy-react-to-aws",
         "slugAsParams": "deploy-react-to-aws"
       },
-      "documentHash": "1737547974706",
+      "documentHash": "1737565329713",
       "hasWarnings": false,
       "documentTypeName": "Doc"
     }

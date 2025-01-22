@@ -1,8 +1,8 @@
 ---
 title: Host React application on AWS
 description: Host Single Page Applications (SPAs) like React on AWS, utilize a private S3 bucket for storage and serve the content globally through the CloudFront CDN.
-publishedAt: "2025-01-22"
-updatedAt: "2025-01-22"
+publishedAt: '2025-01-22'
+updatedAt: '2025-01-22'
 tags: [react, s3, aws, cloudfront, cdn]
 ---
 
@@ -12,11 +12,10 @@ tags: [react, s3, aws, cloudfront, cdn]
 
 **Amaozon CloudFront CDN:** A CDN is used to cache static content like images, videos, html, css, js etc. files in edge locations near to the user. AWS CloudFront allows granual control over each request for more security.
 
-## 1. Build project and store in on S3
+## 1. Build the project and store it on S3
 
 - Build your react project using `npm build`.
 - Create an S3 Bucket, it will require you to set a globally unique name.
 - Keep the default permissions, <u>**don't enable**</u> external access to your S3 bucket.
 - Upload only the build files, i.e. only the contents of `/build` folder from your react project to S3.
 - You can do this easily from the UI using the upload button.
-

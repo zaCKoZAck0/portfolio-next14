@@ -10,7 +10,7 @@ import { Badge } from '~/components/ui/badge';
 import { cn } from '~/lib/utils';
 import { format, differenceInDays } from 'date-fns';
 import { H3 } from '~/components/typography';
-import {allDocs, Doc} from 'contentlayer/generated';
+import { allDocs, Doc } from 'contentlayer/generated';
 import { useRouter } from 'next/navigation';
 
 export function BlogSearch() {

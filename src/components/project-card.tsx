@@ -93,7 +93,7 @@ export function ProjectCard({
           {defaultBranchRef?.target.history.edges.length ? (
             <div className="flex items-center">
               <p>
-               <RelativeDate
+                <RelativeDate
                   date={new Date(defaultBranchRef.target.history.edges[0].node.committedDate || 0)}
                   short={true}
                 />

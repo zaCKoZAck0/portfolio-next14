@@ -4,7 +4,7 @@ import { H4 } from '~/components/typography';
 import { motion, useScroll } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import {allDocs} from 'contentlayer/generated'
+import { allDocs } from 'contentlayer/generated';
 import { BlogSearch } from './search';
 
 const navVariants = {

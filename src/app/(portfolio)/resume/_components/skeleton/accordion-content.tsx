@@ -1,9 +1,9 @@
-import { Skeleton } from "~/components/ui/skeleton"
+import { Skeleton } from '~/components/ui/skeleton';
 
 export function AccordionContentSkeleton() {
   return (
     <div>
-        <Skeleton className="h-56 w-full mt-2" />
+      <Skeleton className="mt-2 h-56 w-full" />
     </div>
-  )
+  );
 }

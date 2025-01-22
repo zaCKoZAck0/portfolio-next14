@@ -25,7 +25,9 @@ export function Experience() {
             </div>
             <td className="text-sm text-muted-foreground md:text-lg">
               <p>Aug 2022 - Present</p>
-              <p><RelativeDate date={new Date('2022-08-30')} /></p>
+              <p>
+                <RelativeDate date={new Date('2022-08-30')} />
+              </p>
             </td>
           </tr>
           <tr className="flex flex-col gap-2 md:flex-row md:items-center md:gap-0">
@@ -46,7 +48,13 @@ export function Experience() {
             </div>
             <td className="text-sm text-muted-foreground md:text-lg">
               <p>October 2021 - May 2022</p>
-              <p><RelativeDate date={new Date('2021-10-28')} short={false} now={new Date('2022-05-01')} /></p>
+              <p>
+                <RelativeDate
+                  date={new Date('2021-10-28')}
+                  short={false}
+                  now={new Date('2022-05-01')}
+                />
+              </p>
             </td>
           </tr>
         </tbody>
