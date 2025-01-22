@@ -1,6 +1,11 @@
 #blog {
   scroll-behavior: smooth;
 }
+
+#blog u {
+  text-underline-offset: 2px;
+}
+
 #blog p {
   padding-top: 0.75rem /* 12px */;
   padding-bottom: 0.75rem /* 12px */;

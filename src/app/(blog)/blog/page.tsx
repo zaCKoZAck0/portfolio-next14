@@ -15,7 +15,8 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  const groupedBlogs = allDocs.reduce(
+  const blogs = allDocs.filter(docs => docs.published)
+  const groupedBlogs = blogs.reduce(
     (acc, blog) => {
       const year = new Date(blog.publishedAt).getFullYear();
       if (!acc[year]) acc[year] = [];
@@ -26,15 +27,12 @@ export default function BlogPage() {
   );
   return (
     <main className="flex min-h-screen justify-center md:container">
-      <section className="flex w-full max-w-3xl translate-y-[calc(100vh/5)] flex-col p-4 md:translate-y-1/4">
-        <div>
+      <section className="flex w-full max-w-3xl min-h-screen flex-col p-4 pb-10">
+        <div className='flex justify-center min-h-screen flex-col'>
           <p className="w-full rounded-md border-orange-200 p-4 text-justify">
             <span className="w-full text-justify text-secondary-foreground">
-              Hi there! I am zackozack, and thus far, I have written {allDocs.length}{' '}
-              blogs.
-            </span>{' '}
-            In my blogs, I write about my experiences, thoughts, and opinions on various topics. I
-            hope you enjoy reading them as much as I enjoy writing them.
+              Hi there! I am Ayush. Welcome to my personal blog. Thus far, I have written only {blogs.length}.
+            </span>{' '} My blogs mostly have content around tools and technologies, tutorials, book / research-paper summaries, etc. 
           </p>
           <div className="flex items-center justify-end gap-2 py-2">
             <a href="https://x.com/zaCKoZAck0">
@@ -52,17 +50,16 @@ export default function BlogPage() {
           </div>
         </div>
         <div className="mt-32">
-          <H2>Top Blogs</H2>
           <div className="flex flex-col gap-4">
-            {allDocs.map((blog) => {
+            {blogs.map((blog) => {
               const isNew = differenceInDays(new Date(), new Date(blog.publishedAt)) <= 7;
               const isUpdated =
                 differenceInDays(new Date(blog.updatedAt), new Date(blog.publishedAt)) > 0 &&
                 differenceInDays(new Date(), new Date(blog.updatedAt)) <= 7;
               return (
                 <Link key={blog.slug} href={`/blog/${blog.slugAsParams}`}>
-                  <div className="group relative overflow-hidden rounded-lg bg-primary/5 p-4 transition-colors duration-500 hover:bg-primary/10">
-                    <H4 className="flex items-center gap-2 text-lg font-normal text-secondary-foreground transition-colors duration-500 group-hover:text-orange-200 md:text-xl">
+                  <div className="group border hover:-translate-y-2 relative overflow-hidden rounded-lg bg-primary/5 p-6 transition-all duration-500 hover:bg-primary/10">
+                    <H4 className="flex items-center gap-2 text-xl font-normal text-secondary-foreground transition-colors duration-500 group-hover:text-orange-200 md:text-xl">
                       {blog.title}
                       {isNew && (
                         <Badge className="border-0 bg-gradient-to-br from-green-400 to-blue-500 text-white">
@@ -75,8 +72,8 @@ export default function BlogPage() {
                         </Badge>
                       )}
                     </H4>
-                    <p className="mt-1 text-xs text-muted-foreground">{blog.description}</p>
-                    <div className="flex items-center justify-end gap-2 text-xs text-muted-foreground">
+                    <p className="mt-2 text-sm text-muted-foreground">{blog.description}</p>
+                    <div className="flex items-center justify-end gap-2 text-xs text-muted-foreground mt-2">
                       <Calendar className="size-3" />
                       <span>{format(new Date(blog.updatedAt), 'MMMM d, yyyy')}</span>
                     </div>
@@ -94,7 +91,7 @@ export default function BlogPage() {
               <table>
                 <tbody>
                   {groupedBlogs[year].map((slug) => {
-                    const blog = allDocs.find((it) => it.slugAsParams === slug);
+                    const blog = blogs.find((it) => it.slugAsParams === slug);
                     if (!blog) return null;
                     const createdDate = new Date(blog.publishedAt);
                     return (

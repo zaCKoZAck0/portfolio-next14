@@ -19,9 +19,7 @@ async function getDocFromParams(slug: string) {
 
 const Page: FC<PageProps> = async ({ params }) => {
     const doc = await getDocFromParams(params.slug);
-  return  <BlogPage blog={doc}> <Mdx code={doc.body.code} />
-      <BlogFooter />
-  </BlogPage>
+  return  <BlogPage blog={doc}> <Mdx code={doc.body.code} /></BlogPage>
 }
 
 export default Page

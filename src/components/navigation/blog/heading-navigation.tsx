@@ -30,8 +30,8 @@ export function DashboardTableOfContents({ toc }: TocProps) {
   }
 
   return mounted ? (
-    <div className="space-y-2 border p-4 rounded-xl shadow bg-foreground/5">
-      <p className="font-bold text-center text-secondary-foreground">On This Page</p>
+    <div className="space-y-2 p-4 rounded-xl shadow bg-card">
+      <p className="font-bold text-center text-card-foreground border-b pb-4">On This Page</p>
       <Tree tree={toc} activeItem={activeHeading} />
     </div>
   ) : null
@@ -95,7 +95,7 @@ function Tree({ tree, level = 1, activeItem }: TreeProps) {
             <a
               href={item.url}
               className={cn(
-                "inline-block no-underline",
+                "inline-block no-underline transition-all",
                 item.url === `#${activeItem}`
                   ? "font-medium text-orange-200"
                   : "text-sm text-muted-foreground"

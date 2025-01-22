@@ -129,7 +129,7 @@ const components = {
   code: ({ className, ...props }) => (
     <code
       className={cn(
-        "relative rounded px-[1rem] font-mono text-base",
+        "relative rounded font-mono text-base bg-card text-orange-200 px-[.5rem] font-thin",
         className
       )}
       {...props}
