@@ -8,7 +8,7 @@
     "start": "pnpm script:github && next start",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "lint:fix": "eslint . --fix --cache --cache-location \"node_modules/.cache/.eslintcache\" --max-warnings 0",
+    "lint:fix": "eslint . --fix",
     "prettier": "pnpx prettier src test --check",
     "prettier:fix": "pnpm run prettier -- --write",
     "build:content": "contentlayer2 build",

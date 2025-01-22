@@ -1,5 +1,5 @@
-import { env } from "~/env";
+import { env } from '~/env';
 
 export function absoluteUrl(path: string) {
-    return `${env.NEXT_PUBLIC_APP_URL}${path}`
-  }
+  return `${env.NEXT_PUBLIC_APP_URL}${path}`;
+}

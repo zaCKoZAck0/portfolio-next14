@@ -9,8 +9,11 @@ tags: [react, s3, aws, cloudfront, cdn]
 ## Some Background
 
 **Amazon S3:** It is a block storage service provided by AWS to securely keep your files in isolated containers called _buckets_. By default all access to a s3 bucket is blocked by AWS.
+
 <br />
-**Amaozon CloudFront CDN:** A CDN is used to cache static content like images, videos, html, css, js etc. files in edge locations near to the user. AWS CloudFront allows granual control over each request for more security.
+**Amaozon CloudFront CDN:** A CDN is used to cache static content like images, videos, html, css, js
+etc. files in edge locations near to the user. AWS CloudFront allows granual control over each
+request for more security.
 
 ## 1. Build the project and store it on S3
 
@@ -19,9 +22,13 @@ tags: [react, s3, aws, cloudfront, cdn]
 - Keep the default permissions, <u>**don't disable**</u> "Block _all_ public access" permissions on your S3 bucket. Rquired as it enables one access entry point to your s3 bucket.
 - Upload only the build files, i.e. only the contents of `/build` folder from your react project to S3.
 - You can do this easily from the UI using the "Upload" button.
+  
 <Callout icon={<Icons.ScrollIcon />}>
+
 ### Important
+
 Make sure `index.html` is in the root directory of your bucket.
+
 </Callout>
 
 ## 2. Create and configure CloudFront Distribution
@@ -39,5 +46,6 @@ Disable "Block _all_ public access" permissions, and enable "Static website host
 Voila!.. You website is now hosted on AWS, and ready to be used publically by the users by visiting `https://[bucket-name].s3.[region].amazonaws.com/index.html`.
 
 But this method is considered unsafe and is generally not recommended.
+
 </Callout>
 <hr />

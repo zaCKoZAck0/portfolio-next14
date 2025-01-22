@@ -71,7 +71,7 @@ const components = {
   Image,
   Callout,
   Card: MdxCard,
-  Icons
+  Icons,
 };
 
 interface MdxProps {
