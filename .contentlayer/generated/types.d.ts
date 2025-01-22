@@ -17,9 +17,9 @@ export type Doc = {
   description: string
   published: boolean
   featured: boolean
-  publishedAt: IsoDateTimeString
-  updatedAt: IsoDateTimeString
-  tags?: string[] | undefined
+  publishedAt?: IsoDateTimeString | undefined
+  updatedAt?: IsoDateTimeString | undefined
+  tags: string[]
   /** MDX file body */
   body: MDX
   slug: string
