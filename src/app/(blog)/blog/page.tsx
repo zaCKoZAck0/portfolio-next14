@@ -7,6 +7,7 @@ import { Metadata } from 'next';
 import { differenceInDays, format } from 'date-fns';
 import { Badge } from '~/components/ui/badge';
 import { Calendar } from 'lucide-react';
+import { BlogFooter} from '~/components/navigation/blog/footer';
 
 export const metadata: Metadata = {
   title: 'Blog | zackozack',
@@ -121,6 +122,7 @@ export default function BlogPage() {
             </div>
           ))}
         </div>
+      <BlogFooter />
       </section>
     </main>
   );

@@ -3,6 +3,7 @@ import { allDocs } from 'contentlayer/generated'
 import { notFound } from 'next/navigation';
 import { Mdx } from '~/components/mdx-components';
 import {  BlogPage  } from '~/components/blog-page';
+import { BlogFooter} from '~/components/navigation/blog/footer';
 
 interface PageProps {
     params: {
@@ -18,7 +19,9 @@ async function getDocFromParams(slug: string) {
 
 const Page: FC<PageProps> = async ({ params }) => {
     const doc = await getDocFromParams(params.slug);
-  return  <BlogPage blog={doc}> <Mdx code={doc.body.code} /></BlogPage>
+  return  <BlogPage blog={doc}> <Mdx code={doc.body.code} />
+      <BlogFooter />
+  </BlogPage>
 }
 
 export default Page
