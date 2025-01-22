@@ -1,0 +1,38 @@
+{
+  "cacheItemsMap": {
+    "blogs/middleware.mdx": {
+      "document": {
+        "title": "Middleware",
+        "description": "Middleware is a function that has access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle.",
+        "published": true,
+        "featured": false,
+        "publishedAt": "2021-10-10T00:00:00.000Z",
+        "updatedAt": "2021-10-10T00:00:00.000Z",
+        "tags": [
+          "middleware",
+          "express",
+          "aws",
+          "cloudfront"
+        ],
+        "body": {
+          "raw": "\n# Yabsd\n- Content delivery network service from AWS\n- Enables you to serve content directly to AWS edge locations, nearest to the user's location.\n- Source can be from _S3, EC2, ELB and External Websites_.\n- :LiCross: If content is not available at edge location, it is retrieved from the origin server and cached.\n- No minimum usage commitment\n    - Users are not required to commit to a certain level of usage or spend a minimum amount each month. Instead, _you only pay for what you use_.\n- Provides features to protect your private content.\n\n## Heading 2\n\n\n```js {1}\nconsole.log('1') // highlighted\nconsole.log('2')\nconsole.log('3') // highlighted\nconsole.log('4') // highlighted\n```\n",
+          "code": "var Component=(()=>{var m=Object.create;var i=Object.defineProperty;var u=Object.getOwnPropertyDescriptor;var p=Object.getOwnPropertyNames;var g=Object.getPrototypeOf,N=Object.prototype.hasOwnProperty;var j=(a,e)=>()=>(e||a((e={exports:{}}).exports,e),e.exports),f=(a,e)=>{for(var s in e)i(a,s,{get:e[s],enumerable:!0})},t=(a,e,s,c)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let l of p(e))!N.call(a,l)&&l!==s&&i(a,l,{get:()=>e[l],enumerable:!(c=u(e,l))||c.enumerable});return a};var b=(a,e,s)=>(s=a!=null?m(g(a)):{},t(e||!a||!a.__esModule?i(s,\"default\",{value:a,enumerable:!0}):s,a)),_=a=>t(i({},\"__esModule\",{value:!0}),a);var o=j((w,r)=>{r.exports=_jsx_runtime});var y={};f(y,{default:()=>d,frontmatter:()=>v});var n=b(o()),v={title:\"Middleware\",description:\"Middleware is a function that has access to the request object (req), the response object (res), and the next middleware function in the application\\u2019s request-response cycle.\",publishedAt:\"2021-10-10\",updatedAt:\"2021-10-10\",tags:[\"middleware\",\"express\",\"aws\",\"cloudfront\"]};function h(a){let e={a:\"a\",code:\"code\",em:\"em\",h1:\"h1\",h2:\"h2\",li:\"li\",pre:\"pre\",span:\"span\",ul:\"ul\",...a.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsxs)(e.h1,{id:\"yabsd\",children:[(0,n.jsx)(e.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#yabsd\",children:(0,n.jsx)(e.span,{className:\"icon icon-link\"})}),\"Yabsd\"]}),`\n`,(0,n.jsxs)(e.ul,{children:[`\n`,(0,n.jsx)(e.li,{children:\"Content delivery network service from AWS\"}),`\n`,(0,n.jsx)(e.li,{children:\"Enables you to serve content directly to AWS edge locations, nearest to the user's location.\"}),`\n`,(0,n.jsxs)(e.li,{children:[\"Source can be from \",(0,n.jsx)(e.em,{children:\"S3, EC2, ELB and External Websites\"}),\".\"]}),`\n`,(0,n.jsx)(e.li,{children:\":LiCross: If content is not available at edge location, it is retrieved from the origin server and cached.\"}),`\n`,(0,n.jsxs)(e.li,{children:[\"No minimum usage commitment\",`\n`,(0,n.jsxs)(e.ul,{children:[`\n`,(0,n.jsxs)(e.li,{children:[\"Users are not required to commit to a certain level of usage or spend a minimum amount each month. Instead, \",(0,n.jsx)(e.em,{children:\"you only pay for what you use\"}),\".\"]}),`\n`]}),`\n`]}),`\n`,(0,n.jsx)(e.li,{children:\"Provides features to protect your private content.\"}),`\n`]}),`\n`,(0,n.jsxs)(e.h2,{id:\"heading-2\",children:[(0,n.jsx)(e.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#heading-2\",children:(0,n.jsx)(e.span,{className:\"icon icon-link\"})}),\"Heading 2\"]}),`\n`,(0,n.jsx)(e.pre,{style:{background:\"#2e3440\"},children:(0,n.jsxs)(e.code,{className:\"hljs language-js\",children:[(0,n.jsxs)(e.span,{className:\"code-line highlighted-code-line\",children:[(0,n.jsx)(e.span,{className:\"hljs-variable language_\",children:\"console\"}),\".\",(0,n.jsx)(e.span,{className:\"hljs-title function_\",children:\"log\"}),\"(\",(0,n.jsx)(e.span,{className:\"hljs-string\",children:\"'1'\"}),\") \",(0,n.jsx)(e.span,{className:\"hljs-comment\",children:\"// highlighted\"})]}),`\n`,(0,n.jsxs)(e.span,{className:\"code-line\",children:[(0,n.jsx)(e.span,{className:\"hljs-variable language_\",children:\"console\"}),\".\",(0,n.jsx)(e.span,{className:\"hljs-title function_\",children:\"log\"}),\"(\",(0,n.jsx)(e.span,{className:\"hljs-string\",children:\"'2'\"}),\")\"]}),`\n`,(0,n.jsxs)(e.span,{className:\"code-line\",children:[(0,n.jsx)(e.span,{className:\"hljs-variable language_\",children:\"console\"}),\".\",(0,n.jsx)(e.span,{className:\"hljs-title function_\",children:\"log\"}),\"(\",(0,n.jsx)(e.span,{className:\"hljs-string\",children:\"'3'\"}),\") \",(0,n.jsx)(e.span,{className:\"hljs-comment\",children:\"// highlighted\"})]}),`\n`,(0,n.jsxs)(e.span,{className:\"code-line\",children:[(0,n.jsx)(e.span,{className:\"hljs-variable language_\",children:\"console\"}),\".\",(0,n.jsx)(e.span,{className:\"hljs-title function_\",children:\"log\"}),\"(\",(0,n.jsx)(e.span,{className:\"hljs-string\",children:\"'4'\"}),\") \",(0,n.jsx)(e.span,{className:\"hljs-comment\",children:\"// highlighted\"})]}),`\n`]})})]})}function d(a={}){let{wrapper:e}=a.components||{};return e?(0,n.jsx)(e,{...a,children:(0,n.jsx)(h,{...a})}):h(a)}return _(y);})();\n;return Component;"
+        },
+        "_id": "blogs/middleware.mdx",
+        "_raw": {
+          "sourceFilePath": "blogs/middleware.mdx",
+          "sourceFileName": "middleware.mdx",
+          "sourceFileDir": "blogs",
+          "contentType": "mdx",
+          "flattenedPath": "blogs/middleware"
+        },
+        "type": "Doc",
+        "slug": "/blogs/middleware",
+        "slugAsParams": "middleware"
+      },
+      "documentHash": "1737508775854",
+      "hasWarnings": false,
+      "documentTypeName": "Doc"
+    }
+  }
+}

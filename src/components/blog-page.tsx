@@ -2,17 +2,19 @@ import { ArrowLeft } from 'lucide-react';
 import { H1 } from '~/components/typography';
 import { Button } from '~/components/ui/button';
 import Link from 'next/link';
-// import { HeadingNavigation } from '~/components/navigation/blog/heading-nativation';
+import { DashboardTableOfContents } from '~/components/navigation/blog/heading-navigation';
 import { Doc } from 'contentlayer/generated';
+import { getTableOfContents } from "~/lib/toc"
 
 interface BlogPageProps {
   blog: Doc;
   children: React.ReactNode;
 }
 
-export function BlogPage({ blog, children }: BlogPageProps) {
+export async function BlogPage({ blog, children }: BlogPageProps) {
   const createdDate = new Date(blog.publishedAt);
   const updatedDate = new Date(blog.updatedAt);
+  const toc = await getTableOfContents(blog.body.raw)
 
   return (
     <main className="relative flex min-h-screen items-start justify-center">
@@ -20,7 +22,7 @@ export function BlogPage({ blog, children }: BlogPageProps) {
         <div className="flex flex-col md:flex-row md:space-x-8">
           <aside className="mt-8 w-full md:mt-0 md:w-1/4">
             <div className="sticky top-4 hidden md:block">
-              {/* <HeadingNavigation /> */}
+              <DashboardTableOfContents toc={toc} />
             </div>
           </aside>
           <section className="w-full md:w-3/4">
