@@ -2,6 +2,7 @@
 import { defineDocumentType, makeSource } from "contentlayer2/source-files";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
+import highlight from "rehype-highlight";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 var computedFields = {
@@ -58,9 +59,10 @@ var contentlayer_config_default = makeSource({
     rehypePlugins: [
       rehypeSlug,
       [
+        highlight,
         rehypePrettyCode,
         {
-          theme: "catppuccin-mocha",
+          // theme: 'catppuccin-mocha',
           onVisitLine(node) {
             if (node.children.length === 0) {
               node.children = [{ type: "text", value: " " }];
@@ -90,4 +92,4 @@ export {
   Doc,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-LEVBGJTX.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-ED4HS3VU.mjs.map

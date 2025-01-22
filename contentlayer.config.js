@@ -1,6 +1,7 @@
 import { defineDocumentType, makeSource } from "contentlayer2/source-files";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
+import highlight from 'rehype-highlight'
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 
@@ -60,9 +61,10 @@ export default makeSource({
     rehypePlugins: [
       rehypeSlug,
       [
+        highlight,
         rehypePrettyCode,
         {
-          theme: 'catppuccin-mocha',
+          // theme: 'catppuccin-mocha',
           onVisitLine(node) {
             if (node.children.length === 0) {
               node.children = [{ type: "text", value: " " }];
