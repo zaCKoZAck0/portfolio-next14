@@ -1,21 +1,43 @@
 ---
-title: Host React application on AWS
-description: Host Single Page Applications (SPAs) like React on AWS, utilize a private S3 bucket for storage and serve the content globally through the CloudFront CDN.
+title: Deploy a React Application with AWS
+description: Deploy Single Page Applications (SPAs) like React on AWS, utilize a private S3 bucket for storage and serve the content globally through the CloudFront CDN.
 publishedAt: '2025-01-22'
-updatedAt: '2025-01-22'
+updatedAt: '2025-01-23'
 tags: [react, s3, aws, cloudfront, cdn]
 ---
 
 ## Some Background
 
 **Amazon S3:** It is a block storage service provided by AWS to securely keep your files in isolated containers called _buckets_. By default all access to a s3 bucket is blocked by AWS.
-
+<br />
 **Amaozon CloudFront CDN:** A CDN is used to cache static content like images, videos, html, css, js etc. files in edge locations near to the user. AWS CloudFront allows granual control over each request for more security.
 
 ## 1. Build the project and store it on S3
 
 - Build your react project using `npm build`.
 - Create an S3 Bucket, it will require you to set a globally unique name.
-- Keep the default permissions, <u>**don't enable**</u> external access to your S3 bucket.
+- Keep the default permissions, <u>**don't disable**</u> "Block _all_ public access" permissions on your S3 bucket. Rquired as it enables one access entry point to your s3 bucket.
 - Upload only the build files, i.e. only the contents of `/build` folder from your react project to S3.
-- You can do this easily from the UI using the upload button.
+- You can do this easily from the UI using the "Upload" button.
+<Callout icon={<Icons.ScrollIcon />}>
+### Important
+Make sure `index.html` is in the root directory of your bucket.
+</Callout>
+
+## 2. Create and configure CloudFront Distribution
+
+- Click on "Create Distribution" in the CloudFront console.
+- Choose "Origin domain" as the recently created s3 bucket.
+- Enter `index.html` in the "Default root object - optional" field, it will re-direct all `/` requests from the distribution to `/index.html` file on your s3.
+- WAF (Web Application Firewall) is completely optional.
+
+<Callout type="danger" icon={<Icons.CircleAlertIcon />}>
+### There's an alternate option
+
+Disable "Block _all_ public access" permissions, and enable "Static website hosting" property on your s3 bucket.
+
+Voila!.. You website is now hosted on AWS, and ready to be used publically by the users by visiting `https://[bucket-name].s3.[region].amazonaws.com/index.html`.
+
+But this method is considered unsafe and is generally not recommended.
+</Callout>
+<hr />

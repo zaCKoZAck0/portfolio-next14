@@ -7,6 +7,7 @@ import { useMDXComponent } from 'next-contentlayer2/hooks';
 import { cn } from '~/lib/utils';
 import { Callout } from '~/components/callout';
 import { MdxCard } from '~/components/mdx-card';
+import * as Icons from 'lucide-react';
 
 const components = {
   h1: ({ className, ...props }) => <h1 className={className} {...props} />,
@@ -70,6 +71,7 @@ const components = {
   Image,
   Callout,
   Card: MdxCard,
+  Icons
 };
 
 interface MdxProps {

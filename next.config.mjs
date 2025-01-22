@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 import { withContentlayer } from 'next-contentlayer2';
+import withImages from 'next-images';
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -15,4 +16,4 @@ const nextConfig = {
   },
 };
 
-export default withContentlayer({ ...nextConfig });
+export default withContentlayer(withImages({ ...nextConfig }));
