@@ -76,13 +76,8 @@
   color: white;
 }
 
-#blog code {
-  color: rgb(254, 215, 170);
-  background-color: rgb(254, 215, 170, 0.05);
-  padding: 0rem 0.25rem;
-  padding-bottom: 0.1rem;
-  border-radius: 0.25rem /* 4px */;
-  border: 1px solid rgb(254, 215, 170, 0.25);
+#blog em {
+  color: rgb(178, 251, 165);
 }
 
 #blog aside {

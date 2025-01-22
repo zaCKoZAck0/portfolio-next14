@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import {Doc} from 'contentlayer/generated';
 
 interface TableOfContentsItem {
   id: string;
@@ -10,8 +11,8 @@ interface TableOfContentsItem {
   level: number;
 }
 
-export function HeadingNavigation() {
-  const [isOpen, setIsOpen] = useState(true);
+export function HeadingNavigation({blog}: {blog: Doc}) {
+  const [isOpen, setIsOpen] = useState(Doc);
   const [activeId, setActiveId] = useState('');
   const [toc, setToc] = useState<TableOfContentsItem[]>([]);
   const observerRef = useRef<IntersectionObserver | null>(null);

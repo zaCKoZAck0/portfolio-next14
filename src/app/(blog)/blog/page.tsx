@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { FaUser, FaXTwitter } from 'react-icons/fa6';
 import { H2, H4 } from '~/components/typography';
 import { Button } from '~/components/ui/button';
-import { blogs } from './_blogs';
+import { allDocs } from 'contentlayer/generated'
 import { Metadata } from 'next';
 import { differenceInDays, format } from 'date-fns';
 import { Badge } from '~/components/ui/badge';
@@ -14,12 +14,11 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  const groupedBlogs = Object.keys(blogs).reduce(
-    (acc, slug) => {
-      const blog = blogs[slug];
-      const year = new Date(blog.created_at).getFullYear();
+  const groupedBlogs = allDocs.reduce(
+    (acc, blog) => {
+      const year = new Date(blog.publishedAt).getFullYear();
       if (!acc[year]) acc[year] = [];
-      acc[year].push(slug);
+      acc[year].push(blog.slugAsParams);
       return acc;
     },
     {} as Record<string, string[]>,
@@ -30,7 +29,7 @@ export default function BlogPage() {
         <div>
           <p className="w-full rounded-md border-orange-200 p-4 text-justify">
             <span className="w-full text-justify text-secondary-foreground">
-              Hi there! I am zackozack, and thus far, I have written {Object.keys(blogs).length}{' '}
+              Hi there! I am zackozack, and thus far, I have written {allDocs.length}{' '}
               blogs.
             </span>{' '}
             In my blogs, I write about my experiences, thoughts, and opinions on various topics. I
@@ -54,14 +53,13 @@ export default function BlogPage() {
         <div className="mt-32">
           <H2>Top Blogs</H2>
           <div className="flex flex-col gap-4">
-            {Object.keys(blogs).map((slug) => {
-              const blog = blogs[slug];
-              const isNew = differenceInDays(new Date(), new Date(blog.created_at)) <= 7;
+            {allDocs.map((blog) => {
+              const isNew = differenceInDays(new Date(), new Date(blog.publishedAt)) <= 7;
               const isUpdated =
-                differenceInDays(new Date(blog.updated_at), new Date(blog.created_at)) > 0 &&
-                differenceInDays(new Date(), new Date(blog.updated_at)) <= 7;
+                differenceInDays(new Date(blog.updatedAt), new Date(blog.publishedAt)) > 0 &&
+                differenceInDays(new Date(), new Date(blog.updatedAt)) <= 7;
               return (
-                <Link key={slug} href={`/blog/${slug}`}>
+                <Link key={blog.slug} href={`/blog/${blog.slugAsParams}`}>
                   <div className="group relative overflow-hidden rounded-lg bg-primary/5 p-4 transition-colors duration-500 hover:bg-primary/10">
                     <H4 className="flex items-center gap-2 text-lg font-normal text-secondary-foreground transition-colors duration-500 group-hover:text-orange-200 md:text-xl">
                       {blog.title}
@@ -79,7 +77,7 @@ export default function BlogPage() {
                     <p className="mt-1 text-xs text-muted-foreground">{blog.description}</p>
                     <div className="flex items-center justify-end gap-2 text-xs text-muted-foreground">
                       <Calendar className="size-3" />
-                      <span>{format(new Date(blog.updated_at), 'MMMM d, yyyy')}</span>
+                      <span>{format(new Date(blog.updatedAt), 'MMMM d, yyyy')}</span>
                     </div>
                   </div>
                 </Link>
@@ -95,8 +93,9 @@ export default function BlogPage() {
               <table>
                 <tbody>
                   {groupedBlogs[year].map((slug) => {
-                    const blog = blogs[slug];
-                    const createdDate = new Date(blog.created_at);
+                    const blog = allDocs.find((it) => it.slugAsParams === slug);
+                    if (!blog) return null;
+                    const createdDate = new Date(blog.publishedAt);
                     return (
                       <Link key={slug} href={`/blog/${slug}`}>
                         <tr key={blog.title} className="group flex items-center pt-4">

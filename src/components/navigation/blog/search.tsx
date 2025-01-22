@@ -10,16 +10,16 @@ import { Badge } from '~/components/ui/badge';
 import { cn } from '~/lib/utils';
 import { format, differenceInDays } from 'date-fns';
 import { H3 } from '~/components/typography';
-import { blogs, Blog } from '~/app/(blog)/blog/_blogs';
+import {allDocs, Doc} from 'contentlayer/generated';
 import { useRouter } from 'next/navigation';
 
 export function BlogSearch() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
-  const [results, setResults] = useState<Blog[]>([]);
-  const [recentReads, setRecentReads] = useState<Blog[]>([]);
-  const [suggestedBlogs, setSuggestedBlogs] = useState<Blog[]>([]);
+  const [results, setResults] = useState<Doc[]>([]);
+  const [recentReads, setRecentReads] = useState<Doc[]>([]);
+  const [suggestedBlogs, setSuggestedBlogs] = useState<Doc[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -49,7 +49,7 @@ export function BlogSearch() {
 
   useEffect(() => {
     const search = async () => {
-      const filtered = Object.values(blogs).filter(
+      const filtered = allDocs.filter(
         (post) =>
           post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
           post.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -68,8 +68,8 @@ export function BlogSearch() {
   useEffect(() => {
     const getSuggestedBlogs = () => {
       if (recentReads.length === 0) {
-        return Object.values(blogs)
-          .sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime())
+        return allDocs
+          .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
           .slice(0, 5);
       }
 
@@ -82,7 +82,7 @@ export function BlogSearch() {
         {} as Record<string, number>,
       );
 
-      const sortedBlogs = Object.values(blogs)
+      const sortedBlogs = allDocs
         .map((blog) => ({
           ...blog,
           relevance: blog.tags.reduce((sum, tag) => sum + (tagCounts[tag] || 0), 0),
@@ -95,9 +95,9 @@ export function BlogSearch() {
       if (similarBlogs.length >= 5) {
         return similarBlogs.slice(0, 5);
       } else {
-        const recentlyUpdated = Object.values(blogs)
+        const recentlyUpdated = allDocs
           .filter((blog) => !similarBlogs.some((similar) => similar.title === blog.title))
-          .sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
+          .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime());
         return [...similarBlogs, ...recentlyUpdated].slice(0, 5);
       }
     };
@@ -122,7 +122,7 @@ export function BlogSearch() {
     }
   };
 
-  const handlePostSelection = (post: Blog) => {
+  const handlePostSelection = (post: Doc) => {
     console.log('Selected:', post);
     const updatedRecentReads = [post, ...recentReads.filter((p) => p.title !== post.title)].slice(
       0,
@@ -130,15 +130,15 @@ export function BlogSearch() {
     );
     setRecentReads(updatedRecentReads);
     localStorage.setItem('recentReads', JSON.stringify(updatedRecentReads));
-    router.push(`/blog/${post.slug}`);
+    router.push(`/blog/${post.slugAsParams}`);
     setIsOpen(false);
   };
 
-  const renderPostItem = (blog: Blog, index: number) => {
-    const isNew = differenceInDays(new Date(), new Date(blog.created_at)) <= 7;
+  const renderPostItem = (blog: Doc, index: number) => {
+    const isNew = differenceInDays(new Date(), new Date(blog.publishedAt)) <= 7;
     const isUpdated =
-      differenceInDays(new Date(blog.updated_at), new Date(blog.created_at)) > 0 &&
-      differenceInDays(new Date(), new Date(blog.updated_at)) <= 7;
+      differenceInDays(new Date(blog.updatedAt), new Date(blog.publishedAt)) > 0 &&
+      differenceInDays(new Date(), new Date(blog.updatedAt)) <= 7;
 
     return (
       <div
@@ -168,7 +168,7 @@ export function BlogSearch() {
         <div className="mt-1 text-xs text-muted-foreground">{blog.description}</div>
         <div className="flex items-center justify-end gap-2 text-xs text-muted-foreground">
           <Calendar className="size-3" />
-          <span>{format(new Date(blog.updated_at), 'MMMM d, yyyy')}</span>
+          <span>{format(new Date(blog.updatedAt), 'MMMM d, yyyy')}</span>
         </div>
       </div>
     );

@@ -4,7 +4,7 @@ import { H4 } from '~/components/typography';
 import { motion, useScroll } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import { blogs } from '~/app/(blog)/blog/_blogs';
+import {allDocs} from 'contentlayer/generated'
 import { BlogSearch } from './search';
 
 const navVariants = {
@@ -28,7 +28,7 @@ export function BlogNavigation() {
   const pathname = usePathname();
   const isBlog = pathname.startsWith('/blog');
   const blogPath = isBlog ? (pathname.split('/')[2] ?? null) : null;
-  const blogTitle = blogPath ? blogs[blogPath]?.title : '';
+  const blogTitle = blogPath ? allDocs.find((doc) => doc.slugAsParams === blogPath)?.title : '';
 
   const [navState, setNavState] = useState<keyof typeof navVariants>('initial');
   const [showBlogTitle, setShowBlogTitle] = useState(false);

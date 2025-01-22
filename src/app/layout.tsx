@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
 import './globals.css';
+import './blog.css';
 import { cn } from '~/lib/utils';
 import { Providers } from './providers';
 

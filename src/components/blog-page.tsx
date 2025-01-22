@@ -1,17 +1,18 @@
 import { ArrowLeft } from 'lucide-react';
 import { H1 } from '~/components/typography';
 import { Button } from '~/components/ui/button';
-import { Blog } from '../../_blogs';
 import Link from 'next/link';
-import { HeadingNavigation } from '~/components/navigation/blog/heading-nativation';
+// import { HeadingNavigation } from '~/components/navigation/blog/heading-nativation';
+import { Doc } from 'contentlayer/generated';
 
 interface BlogPageProps {
-  blog: Blog;
+  blog: Doc;
+  children: React.ReactNode;
 }
 
-export function BlogPage({ blog }: BlogPageProps) {
-  const createdDate = new Date(blog.created_at);
-  const updatedDate = new Date(blog.updated_at);
+export function BlogPage({ blog, children }: BlogPageProps) {
+  const createdDate = new Date(blog.publishedAt);
+  const updatedDate = new Date(blog.updatedAt);
 
   return (
     <main className="relative flex min-h-screen items-start justify-center">
@@ -19,7 +20,7 @@ export function BlogPage({ blog }: BlogPageProps) {
         <div className="flex flex-col md:flex-row md:space-x-8">
           <aside className="mt-8 w-full md:mt-0 md:w-1/4">
             <div className="sticky top-4 hidden md:block">
-              <HeadingNavigation />
+              {/* <HeadingNavigation /> */}
             </div>
           </aside>
           <section className="w-full md:w-3/4">
@@ -63,8 +64,8 @@ export function BlogPage({ blog }: BlogPageProps) {
                 </span>
               </p>
             </div>
-            <article className="prose prose-gray dark:prose-invert max-w-none">
-              {blog.content}
+            <article id='blog' className="prose prose-gray dark:prose-invert max-w-none">
+              {children}
             </article>
           </section>
         </div>
