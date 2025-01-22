@@ -6,7 +6,7 @@ export function BlogFooter() {
   return (
     <footer className="mt-36 rounded-xl bg-card text-card-foreground">
       <div className="max-w-7xl px-6 py-6">
-        <div className="flex flex-col md:flex-row items-center gap-6">
+        <div className="flex flex-col items-center gap-6 md:flex-row">
           <Image
             className="size-16 flex-shrink-0 rounded-full border-2 border-orange-200"
             alt="zackozack"
@@ -16,7 +16,9 @@ export function BlogFooter() {
           />
           {/* About Section */}
           <div className="space-y-2">
-            <h3 className="font-mono text-lg font-semibold text-white text-center md:text-left">About Me</h3>
+            <h3 className="text-center font-mono text-lg font-semibold text-white md:text-left">
+              About Me
+            </h3>
             <p className="text-xs">
               {`Full-stack engineer by day, blogger by night. Sharing knowledge, one line of code at a time.
               Hi, I'm Ayush. Join me at my coding adventures.
@@ -26,7 +28,7 @@ export function BlogFooter() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-6 flex flex-col md:flex-row md:justify-between border-t pt-6 text-center text-xs text-muted-foreground">
+        <div className="mt-6 flex flex-col border-t pt-6 text-center text-xs text-muted-foreground md:flex-row md:justify-between">
           <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} zackozack</p>
           <div className="flex items-center justify-center gap-2">
             <Link className="flex items-center gap-1 underline-offset-2 hover:underline" href="/">

@@ -54,7 +54,7 @@ export function ImageCarousel({ items: initialItems }: IImageCarouselProps) {
           </div>
         ))}
       </div>
-      <div className="flex items-center justify-center gap-2 md:pr-10">
+      <div className="mt-2 flex items-center justify-center gap-2 md:pr-10">
         <Tooltip>
           <TooltipTrigger>
             <Button onClick={handleNext} size="icon" variant="outline" className="rounded-full">
