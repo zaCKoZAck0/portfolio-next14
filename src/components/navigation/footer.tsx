@@ -1,21 +1,31 @@
-'use client';
-import { SiNextdotjs } from 'react-icons/si';
-import data from '../../../data/github-data.json';
-import { RelativeDate } from '../relative-date';
+import { ExternalLinkIcon } from 'lucide-react';
+import Link from 'next/link';
 
 export function Footer() {
   return (
     <div className="w-full pb-2 pt-5 text-xs">
-      <div className="flex flex-grow flex-col justify-between gap-2 rounded-md bg-muted/50 px-2 py-1 text-muted-foreground md:px-4 md:py-2">
-        <div className="flex justify-between">
-          <p className="flex gap-2">
-            Made with Next.js <SiNextdotjs className="size-4" />
-          </p>
-          <p>
-            Updated <RelativeDate date={new Date(data.last_updated)} /> ago
-          </p>
+      <div className="mt-6 flex flex-col md:flex-row md:justify-between border-t text-center text-xs text-muted-foreground p-6">
+          <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} zackozack</p>
+          <div className="flex items-center justify-center gap-2">
+            <Link className="flex items-center gap-1 underline-offset-2 hover:underline" href="/blog">
+              Blogs
+            </Link>{' '}
+            |
+            <Link
+              className="flex items-center gap-1 underline-offset-2 hover:underline"
+              href="/projects"
+            >
+              Projects
+            </Link>{' '}
+            |
+            <a
+              className="flex items-center gap-1 underline-offset-2 hover:underline"
+              href="https://github.com/zaCKoZAck0/portfolio-next14"
+            >
+              Github repo <ExternalLinkIcon size={12} />
+            </a>
+          </div>
         </div>
-      </div>
     </div>
   );
 }
