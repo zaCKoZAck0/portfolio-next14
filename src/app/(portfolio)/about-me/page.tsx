@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { Introduction } from './_components/introduction';
-import { InterestsAndGoals } from './_components/interests-and-goals';
+import { Projects } from './_components/projects';
 import { Recommendations } from './_components/recommendations';
 import { Footer } from '~/components/navigation/footer';
 
@@ -14,7 +14,7 @@ export default function AboutMe() {
     <main className="flex justify-center px-4 md:container">
       <section className="flex h-[calc(100vh-48px)] w-full max-w-3xl flex-col">
         <Introduction />
-        <InterestsAndGoals />
+        <Projects />
         <Recommendations />
         <Footer />
       </section>

@@ -54,10 +54,44 @@ export const Doc = defineDocumentType(() => ({
   computedFields,
 }));
 
+export const Project = defineDocumentType(() => ({
+  name: 'Project',
+  filePathPattern: `projects/**/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    title: {
+      type: 'string',
+      required: true,
+    },
+    description: {
+      type: 'string',
+      required: true,
+    },
+    github: {
+      type: 'string',
+      required: true,
+    },
+    liveUrl: {
+      type: 'string',
+      required: true,
+    },
+    featured: {
+      type: 'boolean',
+      default: false,
+    },
+    technologies: {
+      type: 'list',
+      of: { type: 'string' },
+      required: true,
+    },
+  },
+  computedFields,
+}));
+
 export default makeSource({
   contentDirPath: 'src/content',
   disableImportAliasWarning: true,
-  documentTypes: [Doc],
+  documentTypes: [Doc, Project],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
