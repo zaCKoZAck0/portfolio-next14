@@ -8,8 +8,8 @@ import { BlogFooter } from '~/components/navigation/blog/footer';
 import { BlogCard } from '~/components/blog-card';
 
 export const metadata: Metadata = {
-  title: 'Blog | zackozack',
-  description: 'A collection of blogs by zackozack',
+  title: 'Blog | zackozack (Ayush Kumar Yadav)',
+  description: 'I am Ayush. Welcome to my personal blog.',
 };
 
 export default function BlogPage() {
@@ -54,7 +54,7 @@ export default function BlogPage() {
           <div className="flex flex-col gap-4">
             {blogs.map((blog) => {
               return (
-                <BlogCard blog={blog} />
+                <BlogCard key={blog._id} blog={blog} />
               );
             })}
           </div>

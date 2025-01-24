@@ -1,12 +1,11 @@
 import { Metadata } from 'next';
 import { Introduction } from './_components/introduction';
 import { Projects } from './_components/projects';
-import { Recommendations } from './_components/recommendations';
 import { Footer } from '~/components/navigation/footer';
 
 export const metadata: Metadata = {
-  title: 'About Me | zackozack',
-  description: 'I am a fullstack software engineer who loves to build things for the web.',
+  title: 'About Me | zackozack (Ayush Kumar Yadav)',
+  description: 'Fullstack developer skilled in React, Spring Boot and AWS.',
 };
 
 export default function AboutMe() {

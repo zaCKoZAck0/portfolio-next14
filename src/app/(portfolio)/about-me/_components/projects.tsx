@@ -69,7 +69,7 @@ export function Projects() {
         <div className="grid grid-cols-1 gap-4">
           {allDocs.map((blog) =>
             blog.featured ? (
-              <BlogCard blog={blog} />
+              <BlogCard key={blog._id} blog={blog} />
             ) : null,
           )}
         </div>
