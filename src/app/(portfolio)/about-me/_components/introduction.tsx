@@ -1,13 +1,14 @@
 import { ClockIcon, MapPinIcon, BriefcaseIcon } from 'lucide-react';
 import Link from 'next/link';
-import { FaGithub, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
-import { SiLeetcode } from 'react-icons/si';
 import { ImageCarousel } from '~/components/image-carousel';
 import { H3 } from '~/components/typography';
 import { LocalTime } from '../../resume/_components/local-time';
 import Image from 'next/image';
+import { allProfiles } from 'contentlayer/generated';
+import { SocialIcon } from '~/components/social-icons';
 
 export function Introduction() {
+  const profile = allProfiles[0];
   return (
     <>
       <div className="relative flex min-h-screen flex-col items-center justify-center md:mt-0">
@@ -18,13 +19,13 @@ export function Introduction() {
                 items={[
                   {
                     id: 1,
-                    title: 'zackozack',
-                    image: 'https://utfs.io/f/7b6ae0f8-148e-4e57-bd36-14ae0c90887b-e4obn3.gif',
+                    title: profile.username,
+                    image: profile.profileImage,
                   },
                   {
                     id: 2,
-                    title: 'ayush',
-                    image: 'https://utfs.io/f/2c14b502-511f-45f9-9dff-4a83a1cb77b1-wj0x4g.webp',
+                    title: profile.fullName,
+                    image: profile.formalImage,
                   },
                 ]}
               />
@@ -33,54 +34,30 @@ export function Introduction() {
               <div className="flex items-center justify-between gap-4">
                 <Image
                   className="block size-14 flex-shrink-0 rounded-full border-2 border-orange-200 md:hidden"
-                  alt="zackozack"
+                  alt={profile.username}
                   width={100}
                   height={100}
-                  src="https://utfs.io/f/7b6ae0f8-148e-4e57-bd36-14ae0c90887b-e4obn3.gif"
+                  src={profile.profileImage}
                 />
                 <div>
-                  <H3 className="font-semibold leading-8 md:text-4xl">Ayush Kumar Yadav</H3>
-                  <H3 className="font-thin leading-8 md:text-4xl">zackozack</H3>
+                  <H3 className="font-semibold leading-8 md:text-4xl">{profile.fullName}</H3>
+                  <H3 className="font-thin leading-8 md:text-4xl">{profile.username}</H3>
                 </div>
               </div>
 
               <div className="flex flex-col gap-4 pt-8 text-sm font-normal italic text-muted-foreground md:text-lg">
-                <Link
-                  className="underline-offset-2 transition-all w-fit hover:text-orange-200 hover:underline"
-                  href="https://github.com/zaCKoZAck0"
-                >
-                  <div className="flex items-center gap-2">
-                    <FaGithub className="size-4 md:size-7" />
-                    <span>zaCKoZAck0</span>
-                  </div>
-                </Link>
-                <Link
-                  className="underline-offset-2 transition-all w-fit hover:text-orange-200 hover:underline"
-                  href="https://github.com/zaCKoZAck0"
-                >
-                  <div className="flex items-center gap-2">
-                    <FaXTwitter className="size-4 md:size-7" />
-                    <span>@zaCKoZAck0</span>
-                  </div>
-                </Link>
-                <Link
-                  className="underline-offset-2 transition-all w-fit hover:text-orange-200 hover:underline"
-                  href="https://github.com/zaCKoZAck0"
-                >
-                  <div className="flex items-center gap-2">
-                    <SiLeetcode className="size-4 md:size-7" />
-                    <span>u/zackozack2</span>
-                  </div>
-                </Link>
-                <Link
-                  className="underline-offset-2 transition-all w-fit hover:text-orange-200 hover:underline"
-                  href="https://github.com/zaCKoZAck0"
-                >
-                  <div className="flex items-center gap-2">
-                    <FaLinkedin className="size-4 md:size-6" />
-                    <span>in/ayush-kumar-yadav</span>
-                  </div>
-                </Link>
+                {profile.links?.map((link) => (
+                  <Link
+                    key={link._id}
+                    className="w-fit underline-offset-2 transition-all hover:text-orange-200 hover:underline"
+                    href={link.url}
+                  >
+                    <div className="flex items-center gap-2">
+                      <SocialIcon platform={link.platform} className="size-4 md:size-7" />
+                      <span>{link.alias}</span>
+                    </div>
+                  </Link>
+                ))}
               </div>
               <div className="mt-8 flex items-center justify-between text-sm text-muted-foreground md:text-base">
                 <div className="flex items-center gap-2">
@@ -99,7 +76,7 @@ export function Introduction() {
           <BriefcaseIcon className="size-10 text-muted-foreground" />
         </div>
         <H3 className="text-center text-2xl text-secondary-foreground">
-          Software Engineer <span className="text-muted-foreground">@</span> Volkswagen
+          {profile.role} <span className="text-muted-foreground">@</span> {profile.company}
         </H3>
       </div>
     </>

@@ -1,4 +1,4 @@
-import { defineDocumentType, makeSource } from 'contentlayer2/source-files';
+import { defineDocumentType, defineNestedType, makeSource } from 'contentlayer2/source-files';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypePrettyCode from 'rehype-pretty-code';
 import highlight from 'rehype-highlight';
@@ -15,6 +15,68 @@ const computedFields = {
     resolve: (doc) => doc._raw.flattenedPath.split('/').slice(1).join('/'),
   },
 };
+
+const Link = defineNestedType(() => ({
+  name: 'Link',
+  fields: {
+    platform: {
+      type: 'string',
+      required: true,
+    },
+    url: {
+      type: 'string',
+      required: true,
+    },
+    alias: {
+      type: 'string',
+      required: true,
+    },
+  },
+}));
+
+export const Profile = defineDocumentType(() => ({
+  name: 'Profile',
+  filePathPattern: `profile/**/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    username: {
+      type: 'string',
+      required: true,
+    },
+    formalImage: {
+      type: 'string',
+      required: true,
+    },
+    profileImage: {
+      type: 'string',
+      required: true,
+    },
+    fullName: {
+      type: 'string',
+      required: true,
+    },
+    headline: {
+      type: 'string',
+      required: true,
+    },
+    blogHeadline: {
+      type: 'string',
+      required: true,
+    },
+    links: {
+      type: 'list',
+      of: Link,
+    },
+    role: {
+      type: 'string',
+      required: true,
+    },
+    company: {
+      type: 'string',
+      required: true,
+    },
+  },
+}));
 
 export const Doc = defineDocumentType(() => ({
   name: 'Doc',
@@ -91,7 +153,7 @@ export const Project = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: 'src/content',
   disableImportAliasWarning: true,
-  documentTypes: [Doc, Project],
+  documentTypes: [Doc, Project, Profile, Link],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
