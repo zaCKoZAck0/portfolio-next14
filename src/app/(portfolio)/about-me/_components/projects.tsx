@@ -67,7 +67,7 @@ export function Projects() {
       </div>
       <div className="py-20">
         <div className="grid grid-cols-1 gap-4">
-          {allDocs.map((blog) => (blog.featured ? <BlogCard key={blog._id} blog={blog} /> : null))}
+          {allDocs.map((blog) => (blog.published && blog.featured ? <BlogCard key={blog._id} blog={blog} /> : null))}
         </div>
         <div className="mb-2 mt-10 flex justify-center">
           <Link href="/blog">

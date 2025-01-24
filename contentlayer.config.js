@@ -93,7 +93,11 @@ export const Doc = defineDocumentType(() => ({
     },
     published: {
       type: 'boolean',
-      default: true,
+      default: false,
+    },
+    author: {
+      type: 'string',
+      required: true,
     },
     featured: {
       type: 'boolean',
