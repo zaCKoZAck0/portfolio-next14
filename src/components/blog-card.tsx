@@ -16,7 +16,7 @@ export function BlogCard({blog}:BlogCardProps){
                 differenceInDays(new Date(blog.updatedAt), new Date(blog.publishedAt)) > 0 &&
                 differenceInDays(new Date(), new Date(blog.updatedAt)) <= 7;
     return (<Link key={blog.slug} href={`/blog/${blog.slugAsParams}`}>
-    <div className="group relative overflow-hidden rounded-lg border bg-primary/5 p-6 transition-all duration-500 hover:bg-primary/10">
+    <div className="group relative overflow-hidden rounded-lg border hover:bg-primary/5 p-6 transition-all duration-500 bg-card">
       <H4 className="flex items-center gap-2 text-xl font-normal text-secondary-foreground transition-colors duration-500 group-hover:text-orange-200 md:text-xl">
         {blog.title}
       </H4>
