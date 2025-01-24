@@ -22,14 +22,14 @@ export function BlogCard({ blog }: BlogCardProps) {
         </H4>
         <p className="mt-2 text-sm text-muted-foreground">{blog.description}</p>
         <div className="mt-2 flex items-center justify-between text-xs text-muted-foreground">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
             {isNew && (
-              <Badge className="border-0 bg-gradient-to-br from-green-400 to-blue-500 text-white">
+              <Badge className="border-0 p-0 bg-gradient-to-br from-green-400 to-blue-500 text-transparent bg-clip-text">
                 New
               </Badge>
             )}
             {isUpdated && (
-              <Badge className="border-0 bg-gradient-to-br from-purple-400 to-pink-500 text-white">
+              <Badge className="border-0 p-0 bg-gradient-to-br from-purple-400 to-pink-500 text-transparent bg-clip-text">
                 Updated
               </Badge>
             )}
