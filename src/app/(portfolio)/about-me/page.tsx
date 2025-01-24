@@ -15,7 +15,6 @@ export default function AboutMe() {
       <section className="flex h-[calc(100vh-48px)] w-full max-w-3xl flex-col">
         <Introduction />
         <Projects />
-        <Recommendations />
         <Footer />
       </section>
     </main>

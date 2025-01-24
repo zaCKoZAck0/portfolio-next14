@@ -10,7 +10,7 @@ export function Callout({ children, icon, type = 'default', ...props }: CalloutP
   return (
     <div
       className={cn(
-        'callout relative my-6 flex items-start rounded-lg border-2 p-2 px-6 pb-4 text-justify text-sm',
+        'callout relative my-6 flex items-start rounded-lg border-2 p-2 px-6 pb-4 text-sm',
         {
           'border-red-700/50 text-card-foreground': type === 'danger',
           'border-yellow-700 bg-yellow-500/95': type === 'warning',

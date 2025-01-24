@@ -2,19 +2,19 @@ import { ChevronDown, PlayIcon } from 'lucide-react';
 import { H3 } from '~/components/typography';
 import { Button, buttonVariants } from '~/components/ui/button';
 import Link from 'next/link';
-import { allProjects } from 'contentlayer/generated';
+import { allDocs, allProjects } from 'contentlayer/generated';
 import { Card, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
 import { SiGithub } from 'react-icons/si';
 import { cn } from '~/lib/utils';
+import { BlogCard } from '~/components/blog-card';
 
 export function Projects() {
   return (
-    <div className="py-20">
-      <div className="mb-10">
+    <>
+    <div className="pb-20 pt-40">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          {allProjects
-            .filter((project) => project.featured)
-            .map((project) => (
+          {allProjects.map((project) =>
+            project.featured ? (
               <Card
                 key={project._id}
                 className="relative bg-gradient-to-bl from-orange-200/10 to-card to-30%"
@@ -53,7 +53,8 @@ export function Projects() {
                   </Button>
                 </div>
               </Card>
-            ))}
+            ) : null,
+          )}
         </div>
         <div className="mb-2 mt-10 flex justify-center">
           <Link href="/projects">
@@ -63,7 +64,24 @@ export function Projects() {
             </Button>
           </Link>
         </div>
-      </div>
     </div>
+    <div className="py-20">
+        <div className="grid grid-cols-1 gap-4">
+          {allDocs.map((blog) =>
+            blog.featured ? (
+              <BlogCard blog={blog} />
+            ) : null,
+          )}
+        </div>
+        <div className="mb-2 mt-10 flex justify-center">
+          <Link href="/blog">
+            <Button variant="ghost" size="sm" className="rounded-full">
+              View All Blogs
+              <ChevronDown size={20} className="ml-2" />
+            </Button>
+          </Link>
+        </div>
+    </div>
+    </>
   );
 }

@@ -46,7 +46,7 @@ export function Introduction() {
 
               <div className="flex flex-col gap-4 pt-8 text-sm font-normal italic text-muted-foreground md:text-lg">
                 <Link
-                  className="underline-offset-2 transition-all hover:text-orange-200 hover:underline"
+                  className="underline-offset-2 transition-all w-fit hover:text-orange-200 hover:underline"
                   href="https://github.com/zaCKoZAck0"
                 >
                   <div className="flex items-center gap-2">
@@ -55,7 +55,7 @@ export function Introduction() {
                   </div>
                 </Link>
                 <Link
-                  className="underline-offset-2 transition-all hover:text-orange-200 hover:underline"
+                  className="underline-offset-2 transition-all w-fit hover:text-orange-200 hover:underline"
                   href="https://github.com/zaCKoZAck0"
                 >
                   <div className="flex items-center gap-2">
@@ -64,7 +64,7 @@ export function Introduction() {
                   </div>
                 </Link>
                 <Link
-                  className="underline-offset-2 transition-all hover:text-orange-200 hover:underline"
+                  className="underline-offset-2 transition-all w-fit hover:text-orange-200 hover:underline"
                   href="https://github.com/zaCKoZAck0"
                 >
                   <div className="flex items-center gap-2">
@@ -73,7 +73,7 @@ export function Introduction() {
                   </div>
                 </Link>
                 <Link
-                  className="underline-offset-2 transition-all hover:text-orange-200 hover:underline"
+                  className="underline-offset-2 transition-all w-fit hover:text-orange-200 hover:underline"
                   href="https://github.com/zaCKoZAck0"
                 >
                   <div className="flex items-center gap-2">
@@ -94,7 +94,7 @@ export function Introduction() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center gap-1 pb-10">
+      <div className="flex flex-col items-center justify-center gap-1 py-10">
         <div className="p-1">
           <BriefcaseIcon className="size-10 text-muted-foreground" />
         </div>
