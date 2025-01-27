@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import { Projects } from './_components/projects';
 
 export const metadata: Metadata = {
   title: 'Projects | zackozack',
@@ -7,5 +6,5 @@ export const metadata: Metadata = {
 };
 
 export default function ProjectsPage() {
-  return <Projects />;
+  return <div></div>;
 }
