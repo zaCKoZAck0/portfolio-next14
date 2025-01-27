@@ -6,6 +6,17 @@ import { Footer } from '~/components/navigation/footer';
 export const metadata: Metadata = {
   title: 'About Me | zackozack (Ayush Kumar Yadav)',
   description: 'Fullstack developer skilled in React, Spring Boot and AWS.',
+  openGraph: {
+    title: 'About Acme',
+    description: 'Learn more about Acme Corporation',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function AboutMe() {
