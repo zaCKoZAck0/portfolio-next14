@@ -12,7 +12,7 @@ export function Projects() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {allProjects.map((project) =>
             project.featured ? (
-              <ProjectCard project={project} />
+              <ProjectCard key={project._id} project={project} />
             ) : null,
           )}
         </div>
