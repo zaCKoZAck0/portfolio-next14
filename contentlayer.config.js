@@ -78,6 +78,58 @@ export const Profile = defineDocumentType(() => ({
   },
 }));
 
+const Content = defineNestedType(() => ({
+  name: 'Content',
+  fields: {
+    title: {
+      type: 'string',
+      required: true
+    },
+    url: {
+      type: 'string',
+      required: true
+    }
+  }
+}));
+
+const Modules = defineNestedType(() => ({
+  name: 'Module',
+  fields: {
+    name: {
+      type: 'string',
+      required: true
+    },
+    contents: {
+      type: 'list',
+      of: Content
+    }
+  }
+}));
+
+export const Course = defineDocumentType(() => ({
+  name: 'Course',
+  filePathPattern: `courses/**/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    title: {
+      type: 'string',
+      required: true
+    },
+    description: {
+      type: 'string',
+      required: true
+    },
+    image: {
+      type: 'string',
+      required: true
+    },
+    modules: {
+      type: 'list',
+      of: Modules
+    }
+  }
+})); 
+
 export const Doc = defineDocumentType(() => ({
   name: 'Doc',
   filePathPattern: `blogs/**/*.mdx`,
