@@ -6,6 +6,7 @@ import { Footer } from '~/components/navigation/footer';
 export const metadata: Metadata = {
   title: 'About Me | zackozack (Ayush Kumar Yadav)',
   description: 'Fullstack developer skilled in React, Spring Boot and AWS.',
+  metadataBase: new URL('https://www.zackozack.xyz'),
   openGraph: {
     title: 'About Acme',
     description: 'Learn more about Acme Corporation',
