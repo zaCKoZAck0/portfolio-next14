@@ -1,53 +1,67 @@
 import { ImageResponse } from 'next/og'
- 
-// Route segment config
+
 export const runtime = 'edge'
- 
-// Image metadata
-export const alt = 'About Acme'
-export const size = {
-  width: 1200,
-  height: 630,
-}
- 
+export const alt = 'Zack Ozack Portfolio'
+export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
- 
-// Image generation
+
 export default async function Image() {
-  // Font
-//   const interSemiBold = fetch(
-//     new URL('./Inter-SemiBold.ttf', import.meta.url)
-//   ).then((res) => res.arrayBuffer())
- 
+  // Load JetBrains Mono font (regular weight)
+  const jetbrainsMono = fetch(
+    new URL(
+      '/fonts/JetBrainsMono-Regular.ttf',
+      process.env.NEXT_PUBLIC_SITE_URL || 'https://www.zackozack.xyz'
+    )
+  ).then((res) => res.arrayBuffer())
+
   return new ImageResponse(
     (
-      // ImageResponse JSX element
       <div
         style={{
-          fontSize: 128,
-          background: 'white',
+          background: 'linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%)',
           width: '100%',
           height: '100%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          flexDirection: 'column',
+          color: '#fff',
+          padding: '40px',
+          textAlign: 'center',
         }}
       >
-        About Acme
+        <div
+          style={{
+            fontSize: 72,
+            fontFamily: 'JetBrains Mono',
+            marginBottom: '24px',
+            letterSpacing: '-0.05em',
+          }}
+        >
+          Zack Ozack
+        </div>
+        <div
+          style={{
+            fontSize: 36,
+            fontFamily: 'JetBrains Mono',
+            opacity: 0.8,
+            maxWidth: '800px',
+            lineHeight: 1.4,
+          }}
+        >
+          Full-Stack Developer & Creative Coder
+        </div>
       </div>
     ),
-    // ImageResponse options
     {
-      // For convenience, we can re-use the exported opengraph-image
-      // size config to also set the ImageResponse's width and height.
       ...size,
       fonts: [
-        // {
-        //   name: 'Inter',
-        //   data: await interSemiBold,
-        //   style: 'normal',
-        //   weight: 400,
-        // },
+        {
+          name: 'JetBrains Mono',
+          data: await jetbrainsMono,
+          style: 'normal',
+          weight: 400,
+        },
       ],
     }
   )
