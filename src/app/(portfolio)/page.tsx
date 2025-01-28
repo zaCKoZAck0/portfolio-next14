@@ -1,5 +1,5 @@
-import { permanentRedirect } from 'next/navigation'
+import { permanentRedirect } from 'next/navigation';
 
 export default function Home() {
-  return permanentRedirect('/about-me')
+  return permanentRedirect('/about-me');
 }

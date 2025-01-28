@@ -19,7 +19,7 @@ export async function BlogPage({ blog, children }: BlogPageProps) {
 
   return (
     <main className="relative flex min-h-screen items-start justify-center">
-      <div className="flex w-full max-w-6xl translate-y-[calc(100vh/5)] flex-col pb-10 p-4 md:translate-y-[calc(100vh/4)]">
+      <div className="flex w-full max-w-6xl translate-y-[calc(100vh/5)] flex-col p-4 pb-10 md:translate-y-[calc(100vh/4)]">
         <div className="flex flex-col md:flex-row md:space-x-8">
           <aside className="mt-8 w-full md:mt-0 md:w-1/4">
             <div className="sticky top-4 hidden md:block">

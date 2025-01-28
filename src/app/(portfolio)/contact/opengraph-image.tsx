@@ -45,7 +45,7 @@ export default async function Image() {
           >
             /
           </span>
-          about-me
+          contact
         </h1>
         <div
           style={{

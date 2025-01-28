@@ -1,13 +1,7 @@
 import { Logo } from '~/components/navigation/logo';
-import type { Metadata } from 'next';
 import { LoaderCircle } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Portfolio | zackozack',
-  description: 'I am a fullstack software engineer who loves to build things for the web.',
-};
-
-export default function Home() {
+export default function Loading() {
   return (
     <main className="container bg-background text-foreground">
       <section className="flex h-[calc(100vh-48px)] flex-col items-center justify-center gap-5">

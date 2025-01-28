@@ -83,13 +83,13 @@ const Content = defineNestedType(() => ({
   fields: {
     title: {
       type: 'string',
-      required: true
+      required: true,
     },
     url: {
       type: 'string',
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 }));
 
 const Modules = defineNestedType(() => ({
@@ -97,13 +97,13 @@ const Modules = defineNestedType(() => ({
   fields: {
     name: {
       type: 'string',
-      required: true
+      required: true,
     },
     contents: {
       type: 'list',
-      of: Content
-    }
-  }
+      of: Content,
+    },
+  },
 }));
 
 export const Course = defineDocumentType(() => ({
@@ -113,22 +113,22 @@ export const Course = defineDocumentType(() => ({
   fields: {
     title: {
       type: 'string',
-      required: true
+      required: true,
     },
     description: {
       type: 'string',
-      required: true
+      required: true,
     },
     image: {
       type: 'string',
-      required: true
+      required: true,
     },
     modules: {
       type: 'list',
-      of: Modules
-    }
-  }
-})); 
+      of: Modules,
+    },
+  },
+}));
 
 export const Doc = defineDocumentType(() => ({
   name: 'Doc',

@@ -16,6 +16,7 @@ export type Doc = {
   title: string
   description: string
   published: boolean
+  author: string
   featured: boolean
   publishedAt: IsoDateTimeString
   updatedAt: IsoDateTimeString
@@ -24,25 +25,86 @@ export type Doc = {
   body: MDX
   slug: string
   slugAsParams: string
+}
+
+export type Link = {
+  /** File path relative to `contentDirPath` */
+  _id: string
+  _raw: Local.RawDocumentData
+  type: 'Link'
+  platform: string
+  url: string
+  alias: string
+  /** Markdown file body */
+  body: Markdown
+
+}
+
+export type Profile = {
+  /** File path relative to `contentDirPath` */
+  _id: string
+  _raw: Local.RawDocumentData
+  type: 'Profile'
+  username: string
+  formalImage: string
+  profileImage: string
+  fullName: string
+  headline: string
+  blogHeadline: string
+  links?: Link[] | undefined
+  role: string
+  company: string
+  /** MDX file body */
+  body: MDX
+
+}
+
+export type Project = {
+  /** File path relative to `contentDirPath` */
+  _id: string
+  _raw: Local.RawDocumentData
+  type: 'Project'
+  title: string
+  description: string
+  github: string
+  liveUrl: string
+  featured: boolean
+  technologies: string[]
+  /** MDX file body */
+  body: MDX
+  slug: string
+  slugAsParams: string
 }  
 
 /** Nested types */
-  
+export type Link = {
+  /** File path relative to `contentDirPath` */
+  _id: string
+  _raw: Local.RawDocumentData
+  type: 'Link'
+  platform: string
+  url: string
+  alias: string
+
+}  
 
 /** Helper types */
 
 export type AllTypes = DocumentTypes | NestedTypes
 export type AllTypeNames = DocumentTypeNames | NestedTypeNames
 
-export type DocumentTypes = Doc
-export type DocumentTypeNames = 'Doc'
+export type DocumentTypes = Doc | Link | Profile | Project
+export type DocumentTypeNames = 'Doc' | 'Link' | 'Profile' | 'Project'
 
-export type NestedTypes = never
-export type NestedTypeNames = never
+export type NestedTypes = Link
+export type NestedTypeNames = 'Link'
 
 export type DataExports = {
   allDocuments: DocumentTypes[]
   allDocs: Doc[]
+  allProjects: Project[]
+  allProfiles: Profile[]
+  allLinks: Link[]
 }
 
 
@@ -63,10 +125,13 @@ declare global {
 
 export type DocumentTypeMap = {
   Doc: Doc
+  Link: Link
+  Profile: Profile
+  Project: Project
 }
 
 export type NestedTypeMap = {
-
+  Link: Link
 }
 
  
