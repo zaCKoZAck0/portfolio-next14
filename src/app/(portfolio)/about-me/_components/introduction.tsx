@@ -42,8 +42,14 @@ export function Introduction() {
                   src={profile.profileImage}
                 />
                 <div>
-                  <FadeUpStagger text={profile.fullName} className='font-semibold leading-8 md:text-4xl text-2xl' />
-                  <FadeUpStagger text={profile.username} className="font-thin leading-8 md:text-4xl text-2xl" />
+                  <FadeUpStagger
+                    text={profile.fullName}
+                    className="text-2xl font-semibold leading-8 md:text-4xl"
+                  />
+                  <FadeUpStagger
+                    text={profile.username}
+                    className="text-2xl font-thin leading-8 md:text-4xl"
+                  />
                 </div>
               </div>
 
