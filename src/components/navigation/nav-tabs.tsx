@@ -72,9 +72,9 @@ export default function NavTabs({ tabs }: { tabs: NavItem[] }) {
         />
       ))}
       <Link href="/blogs">
-        <div className="relative flex items-center gap-1 rounded-full bg-gradient-to-br from-orange-300 to-primary px-4 py-1 text-sm text-background">
-          <H4 className="font-base relative z-50">Blogs</H4>
-          <PenLine size={20} />
+        <div className="relative flex items-center gap-1 rounded-full bg-gradient-to-t from-blue-400 border border-blue-400 to-purple-400 px-4 py-1 text-sm text-background">
+          <H4 className="font-base relative z-50 opacity-85">Blogs</H4>
+          <PenLine className='opacity-85' size={20} />
         </div>
       </Link>
     </div>

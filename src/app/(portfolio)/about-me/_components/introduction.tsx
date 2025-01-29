@@ -88,8 +88,8 @@ export function Introduction() {
         </H3>
         <BlurryBlob
           className="rounded-xl opacity-45"
-          firstBlobColor="bg-orange-300"
-          secondBlobColor="bg-primary"
+          firstBlobColor=""
+          secondBlobColor=""
         />
       </div>
     </>
