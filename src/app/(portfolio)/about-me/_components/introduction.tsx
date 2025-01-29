@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { allProfiles } from 'contentlayer/generated';
 import { SocialIcon } from '~/components/social-icons';
 import { BlurryBlob } from '~/components/blurry-blob';
+import { FadeUpStagger } from '~/components/typography/animated/fade-up';
 
 export function Introduction() {
   const profile = allProfiles[0];
@@ -41,8 +42,8 @@ export function Introduction() {
                   src={profile.profileImage}
                 />
                 <div>
-                  <H3 className="font-semibold leading-8 md:text-4xl">{profile.fullName}</H3>
-                  <H3 className="font-thin leading-8 md:text-4xl">{profile.username}</H3>
+                  <FadeUpStagger text={profile.fullName} className='font-semibold leading-8 md:text-4xl text-2xl' />
+                  <FadeUpStagger text={profile.username} className="font-thin leading-8 md:text-4xl text-2xl" />
                 </div>
               </div>
 
