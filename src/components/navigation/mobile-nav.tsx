@@ -1,5 +1,5 @@
 'use client';
-import { Menu } from 'lucide-react';
+import { Menu, PenLine } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Logo } from './logo';
 
@@ -71,6 +71,14 @@ export function MobileNav({ tabs }: { tabs: NavItem[] }) {
                 </button>
               </li>
             ))}
+            <Link href="/blogs" className="p-4">
+              <div className="relative flex items-center justify-center text-sm">
+                <H3 className="relative z-50 flex items-center gap-1 rounded-full bg-gradient-to-br from-orange-300 to-primary px-4 py-2 text-background">
+                  Blogs
+                  <PenLine />
+                </H3>
+              </div>
+            </Link>
           </ul>
         </SheetContent>
       </Sheet>

@@ -19,6 +19,10 @@ const config = {
     },
     extend: {
       colors: {
+        filter: {
+          'blur-20': 'blur(20px)',
+          'blur-25': 'blur(25px)',
+        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -101,6 +105,16 @@ const config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+        appear: {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'pop-blob': {
+          '0%': { transform: 'scale(1)' },
+          '33%': { transform: 'scale(1.2)' },
+          '66%': { transform: 'scale(0.8)' },
+          '100%': { transform: 'scale(1)' },
+        },
       },
       transitionTimingFunction: {
         'minor-spring': 'cubic-bezier(0.18,0.89,0.82,1.04)',
@@ -112,6 +126,8 @@ const config = {
         ripple: 'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite',
         'dynamic-island-expand': 'dynamic-island-expand 0.5s ease-in-out',
         'dynamic-island-contract': 'dynamic-island-contract 0.5s ease-in-out',
+        appear: 'appear 0.5s ease-out',
+        'pop-blob': 'pop-blob 5s infinite',
       },
     },
   },

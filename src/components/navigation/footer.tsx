@@ -1,4 +1,4 @@
-import { ExternalLinkIcon } from 'lucide-react';
+import { ExternalLinkIcon, PenLine } from 'lucide-react';
 import Link from 'next/link';
 
 export function Footer() {
@@ -7,8 +7,12 @@ export function Footer() {
       <div className="mt-6 flex flex-col border-t p-6 text-center text-xs text-muted-foreground md:flex-row md:justify-between">
         <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} zackozack</p>
         <div className="flex items-center justify-center gap-2">
-          <Link className="flex items-center gap-1 underline-offset-2 hover:underline" href="/blog">
+          <Link
+            className="flex items-center gap-1 underline-offset-2 hover:underline"
+            href="/blogs"
+          >
             Blogs
+            <PenLine size={12} />
           </Link>{' '}
           |
           <Link

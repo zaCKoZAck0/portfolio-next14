@@ -12,10 +12,6 @@ const NavItems: NavItem[] = [
     pathname: '/about-me',
   },
   {
-    label: 'Resume',
-    pathname: '/resume',
-  },
-  {
     label: 'Projects',
     pathname: '/projects',
   },

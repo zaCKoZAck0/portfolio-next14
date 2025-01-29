@@ -6,6 +6,7 @@ import { LocalTime } from '../../resume/_components/local-time';
 import Image from 'next/image';
 import { allProfiles } from 'contentlayer/generated';
 import { SocialIcon } from '~/components/social-icons';
+import { BlurryBlob } from '~/components/blurry-blob';
 
 export function Introduction() {
   const profile = allProfiles[0];
@@ -71,13 +72,18 @@ export function Introduction() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center gap-1 py-10">
-        <div className="p-1">
+      <div className="z-10 flex flex-col items-center justify-center gap-1 py-10">
+        <div className="z-10 p-1">
           <BriefcaseIcon className="size-10 text-muted-foreground" />
         </div>
-        <H3 className="text-center text-2xl text-secondary-foreground">
+        <H3 className="z-10 text-center text-2xl text-secondary-foreground">
           {profile.role} <span className="text-muted-foreground">@</span> {profile.company}
         </H3>
+        <BlurryBlob
+          className="rounded-xl opacity-45"
+          firstBlobColor="bg-orange-300"
+          secondBlobColor="bg-primary"
+        />
       </div>
     </>
   );
