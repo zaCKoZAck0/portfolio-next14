@@ -1,13 +1,12 @@
-import { ClockIcon, MapPinIcon, BriefcaseIcon } from 'lucide-react';
-import Link from 'next/link';
+import { BriefcaseIcon } from 'lucide-react';
 import { ImageCarousel } from '~/components/image-carousel';
 import { H3 } from '~/components/typography';
-import { LocalTime } from '../../resume/_components/local-time';
 import Image from 'next/image';
 import { allProfiles } from 'contentlayer/generated';
-import { SocialIcon } from '~/components/social-icons';
 import { BlurryBlob } from '~/components/blurry-blob';
 import { FadeUpStagger } from '~/components/typography/animated/fade-up';
+import { ProfileLink } from '~/components/profile-link';
+import { LocationAndTime } from './location-and-time';
 
 export function Introduction() {
   const profile = allProfiles[0];
@@ -54,27 +53,11 @@ export function Introduction() {
               </div>
 
               <div className="flex flex-col gap-4 pt-8 text-sm font-normal italic text-muted-foreground md:text-lg">
-                {profile.links?.map((link) => (
-                  <Link
-                    key={link._id}
-                    className="w-fit underline-offset-2 transition-all hover:text-orange-200 hover:underline"
-                    href={link.url}
-                  >
-                    <div className="flex items-center gap-2">
-                      <SocialIcon platform={link.platform} className="size-4 md:size-7" />
-                      <span>{link.alias}</span>
-                    </div>
-                  </Link>
+                {profile.links?.map((link, index) => (
+                  <ProfileLink key={link._id} link={link} index={index} />
                 ))}
               </div>
-              <div className="mt-8 flex items-center justify-between text-sm text-muted-foreground md:text-base">
-                <div className="flex items-center gap-2">
-                  <MapPinIcon className="size-4 md:size-5" /> India
-                </div>
-                <div className="flex items-center gap-2">
-                  <ClockIcon className="size-4 md:size-5" /> <LocalTime />
-                </div>
-              </div>
+              <LocationAndTime />
             </div>
           </div>
         </div>
@@ -86,11 +69,7 @@ export function Introduction() {
         <H3 className="z-10 text-center text-2xl text-secondary-foreground">
           {profile.role} <span className="text-muted-foreground">@</span> {profile.company}
         </H3>
-        <BlurryBlob
-          className="rounded-xl opacity-45"
-          firstBlobColor=""
-          secondBlobColor=""
-        />
+        <BlurryBlob className="rounded-xl opacity-45" firstBlobColor="" secondBlobColor="" />
       </div>
     </>
   );
