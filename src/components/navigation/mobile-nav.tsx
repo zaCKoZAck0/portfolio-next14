@@ -73,7 +73,7 @@ export function MobileNav({ tabs }: { tabs: NavItem[] }) {
             ))}
             <Link href="/blogs" className="p-4">
               <div className="relative flex items-center justify-center text-sm">
-                <H3 className="relative z-50 flex items-center gap-1 rounded-full bg-gradient-to-br from-orange-300 to-primary px-4 py-2 text-background">
+                <H3 className="relative z-50 flex items-center gap-1 rounded-full border border-blue-400 bg-gradient-to-t from-blue-400 to-purple-400 px-4 py-2 text-sm text-background shadow-sm shadow-blue-400 transition-all duration-300 will-change-transform hover:scale-[1.05] hover:shadow-[0_0_15px_rgba(96,165,250,0.5)]">
                   Blogs
                   <PenLine />
                 </H3>
