@@ -80,7 +80,7 @@ export default function BlogPage() {
                             </H4>
                           </td>
                           <td>
-                            <H4 className="pl-3 text-base font-semibold text-secondary-foreground group-hover:text-orange-200">
+                            <H4 className="from-blue-400 to-purple-400 bg-clip-text pl-3 text-base font-semibold text-secondary-foreground group-hover:bg-gradient-to-br group-hover:text-transparent">
                               {blog.title}
                             </H4>
                           </td>

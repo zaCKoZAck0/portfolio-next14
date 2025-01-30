@@ -1,45 +1,52 @@
+'use client';
 import { Project } from 'contentlayer/generated';
-import { Card, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
-import { SiGithub } from 'react-icons/si';
-import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { H3 } from '~/components/typography';
-import { cn } from '~/lib/utils';
-import { buttonVariants, Button } from './ui/button';
-import { PlayIcon, ChevronDown } from 'lucide-react';
+
+import { Card, CardHeader, CardContent } from '~/components/ui/card';
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <Card
-      key={project._id}
-      className="relative bg-gradient-to-bl from-orange-200/10 to-card to-30%"
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileHover={{ scale: 1.02 }}
+      transition={{ type: 'spring', stiffness: 150 }}
+      className="h-full"
     >
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <H3>{project.title}</H3>
-        </CardTitle>
-        <CardDescription>{project.description}</CardDescription>
-      </CardHeader>
-      <div className="absolute -top-6 right-0 flex gap-1 px-2">
-        <Link
-          href={project.github}
-          className={cn(buttonVariants({ size: 'icon', variant: 'outline' }), 'rounded-full')}
-        >
-          <SiGithub className="size-4" />
-          <span className="sr-only">Project Source Code</span>
-        </Link>
-        <Link
-          href={project.liveUrl}
-          className={cn(buttonVariants({ size: 'icon', variant: 'outline' }), 'rounded-full')}
-        >
-          <PlayIcon className="size-4" />
-          <span className="sr-only">Live Preview</span>
-        </Link>
-      </div>
-      <div className="absolute -bottom-4 left-[30%]">
-        <Button size="sm" variant="outline" className="h-auto rounded-full py-1 text-xs">
-          <ChevronDown className="mr-1 size-4" /> View More
-        </Button>
-      </div>
-    </Card>
+      <Card className="flex h-full flex-col border-0 bg-gradient-to-b from-card/30 to-card/50 shadow-lg transition-all hover:from-card/40 hover:to-card/60 hover:shadow-xl">
+        <CardHeader className="pb-3">
+          <H3 className="line-clamp-2 bg-gradient-to-r from-primary to-secondary-foreground bg-clip-text text-xl font-semibold leading-tight text-transparent">
+            {project.title}
+          </H3>
+        </CardHeader>
+
+        <CardContent className="flex-1 space-y-4">
+          <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+            {project.description}
+          </p>
+
+          {project.technologies && project.technologies.length > 0 && (
+            <div className="mt-4 flex flex-wrap gap-2">
+              {project.technologies.map((tech) => (
+                <div
+                  key={tech}
+                  className="group relative inline-block transition-transform duration-300"
+                >
+                  {/* Front Text Layer */}
+                  <span className="relative z-20 rotate-[15deg] rounded-full bg-accent px-3 py-1 text-xs font-medium text-accent-foreground/90 transition-all duration-300">
+                    {tech}
+                  </span>
+                  {/* Gradient Background Layer */}
+                  <span className="group-hover absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 text-transparent opacity-0 transition-opacity duration-300">
+                    {tech}
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
+        </CardContent>
+      </Card>
+    </motion.div>
   );
 }

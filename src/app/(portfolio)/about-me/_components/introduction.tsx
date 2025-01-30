@@ -1,12 +1,11 @@
-import { BriefcaseIcon } from 'lucide-react';
+'use client';
 import { ImageCarousel } from '~/components/image-carousel';
-import { H3 } from '~/components/typography';
 import Image from 'next/image';
 import { allProfiles } from 'contentlayer/generated';
-import { BlurryBlob } from '~/components/blurry-blob';
 import { FadeUpStagger } from '~/components/typography/animated/fade-up';
 import { ProfileLink } from '~/components/profile-link';
 import { LocationAndTime } from './location-and-time';
+import { WorkExperience } from './work-experience';
 
 export function Introduction() {
   const profile = allProfiles[0];
@@ -62,15 +61,7 @@ export function Introduction() {
           </div>
         </div>
       </div>
-      <div className="z-10 flex flex-col items-center justify-center gap-1 py-10">
-        <div className="z-10 p-1">
-          <BriefcaseIcon className="size-10 text-muted-foreground" />
-        </div>
-        <H3 className="z-10 text-center text-2xl text-secondary-foreground">
-          {profile.role} <span className="text-muted-foreground">@</span> {profile.company}
-        </H3>
-        <BlurryBlob className="rounded-xl opacity-45" firstBlobColor="" secondBlobColor="" />
-      </div>
+      <WorkExperience company={profile.company} role={profile.role} />
     </>
   );
 }
