@@ -1,5 +1,5 @@
 'use client';
-import { LocalTime } from '../../resume/_components/local-time';
+import { LocalTime } from '~/components/local-time';
 import { motion } from 'framer-motion';
 import { MapPinIcon, ClockIcon } from 'lucide-react';
 
