@@ -34,13 +34,13 @@ export function ImageCarousel({ items: initialItems }: IImageCarouselProps) {
           <div
             key={item.id}
             className={cn(
-              'absolute h-[250px] w-[200px] animate-fadeIn overflow-hidden rounded-xl border-4 border-orange-200 bg-primary shadow-md hover:scale-105',
+              'absolute h-[250px] w-[200px] overflow-hidden rounded-xl border-2 bg-background animate-in',
             )}
             style={{
-              transform: index === 1 ? 'scale(1.1) rotate(5deg)' : 'translateX(-30%) rotate(-5deg)',
+              transform: index === 1 ? 'scale(1.1) rotate(3deg)' : 'translateX(-15%) rotate(-3deg)',
               opacity: index === 1 ? 1 : 0.5,
-              transition: 'transform 0.5s ease, filter 0.5s ease',
-              filter: index === 1 ? 'none' : 'grayscale(100%)',
+              transition: 'transform 0.2s ease, filter 0.2s ease',
+              filter: index === 1 ? 'none' : 'grayscale(50%)',
             }}
           >
             <Image

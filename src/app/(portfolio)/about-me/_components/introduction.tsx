@@ -13,8 +13,8 @@ export function Introduction() {
     <>
       <div className="relative flex min-h-screen flex-col items-center justify-center md:mt-0">
         <div>
-          <div className="flex flex-col items-start justify-between md:flex-row md:gap-4">
-            <div className="hidden w-fit md:block">
+          <div className="flex flex-col items-stretch justify-between md:flex-row md:items-start md:gap-4">
+            <div className="ml-12 w-fit md:ml-0">
               <ImageCarousel
                 items={[
                   {
@@ -31,24 +31,15 @@ export function Introduction() {
               />
             </div>
             <div className="flex flex-col pt-6 font-semibold text-secondary-foreground md:pl-10 md:pt-0">
-              <div className="flex items-center justify-between gap-4">
-                <Image
-                  className="block size-14 flex-shrink-0 rounded-full border-2 border-orange-200 md:hidden"
-                  alt={profile.username}
-                  width={100}
-                  height={100}
-                  src={profile.profileImage}
+              <div>
+                <FadeUpStagger
+                  text={profile.fullName}
+                  className="text-2xl font-semibold leading-8 md:text-4xl"
                 />
-                <div>
-                  <FadeUpStagger
-                    text={profile.fullName}
-                    className="text-2xl font-semibold leading-8 md:text-4xl"
-                  />
-                  <FadeUpStagger
-                    text={profile.username}
-                    className="text-2xl font-thin leading-8 md:text-4xl"
-                  />
-                </div>
+                <FadeUpStagger
+                  text={profile.username}
+                  className="text-2xl font-thin leading-8 md:text-4xl"
+                />
               </div>
 
               <div className="flex flex-col gap-4 pt-8 text-sm font-normal italic text-muted-foreground md:text-lg">

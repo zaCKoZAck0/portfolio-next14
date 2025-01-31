@@ -6,7 +6,7 @@ import { MapPinIcon, ClockIcon } from 'lucide-react';
 export function LocationAndTime() {
   return (
     <motion.div
-      className="mt-8 flex items-center justify-between text-sm text-muted-foreground md:text-base"
+      className="mt-8 flex items-center justify-between gap-16 text-sm text-muted-foreground md:text-base"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
