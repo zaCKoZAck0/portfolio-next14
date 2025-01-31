@@ -1,6 +1,5 @@
 'use client';
 import { ImageCarousel } from '~/components/image-carousel';
-import Image from 'next/image';
 import { allProfiles } from 'contentlayer/generated';
 import { FadeUpStagger } from '~/components/typography/animated/fade-up';
 import { ProfileLink } from '~/components/profile-link';
