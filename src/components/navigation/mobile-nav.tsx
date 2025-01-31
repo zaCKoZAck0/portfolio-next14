@@ -1,5 +1,5 @@
 'use client';
-import { Menu, PenLine } from 'lucide-react';
+import { ChevronLeft } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Logo } from './logo';
 
@@ -50,7 +50,7 @@ export function MobileNav({ tabs }: { tabs: NavItem[] }) {
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
           <Button variant="ghost" size="icon">
-            <Menu className="h-6 w-6" />
+            <ChevronLeft className="h-6 w-6" />
           </Button>
         </SheetTrigger>
         <SheetContent className="flex w-fit items-center justify-center bg-background/50 backdrop-blur-xl">
@@ -75,7 +75,6 @@ export function MobileNav({ tabs }: { tabs: NavItem[] }) {
               <div className="relative flex items-center justify-center text-sm">
                 <H3 className="relative z-50 flex items-center gap-1 rounded-full border border-blue-400 bg-gradient-to-t from-blue-400 to-purple-400 px-4 py-2 text-background shadow-sm shadow-blue-400 transition-all duration-300 will-change-transform hover:scale-[1.05] hover:shadow-[0_0_15px_rgba(96,165,250,0.5)]">
                   Blogs
-                  <PenLine />
                 </H3>
               </div>
             </Link>
