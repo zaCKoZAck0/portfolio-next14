@@ -6,7 +6,12 @@ updatedAt: '2025-01-23'
 featured: true
 published: false
 author: zackozack
-tags: [react, s3, aws, cloudfront, cdn]
+tags:
+  - react
+  - s3
+  - aws
+  - cloudfront
+  - cdn
 ---
 
 ## Some Background
@@ -25,7 +30,7 @@ request for more security.
 - Keep the default permissions, <u>**don't disable**</u> "Block _all_ public access" permissions on your S3 bucket. Rquired as it enables one access entry point to your s3 bucket.
 - Upload only the build files, i.e. only the contents of `/build` folder from your react project to S3.
 - You can do this easily from the UI using the "Upload" button.
-  
+
 <Callout icon={<Icons.ScrollIcon />}>
 
 ### Important

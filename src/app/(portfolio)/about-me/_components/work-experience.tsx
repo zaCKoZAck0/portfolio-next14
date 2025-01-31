@@ -10,7 +10,7 @@ interface WorkExperienceProps {
 export function WorkExperience({ company, role }: WorkExperienceProps) {
   return (
     <motion.div
-      className="z-10 flex flex-col items-center justify-center gap-1 py-10"
+      className="z-10 flex flex-col items-center justify-center gap-1 pt-10"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: '-20%' }}

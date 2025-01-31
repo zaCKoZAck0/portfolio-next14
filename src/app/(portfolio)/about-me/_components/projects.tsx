@@ -8,7 +8,7 @@ import { Button } from '~/components/ui/button';
 export function Projects() {
   return (
     <>
-      <div className="pb-20 pt-40">
+      <div className="pb-20 pt-10">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {allProjects.map((project) =>
             project.featured ? <ProjectCard key={project._id} project={project} /> : null,

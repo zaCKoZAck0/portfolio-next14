@@ -31,14 +31,14 @@ export function ProjectCard({ project }: { project: Project }) {
               {project.technologies.map((tech) => (
                 <div
                   key={tech}
-                  className="group relative inline-block transition-transform duration-300"
+                  className="group relative flex" // Added 'transform' here
                 >
                   {/* Front Text Layer */}
-                  <span className="relative z-20 rotate-[15deg] rounded-full bg-accent px-3 py-1 text-xs font-medium text-accent-foreground/90 transition-all duration-300">
+                  <span className="z-20 transform rounded-full bg-accent px-3 py-1 text-xs font-medium text-accent-foreground/90 shadow-md transition-all duration-300 group-hover:rotate-[-5deg]">
                     {tech}
                   </span>
                   {/* Gradient Background Layer */}
-                  <span className="group-hover absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 text-transparent opacity-0 transition-opacity duration-300">
+                  <span className="absolute rounded-full bg-gradient-to-r from-blue-400 to-purple-400 px-3 py-1 text-xs font-medium text-transparent transition-opacity duration-300">
                     {tech}
                   </span>
                 </div>
