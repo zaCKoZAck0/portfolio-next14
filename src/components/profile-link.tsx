@@ -14,15 +14,10 @@ export function ProfileLink({ link, index }: ProfileLinkProps) {
     <motion.div
       initial={{ opacity: 0, y: 10, x: -5 }}
       animate={{ opacity: 1, y: 0, x: 0 }}
-      whileHover={{
-        scale: 1.05,
-        translateX: 2,
-        transition: { type: 'spring', stiffness: 100 },
-      }}
       whileTap={{ scale: 0.95 }}
       transition={{
         type: 'spring',
-        delay: index * 0.15 + 0.15,
+        delay: index * 0.15 + 1,
         stiffness: 100,
         damping: 10,
       }}
