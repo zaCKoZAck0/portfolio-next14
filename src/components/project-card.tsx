@@ -1,14 +1,17 @@
 'use client';
 import { Project } from 'contentlayer/generated';
 import { motion } from 'framer-motion';
-import { H3 } from '~/components/typography';
+import { H2, H3 } from '~/components/typography';
 import { useCallback, useRef } from 'react';
 import { useMousePosition } from '~/hooks/use-mouse-position';
 
 import { Card, CardHeader, CardContent } from '~/components/ui/card';
 import { ChevronDownIcon } from 'lucide-react';
+import { Dialog, DialogTrigger, DialogContent } from '~/components/ui/dialog';
+import { BrowserMockup } from './browser-mock';
+import { Mdx } from './mdx/mdx-components';
 
-export function ProjectCard({ project }: { project: Project }) {
+function ProjectCardButton({ project, small = false }: { project: Project; small?: boolean }) {
   const divRef = useRef<HTMLDivElement>(null);
   const infoRef = useRef<HTMLDivElement>(null);
 
@@ -31,23 +34,24 @@ export function ProjectCard({ project }: { project: Project }) {
       whileHover={{ scale: 1.05 }}
       viewport={{ margin: '-40px' }}
       transition={{ type: 'spring', stiffness: 100, duration: 0.5 }}
-      className="group relative h-full cursor-none"
+      className="group relative h-full cursor-none text-left"
       ref={divRef}
     >
       <Card className="flex h-full flex-col border-0 bg-gradient-to-b from-card/30 to-card/50 shadow-lg transition-all hover:from-card/40 hover:to-card/60 hover:shadow-xl">
         <CardHeader className="pb-3">
-          <H3 className="line-clamp-2 bg-gradient-to-r from-primary to-secondary-foreground bg-clip-text text-xl font-semibold leading-tight text-transparent">
+          <H3 className="line-clamp-2 bg-gradient-to-r from-primary to-secondary-foreground bg-clip-text text-2xl font-semibold leading-tight text-transparent">
             {project.title}
           </H3>
         </CardHeader>
 
         <CardContent className="flex-1 space-y-4">
-          <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground">
-            {project.description}
-          </p>
-
+          {!small && (
+            <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+              {project.description}
+            </p>
+          )}
           {project.technologies && project.technologies.length > 0 && (
-            <div className="mt-4 flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech) => (
                 <div
                   key={tech}
@@ -77,5 +81,39 @@ export function ProjectCard({ project }: { project: Project }) {
         Read more <ChevronDownIcon size={16} className="inline-block" />
       </div>
     </motion.div>
+  );
+}
+
+export function ProjectCard({ project, small = false }: { project: Project; small?: boolean }) {
+  return (
+    <Dialog>
+      <DialogTrigger>
+        <ProjectCardButton project={project} small={small} />
+      </DialogTrigger>
+      <DialogContent className="border-none bg-transparent md:min-w-[780px]">
+        <BrowserMockup url={project.liveUrl}>
+          <div className="max-h-[80vh] overflow-auto p-1 md:max-h-[480px] md:p-4">
+            <H2>{project.title}</H2>
+            <p className="py-2 text-muted-foreground">{project.description}</p>
+            {project.technologies && project.technologies.length > 0 && (
+              <div className="flex flex-wrap gap-2 py-2">
+                {project.technologies.map((tech) => (
+                  <div key={tech} className="group relative flex">
+                    {/* Front Text Layer */}
+                    <span className="z-20 transform rounded-full bg-accent/25 px-3 py-1 text-xs font-medium text-accent-foreground/90 shadow-md transition-all duration-300 will-change-transform group-hover:translate-y-0.5 group-hover:shadow-lg">
+                      {tech}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
+            <hr className="mt-5" />
+            <div id="blog">
+              <Mdx code={project.body.code} />
+            </div>
+          </div>
+        </BrowserMockup>
+      </DialogContent>
+    </Dialog>
   );
 }

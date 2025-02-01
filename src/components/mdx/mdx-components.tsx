@@ -5,8 +5,8 @@ import Image from 'next/image';
 import { useMDXComponent } from 'next-contentlayer2/hooks';
 
 import { cn } from '~/lib/utils';
-import { Callout } from '~/components/callout';
-import { MdxCard } from '~/components/mdx-card';
+import { Callout } from '../callout';
+import { MdxCard } from './mdx-card';
 import * as Icons from 'lucide-react';
 
 const components = {
