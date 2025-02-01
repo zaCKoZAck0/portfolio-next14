@@ -26,11 +26,11 @@ export function ProjectCard({ project }: { project: Project }) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 20, scale: 0.95 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
       whileHover={{ scale: 1.05 }}
-      viewport={{ margin: '-20px' }}
-      transition={{ type: 'spring', stiffness: 150 }}
+      viewport={{ margin: '-40px' }}
+      transition={{ type: 'spring', stiffness: 100, duration: 0.5 }}
       className="group relative h-full cursor-none"
       ref={divRef}
     >
