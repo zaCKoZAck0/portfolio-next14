@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { allDocs } from 'contentlayer/generated';
 import { notFound } from 'next/navigation';
-import { Mdx } from '~/components/mdx-components';
+import { Mdx } from '~/components/mdx/mdx-components';
 import { BlogPage } from '~/components/blog-page';
 import { Metadata } from 'next';
 import { env } from '~/env';
