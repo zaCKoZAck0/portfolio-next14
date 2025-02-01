@@ -37,8 +37,8 @@ export const BlogCard = motion(
         animate={{ opacity: 1, scale: 1 }}
         transition={SPRING_TRANSITION}
       >
-        <Badge className={`bg-gradient-to-r ${gradient} p-0.5`}>
-          <span className="px-2 py-0.5 text-xs text-white">{label}</span>
+        <Badge className={`bg-gradient-to-r ${gradient} bg-clip-text p-0.5 text-transparent`}>
+          <span className="py-0.5 text-sm">{label}</span>
         </Badge>
       </motion.div>
     );
@@ -46,12 +46,13 @@ export const BlogCard = motion(
     return (
       <Link href={`/blogs/${blog.slugAsParams}`}>
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20, scale: 0.95 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
           whileHover={{
             scale: 1.02,
             boxShadow: '0 8px 24px -4px rgba(0,0,0,0.1)',
           }}
+          viewport={{ margin: '-40px' }}
           whileTap={{ scale: 0.98 }}
           transition={SPRING_TRANSITION}
           className="group relative block rounded-xl border bg-card/80 backdrop-blur-sm transition-colors hover:bg-card"
@@ -87,8 +88,8 @@ export const BlogCard = motion(
 
             <div className="mt-4 flex items-center justify-between gap-4">
               <div className="flex gap-2">
-                {isNew && <DateBadge label="New" gradient="from-green-500 to-blue-700" />}
-                {isUpdated && <DateBadge label="Updated" gradient="from-purple-500 to-pink-700" />}
+                {isNew && <DateBadge label="New" gradient="from-green-300 to-blue-400" />}
+                {isUpdated && <DateBadge label="Updated" gradient="from-purple-300 to-pink-400" />}
               </div>
 
               <div className="flex items-center gap-2 text-xs">

@@ -51,7 +51,7 @@ export default function BlogPage() {
           </div>
         </div>
         <div className="mt-32">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col justify-center gap-4">
             {blogs.map((blog) => {
               return <BlogCard key={blog._id} blog={blog} />;
             })}

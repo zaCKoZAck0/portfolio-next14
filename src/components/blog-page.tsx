@@ -28,7 +28,7 @@ export async function BlogPage({ blog, children }: BlogPageProps) {
           </aside>
           <section className="w-full md:w-3/4">
             <div className="py-2">
-              <Link href="/blog">
+              <Link href="/blogs">
                 <Button
                   size="sm"
                   variant="link"

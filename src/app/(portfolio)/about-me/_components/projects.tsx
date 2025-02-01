@@ -30,7 +30,7 @@ export function Projects() {
           )}
         </div>
         <div className="mb-2 mt-10 flex justify-center">
-          <Link href="/blog">
+          <Link href="/blogs">
             <Button variant="link" size="sm" className="rounded-full text-xs">
               <ChevronDown size={20} className="mr-2" />
               View All Blogs

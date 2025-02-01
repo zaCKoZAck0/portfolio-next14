@@ -130,7 +130,7 @@ export function BlogSearch() {
     );
     setRecentReads(updatedRecentReads);
     localStorage.setItem('recentReads', JSON.stringify(updatedRecentReads));
-    router.push(`/blog/${post.slugAsParams}`);
+    router.push(`/blogs/${post.slugAsParams}`);
     setIsOpen(false);
   };
 
