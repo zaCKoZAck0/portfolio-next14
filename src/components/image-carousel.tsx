@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeftRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '~/lib/utils';
@@ -24,37 +25,51 @@ export function ImageCarousel({ items: initialItems }: IImageCarouselProps) {
   };
 
   const visibleIndices = [currentIndex, (currentIndex + 1) % initialItems.length];
-
   const visibleItems = visibleIndices.map((index) => initialItems[index]);
+
+  const imageVariants = {
+    active: (index: number) => ({
+      scale: index === 1 ? 1.1 : 1,
+      rotate: index === 1 ? 3 : -3,
+      opacity: index === 1 ? 1 : 0.5,
+      filter: index === 1 ? 'grayscale(0%)' : 'grayscale(50%)',
+      x: index === 1 ? 0 : '-15%',
+      transition: { type: 'spring', stiffness: 300, damping: 20 },
+    }),
+  };
 
   return (
     <div className="flex w-fit flex-col items-center">
       <div className="relative mb-10 h-[250px] w-[200px] p-2">
-        {visibleItems.map((item, index) => (
-          <div
-            key={item.id}
-            className={cn(
-              'absolute h-[250px] w-[200px] overflow-hidden rounded-xl border-2 bg-background animate-in',
-            )}
-            style={{
-              transform: index === 1 ? 'scale(1.1) rotate(3deg)' : 'translateX(-15%) rotate(-3deg)',
-              opacity: index === 1 ? 1 : 0.5,
-              transition: 'transform 0.2s ease, filter 0.2s ease',
-              filter: index === 1 ? 'none' : 'grayscale(50%)',
-            }}
-          >
-            <Image
-              src={item.image}
-              alt={item.title}
-              layout="fill"
-              objectFit="cover"
-              className="rounded-xl transition-transform duration-300 hover:scale-105"
-              priority
-            />
-          </div>
-        ))}
+        <AnimatePresence mode="wait">
+          {visibleItems.map((item, index) => (
+            <motion.div
+              key={item.id}
+              custom={index}
+              initial={{ opacity: 0 }}
+              variants={imageVariants}
+              animate="active"
+              className={cn(
+                'absolute h-[250px] w-[200px] overflow-hidden rounded-xl border-2 bg-background',
+              )}
+            >
+              <Image
+                src={item.image}
+                alt={item.title}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-xl"
+                priority
+              />
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </div>
-      <div className="mt-2 flex items-center justify-center gap-2">
+      <motion.div
+        initial={{ opacity: 0, y: 20, scale: 0.95 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        className="mt-2 flex items-center justify-center gap-2"
+      >
         <Tooltip>
           <TooltipTrigger>
             <Button onClick={handleNext} size="icon" variant="outline" className="rounded-full">
@@ -63,7 +78,7 @@ export function ImageCarousel({ items: initialItems }: IImageCarouselProps) {
           </TooltipTrigger>
           <TooltipContent>Switch Images</TooltipContent>
         </Tooltip>
-      </div>
+      </motion.div>
     </div>
   );
 }
