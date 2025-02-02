@@ -12,3 +12,45 @@ tags:
   - server-actions
   - nextjs-server-actions
 ---
+
+## What is a Server Action?
+
+A Server Action is an asynchronous function executed on the server, designed for handling data mutations (e.g., form submissions, API calls) directly from React components. It eliminates the need for separate API routes, enabling seamless integration of server-side logic with client-side interactions.
+
+<br />
+**Key features:**
+
+- **Progressive Enhancement:** Works even if JavaScript is disabled.
+- **Caching & Revalidation:** Integrates with Next.js caching (e.g., `revalidatePath`, `revalidateTag`).
+- **Security:** Uses encrypted IDs and CSRF protection by default.
+
+### How to Create a Server Action
+
+One of the steps to create a server action is to create a file with `'use server'`. This tells Next.js to treat the file as a server action.
+
+```ts
+// app/actions.ts
+'use server';
+export async function deletePost(postId: string) {
+  // Delete post from database
+  await db.post.delete({ where: { id: postId } });
+  revalidatePath('/posts'); // Update cache
+}
+```
+
+You can then import and use it in your React client components.
+
+```tsx
+'use client';
+import { deletePost } from '@/app/actions';
+
+export function DeleteButton({ postId }: { postId: string }) {
+  return <button onClick={() => deletePost(postId)}>Delete</button>;
+}
+```
+
+## Internal Working
+
+<img src="/images/server-actions-under-the-hood/server-action-flow.png" alt="Server Action Flow" />
+
+When the Next.js codebase is compiled, the server actions are extracted and

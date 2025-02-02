@@ -54,15 +54,18 @@ const components = {
     />
   ),
   pre: ({ className, ...props }) => (
-    <pre
-      className={cn('mb-4 mt-6 overflow-x-auto rounded-lg border bg-black py-4', className)}
+    <pre className={cn('my-4 overflow-x-auto rounded-lg', className)} {...props} />
+  ),
+  figcaption: ({ className, ...props }) => (
+    <figcaption
+      className={cn('mt-4 border py-0.5 text-center font-mono text-sm text-orange-200', className)}
       {...props}
     />
   ),
   code: ({ className, ...props }) => (
     <code
       className={cn(
-        'relative rounded bg-card px-[.5rem] font-mono text-base font-thin text-orange-200',
+        'relative rounded-lg border bg-card px-[1rem] py-2 font-mono text-base font-thin text-orange-200',
         className,
       )}
       {...props}

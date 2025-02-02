@@ -1,7 +1,6 @@
 import { defineDocumentType, defineNestedType, makeSource } from 'contentlayer2/source-files';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypePrettyCode from 'rehype-pretty-code';
-import highlight from 'rehype-highlight';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 
@@ -213,7 +212,6 @@ export default makeSource({
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
-      highlight,
       rehypeSlug,
       [
         rehypePrettyCode,
