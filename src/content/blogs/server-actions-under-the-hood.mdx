@@ -97,7 +97,7 @@ X-Forwarded-Host: example.com
 ```
 **3. Server Processing**: The server intercepts the request, and:
 
-- Next.js runtime (or the server proxy) matches the `X-Action` header to registered functions.
+- Next.js runtime matches the `X-Action` header to registered functions.
 - Deserializes payload using inverse of client-side encoding.
 - Executes within isolated server context (no client dependencies).
 
