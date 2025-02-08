@@ -69,7 +69,7 @@ export default function BlogPage() {
                     if (!blog) return null;
                     const createdDate = new Date(blog.publishedAt);
                     return (
-                      <Link key={slug} href={`/blog/${slug}`}>
+                      <Link key={slug} href={`/blogs/${slug}`}>
                         <tr key={blog.title} className="group flex items-center pt-4">
                           <td className="flex-shrink-0">
                             <H4 className="pr-3 text-left text-sm font-normal">

@@ -8,6 +8,7 @@ import { cn } from '~/lib/utils';
 import { Callout } from '../callout';
 import { MdxCard } from './mdx-card';
 import * as Icons from 'lucide-react';
+// import {CopyCodeButton} from '~/components/copy-code-button';
 
 const components = {
   h1: ({ className, ...props }) => <h1 className={className} {...props} />,
@@ -54,18 +55,18 @@ const components = {
     />
   ),
   pre: ({ className, ...props }) => (
-    <pre className={cn('my-4 overflow-x-auto rounded-lg', className)} {...props} />
+    <pre className={cn('my-4 px-[1rem] py-2 shadow border bg-card overflow-x-auto rounded-lg', className)} {...props} />
   ),
   figcaption: ({ className, ...props }) => (
     <figcaption
-      className={cn('mt-4 border py-0.5 text-center font-mono text-sm text-orange-200', className)}
+      className={cn('mt-4 border bg-card px-[1rem] py-2 text-center font-mono text-sm text-orange-200', className)}
       {...props}
     />
   ),
   code: ({ className, ...props }) => (
     <code
       className={cn(
-        'relative rounded-lg border bg-card px-[1rem] py-2 font-mono text-base font-thin text-orange-200',
+        'relative bg-card font-mono text-base font-thin text-orange-200',
         className,
       )}
       {...props}

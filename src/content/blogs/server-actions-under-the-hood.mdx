@@ -15,7 +15,7 @@ tags:
 
 ## What is a Server Action?
 
-A Server Action is an asynchronous function executed on the server, designed for handling data mutations (e.g., form submissions, API calls) directly from React components. It eliminates the need for separate API routes, enabling seamless integration of server-side logic with client-side interactions.
+A Server Action is an asynchronous function executed on the server, designed for handling data mutations (e.g., form submissions, API calls) directly from React components, serve as a built-in remote procedure call (RPC) mechanism. It eliminates the need for separate API routes, enabling seamless integration of server-side logic with client-side interactions.
 
 <br />
 **Key features:**
@@ -49,8 +49,90 @@ export function DeleteButton({ postId }: { postId: string }) {
 }
 ```
 
-## Internal Working
+## The Core Principle: Remote Procedure Calls (RPC)
 
 <img src="/images/server-actions-under-the-hood/server-action-flow.png" alt="Server Action Flow" />
 
-When the Next.js codebase is compiled, the server actions are extracted and
+At their core, Server Actions implement an RPC pattern using HTTP POST requests. When you write:
+
+```ts
+"use server";  
+export async function createPost(data: FormData) {  
+  // Database interaction  
+}  
+
+```
+
+Next.js performs these critical operations:
+
+1. **Server-Side Registration**: During the build process, Next.js scans for functions marked with `"use server"`. Each such function is registered in an internal “action registry” with a unique action ID.
+2. **Client-side proxy generation**: Instead of sending the entire function code to the client, Next.js generates a lightweight client proxy. This proxy is merely a thin layer that, when called, packages the function’s arguments (after serialization) and triggers a `POST` request.
+3. **Security wrapping**: Adds automatic *CSRF protection* for requests. 
+
+
+And finally, when the server action is invoked from the client like this:
+
+```tsx
+<form action={createPost}>  
+  <input name="content" />  
+  <button>Submit</button>  
+</form>  
+```
+When the client invokes the proxy (e.g., from a button click or a form submission), the browser submits a POST request with the action ID and serialized headers, the whole process is as follows:
+
+<br/>
+**1. Serialization of function's arguments**: 
+- FormData is encoded using [`multipart/form-data`](https://developer.mozilla.org/en-US/docs/Web/API/FormData)
+- Non-form invocations use JSON.stringify() with [SuperJSON](https://github.com/blitz-js/superjson) for rich type support
+
+**2. Request Dispatch**: 
+The proxy sends a POST request to a hidden endpoint with the action ID and serialized parameters.
+
+```bash
+POST /createPost HTTP/1.1  
+Content-Type: multipart/form-data  
+X-Action: "ACTION_ID"  
+X-Forwarded-Host: example.com  
+...
+```
+**3. Server Processing**: The server intercepts the request, and:
+
+- Next.js runtime (or the server proxy) matches the `X-Action` header to registered functions.
+- Deserializes payload using inverse of client-side encoding.
+- Executes within isolated server context (no client dependencies).
+
+**4. Response Handling**:
+
+- The output is serialized and returned to the client.
+- The client proxy receives the response and continues execution as if it were a direct function call.
+
+This remote procedure call (RPC) pattern means that—despite the illusion of a direct function call—every server action is performing a network round-trip over HTTP behind the scenes. The beauty of this abstraction is that it eliminates the need to manually create and maintain separate API endpoints for many common operations.
+
+### Security Architecture
+Server Actions implement enterprise-grade security by default:
+
+#### CSRF Protection
+- **Automatic CSRF tokens**: Each server action request includes a unique [CSRF token](https://brightsec.com/blog/csrf-token/) in the headers.
+- Signed double-submit cookies with `__Host-` prefix
+- Strict origin matching via `Sec-Fetch-Site` header validation
+
+#### Payload Validation
+- **Type safety**: TypeScript types are enforced on the server side.
+```ts
+// Next.js generates runtime validation from TypeScript types:  
+if (typeof data.content !== "string") {  
+  throw new ActionError("Invalid payload");  
+}  
+```
+<Callout icon={<Icons.InfoIcon />} type='danger'>
+#### No runtime type safety
+Always validate server action inputs with [`Zod`](https://zod.dev/), as TypeScript types alone don’t provide runtime safety.
+</Callout>
+
+#### Isolation Boundaries
+- **Server-side isolation**: Server actions run in a separate Node.js process, isolated from the client runtime.
+- Timeouts enforced via [`AsyncLocalStorage`](https://nodejs.org/api/async_context.html).
+
+
+### Conclusion
+Server Actions represent a fundamental shift in web architecture, enabling developers to build full-stack applications with minimal boilerplate. By abstracting away the complexities of network communication and security.
