@@ -1,8 +1,8 @@
 # Portfolio
 
-A fully customizable portfolio website made with:
-
 ### [Portfolio URL](https://zackozack.xyz)
+
+A fully customizable, professional portfolio website made with:
 
 - Next.js
 - Tailwind CSS
