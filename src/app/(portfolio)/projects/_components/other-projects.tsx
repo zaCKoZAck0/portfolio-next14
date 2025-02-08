@@ -9,8 +9,8 @@ export function OtherProjects({ otherProjects }: OtherProjectsProps) {
   return (
     <section className="flex flex-col gap-4 pb-20">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-        {otherProjects.map((project) => (
-          <ProjectCard key={project.slug} project={project} small />
+        {otherProjects.map((project, idx) => (
+          <ProjectCard key={project.slug} project={project} order={idx} small />
         ))}
       </div>
     </section>

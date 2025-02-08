@@ -11,8 +11,8 @@ export function FeaturedProjects({ featuredProjects }: FeaturedProjectsProps) {
     <section className="flex min-h-screen flex-col items-center justify-center gap-4">
       <H1 className="relative z-10 pb-10 text-4xl font-bold">Featured Projects</H1>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-        {featuredProjects.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
+        {featuredProjects.map((project, idx) => (
+          <ProjectCard key={project.slug} project={project} order={idx} />
         ))}
       </div>
     </section>

@@ -5,14 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "pnpm script:github && next start",
+    "start": "next start",
     "lint": "eslint .",
     "format": "prettier --write .",
     "lint:fix": "eslint . --fix",
     "prettier": "pnpx prettier src test --check",
     "prettier:fix": "pnpm run prettier -- --write",
-    "build:content": "contentlayer2 build",
-    "script:github": "tsx ./src/scripts/github-data-script.ts"
+    "build:content": "contentlayer2 build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

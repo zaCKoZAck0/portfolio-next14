@@ -10,8 +10,10 @@ export function Projects() {
     <>
       <div className="pb-20 pt-10">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          {allProjects.map((project) =>
-            project.featured ? <ProjectCard key={project._id} project={project} /> : null,
+          {allProjects.map((project, idx) =>
+            project.featured ? (
+              <ProjectCard key={project._id} project={project} order={idx} />
+            ) : null,
           )}
         </div>
         <div className="mb-2 mt-10 flex justify-center">

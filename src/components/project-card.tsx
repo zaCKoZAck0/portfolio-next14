@@ -11,7 +11,15 @@ import { Dialog, DialogTrigger, DialogContent } from '~/components/ui/dialog';
 import { BrowserMockup } from './browser-mock';
 import { Mdx } from './mdx/mdx-components';
 
-function ProjectCardButton({ project, small = false }: { project: Project; small?: boolean }) {
+function ProjectCardButton({
+  project,
+  small = false,
+  order,
+}: {
+  project: Project;
+  small?: boolean;
+  order: number;
+}) {
   const divRef = useRef<HTMLDivElement>(null);
   const infoRef = useRef<HTMLDivElement>(null);
 
@@ -29,15 +37,14 @@ function ProjectCardButton({ project, small = false }: { project: Project; small
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20, scale: 0.95 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      whileHover={{ scale: 1.05 }}
+      initial={{ opacity: 0, x: order % 2 == 0 ? -20 : 20, scale: 0.95 }}
+      whileInView={{ opacity: 1, x: 0, scale: 1 }}
       viewport={{ margin: '-40px' }}
-      transition={{ type: 'spring', stiffness: 100, duration: 0.5 }}
+      transition={{ type: 'spring', stiffness: 100, duration: 0.5, delay: 0.1 + order * 0.2 }}
       className="group relative h-full cursor-none text-left"
       ref={divRef}
     >
-      <Card className="flex h-full flex-col border-0 bg-gradient-to-b from-card/30 to-card/50 shadow-lg transition-all hover:from-card/40 hover:to-card/60 hover:shadow-xl">
+      <Card className="flex h-full flex-col border-0 bg-gradient-to-b from-card/30 to-card/50 shadow-lg transition-all duration-300 hover:scale-105 hover:from-card/40 hover:to-card/60 hover:shadow-xl">
         <CardHeader className="pb-3">
           <H3 className="line-clamp-2 bg-gradient-to-r from-primary to-secondary-foreground bg-clip-text text-2xl font-semibold leading-tight text-transparent">
             {project.title}
@@ -84,11 +91,19 @@ function ProjectCardButton({ project, small = false }: { project: Project; small
   );
 }
 
-export function ProjectCard({ project, small = false }: { project: Project; small?: boolean }) {
+export function ProjectCard({
+  project,
+  small = false,
+  order = 0,
+}: {
+  project: Project;
+  small?: boolean;
+  order?: number;
+}) {
   return (
     <Dialog>
       <DialogTrigger>
-        <ProjectCardButton project={project} small={small} />
+        <ProjectCardButton project={project} small={small} order={order} />
       </DialogTrigger>
       <DialogContent className="border-none bg-transparent md:min-w-[780px]">
         <BrowserMockup url={project.liveUrl}>

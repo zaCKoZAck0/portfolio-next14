@@ -1,33 +1,71 @@
 # Portfolio
 
-A portfolio website made with:
+A fully customizable portfolio website made with:
 
 - Next.js
 - Tailwind CSS
 - Framer Motion
+- Contentlayer
 - shadcn/ui
+
+## Features
+
+- Fully customizable with Contentlayer.
+- Blog pages.
+- Precise animations with Framer Motion.
+- Add / edit projects, blog posts, and more with MDX.
+- Typesafe and secure.
+- Optimized for performance.
+- OpenGraph and Twitter card support.
+- Static pages for fast loading.
+- (WIP) Integration with Github / Leetcode API.
+- (WIP) SEO optimized.
+
+### Blog Features
+
+- Static generated blog pages with zero latency.
+- Syntax highlighting Code blocks.
+- Custom Components.
+  - Code blocks (with syntax highlighting)
+  - Auto generated 'Table of Contents' and navigation.
+  - Callouts
+- (WIP) OpenGraph images.
+- (WIP) SEO optimized.
+- Intellegent blog search.
+- Blog history table.
 
 ![image](https://github.com/user-attachments/assets/b6eb0ff5-884a-46e7-85c6-e3094555f575)
 
-[Portfolio Link](https://zackozack.xyz)
+[Demo Portfolio](https://zackozack.xyz)
 
-## Roadmap
+## Routes
 
-### Pages
+```bash
+/
 
-- [x] Hero Section
-- [x] About Me
-- [x] Resume
-- [x] Projects
-- [x] Blog (WIP)
-- [x] Contact Me
+/about-me
 
-### WIP
+/blogs
 
-- [ ] Animations (1st iteration)
-- [x] Blog page (1st iteration)
-- [ ] Blog interactions
-- [ ] og Image
-- [ ] SEO
+/blogs/[slug]
+
+/contact
+
+/projects
+```
+
+## Runnning Locally
+
+1. Clone the repository
+
+```bash
+pnpm install
+```
+
+2. Generate pages from Contentlayer
+
+```bash
+pnpm build:content
+```
 
 **Please ⭐ star this repo, if you found this project helpful**
