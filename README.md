@@ -15,16 +15,16 @@ A fully customizable portfolio website made with:
 
 ## Features
 
-- Fully customizable with Contentlayer.
-- Dynamic content without a server or database.
-- Blog pages.
-- Precise and fluid animations with Framer Motion.
-- Add / edit projects, blog posts, and more with MDX.
-- Typesafe and secure.
-- Optimized for performance.
-- OpenGraph and Twitter card support.
-- Linting and Formatting for enhanced developer experience.
-- Pre-rendered pages for fast loading.
+- **Fully customizable** with Contentlayer.
+- **Dynamic content without a server** or database.
+- Added **Blogs**.
+- Precise and fluid **animations** with Framer Motion.
+- Add / edit projects, blog posts, and more with **MDX**.
+- **Typesafe** and secure.
+- **Optimized** for **performance**.
+- **OpenGraph** and **Twitter card** support.
+- **Linting and Formatting** for enhanced developer experience.
+- **Pre-rendered pages** for fast loading.
 - (WIP) Integration with Github / Leetcode API.
 - (WIP) Github commit graph and top repositories.
 - (WIP) Realtime Leetcode rank and contest history.
