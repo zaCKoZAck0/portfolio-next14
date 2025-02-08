@@ -56,9 +56,11 @@ export function ImageCarousel({ items: initialItems }: IImageCarouselProps) {
               <Image
                 src={item.image}
                 alt={item.title}
-                layout="fill"
+                // layout="fill"
+                height={250}
+                width={200}
                 objectFit="cover"
-                className="rounded-xl"
+                className="h-full rounded-xl object-cover"
                 priority
               />
             </motion.div>
