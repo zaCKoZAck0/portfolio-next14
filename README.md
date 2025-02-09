@@ -29,6 +29,7 @@ A fully customizable, professional portfolio website made with:
 - (WIP) Github commit graph and top repositories.
 - (WIP) Realtime Leetcode rank and contest history.
 - (WIP) SEO optimized.
+- (WIP) Custom not-found page.
 
 ### Blog Features
 
